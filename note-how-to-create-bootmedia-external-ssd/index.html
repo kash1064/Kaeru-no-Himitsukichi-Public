@@ -58,7 +58,7 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" property="og:site_name" content="DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/b27aa09d25b74779e12f1458bf91ad24/note-how-to-create-bootmedia-external-ssd.png"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/b27aa09d25b74779e12f1458bf91ad24/note-how-to-create-bootmedia-external-ssd.png"/><link as="script" rel="preload" href="/webpack-runtime-23b45a0eb82da62a4c67.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-475202403db39cb927d0.js"/><link as="script" rel="preload" href="/app-76f73c1a351d49b8d981.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/note-how-to-create-bootmedia-external-ssd/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する</h1><div class="Content-module--content__body--2TrQ-"><p>今回は外付けSSDからUSB経由でWindowsを起動可能なブートメディアを作成していきます。</p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" property="og:site_name" content="DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/b27aa09d25b74779e12f1458bf91ad24/note-how-to-create-bootmedia-external-ssd.png"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/b27aa09d25b74779e12f1458bf91ad24/note-how-to-create-bootmedia-external-ssd.png"/><link as="script" rel="preload" href="/webpack-runtime-23b45a0eb82da62a4c67.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-f8d9f189f54b1dfba1bf.js"/><link as="script" rel="preload" href="/app-a40552d3997721f1a522.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/note-how-to-create-bootmedia-external-ssd/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">DISMとBCDBootでUSB接続した外付けSSDから起動可能なWindowsメディアを作成する</h1><div class="Content-module--content__body--2TrQ-"><p>今回は外付けSSDからUSB経由でWindowsを起動可能なブートメディアを作成していきます。</p>
 <p>外付けSSDからUSB経由でWindowsを起動可能なブートメディアの作成方法についてググると非常に多くの情報がでてきます。</p>
 <p>Windowsマシンでは外付けSSDからのブートは実現できないとか、有料アプリを使えば実現できるとか、Macなら可能とか、ほんとに色々な情報があり混乱しました。</p>
 <p>結論から言って、本記事執筆時点で最新のWindows10 21H2のバージョンでも外付けSSDからUSB経由で起動可能なブートメディアを作成することはできます。</p>
@@ -83,6 +83,10 @@
 </ul>
 </li>
 <li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
+<li><a href="#%E8%BF%BD%E8%A8%98usb-%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B-windows-%E3%81%AE%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">追記：USB 起動する Windows のエディションを指定する方法</a></li>
+<li><a href="#%E8%BF%BD%E8%A8%98%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%81%AE-efi-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92-os-%E5%81%B4%E3%81%8B%E3%82%89%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">追記：ストレージの EFI パーティションを OS 側から削除する方法</a></li>
+<li><a href="#%E8%BF%BD%E8%A8%98%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%81%8B%E3%82%89%E3%83%97%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%AA%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AE%E5%AF%BE%E5%87%A6">追記：ディスクマネージャからプライマリパーティションが作成できない場合の対処</a></li>
+<li><a href="#%E8%BF%BD%E8%A8%98usbpcap%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E3%81%A8os%E3%81%8C%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B%E5%95%8F%E9%A1%8C">追記：USBPcapをインストールするとOSが起動しなくなる問題</a></li>
 </ul>
 <h2 id="usbからブート可能なssdを作成する" style="position:relative;"><a href="#usb%E3%81%8B%E3%82%89%E3%83%96%E3%83%BC%E3%83%88%E5%8F%AF%E8%83%BD%E3%81%AAssd%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" aria-label="usbからブート可能なssdを作成する permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>USBからブート可能なSSDを作成する</h2>
 <p>今回実践した手順は、失敗すると最悪の場合PCのストレージのデータがすべて消去されます。</p>
@@ -270,8 +274,12 @@ active
 <p>以下のコマンドを管理者権限のPowershellで実行します。</p>
 <p>こちらもドライブレターが僕の環境と異なる場合はコピペしないようにしてください。</p>
 <p>完了まで結構時間がかかりました。</p>
-<div class="gatsby-highlight" data-language="powershell"><pre class="language-powershell"><code class="language-powershell">Dism <span class="token operator">/</span>Apply-Image <span class="token operator">/</span>ImageFile:F:\sources\install<span class="token punctuation">.</span>wim <span class="token operator">/</span>Index=1 <span class="token operator">/</span>ApplyDir:M:\
-M:\Windows\System32\bcdboot M:\Windows <span class="token operator">/</span>l ja-JP <span class="token operator">/</span>s L: <span class="token operator">/</span>f ALL</code></pre></div>
+<div class="gatsby-highlight" data-language="powershell"><pre class="language-powershell"><code class="language-powershell"><span class="token comment"># F は ISO をマウントしたドライブ、M はボリュームパーティションのドライブ</span>
+<span class="token comment"># /Index=1 の値は使用する Windows のエディションによって変更する</span>
+Dism <span class="token operator">/</span>Apply-Image <span class="token operator">/</span>ImageFile:F:\sources\install<span class="token punctuation">.</span>wim <span class="token operator">/</span>Index=1 <span class="token operator">/</span>ApplyDir:M:\
+
+<span class="token comment"># 日本語版を使用する場合は  /l ja-JP を指定</span>
+M:\Windows\System32\bcdboot M:\Windows <span class="token operator">/</span>l en-US <span class="token operator">/</span>s L: <span class="token operator">/</span>f ALL</code></pre></div>
 <p>実行結果はこんな感じでした。</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -379,6 +387,173 @@ M:\Windows\System32\bcdboot M:\Windows <span class="token operator">/</span>l ja
   </a>
     </span></p>
 <p>今までツール任せにしていたブート構成を手動で作成してみたので結構勉強になりました。</p>
+<h2 id="追記usb-起動する-windows-のエディションを指定する方法" style="position:relative;"><a href="#%E8%BF%BD%E8%A8%98usb-%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B-windows-%E3%81%AE%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95" aria-label="追記usb 起動する windows のエディションを指定する方法 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>追記：USB 起動する Windows のエディションを指定する方法</h2>
+<p>上記の手順で、複数のエディションを含む ISO を使用してブートメディアを作成する場合、Index の値を指定することで起動する Windows のエディションを指定することができます。</p>
+<p>ISO に含まれる install.wim から、使用したい OS のエディションのインデックスを取得するには管理者権限で以下のコマンドを実行します。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># D:\sources\install.wim はマウントした ISO のドライブ</span>
+Dism /Get-ImageInfo /ImageFile:D:<span class="token punctuation">\</span>sources<span class="token punctuation">\</span>install.wim
+Details <span class="token keyword">for</span> image <span class="token builtin class-name">:</span> D:<span class="token punctuation">\</span>sources<span class="token punctuation">\</span>install.wim
+
+Index <span class="token builtin class-name">:</span> <span class="token number">1</span>
+Name <span class="token builtin class-name">:</span> Windows <span class="token number">10</span> Home
+Description <span class="token builtin class-name">:</span> Windows <span class="token number">10</span> Home
+Size <span class="token builtin class-name">:</span> <span class="token number">14,732</span>,719,469 bytes
+<span class="token punctuation">..</span>.
+Index <span class="token builtin class-name">:</span> <span class="token number">6</span>
+Name <span class="token builtin class-name">:</span> Windows <span class="token number">10</span> Pro
+Description <span class="token builtin class-name">:</span> Windows <span class="token number">10</span> Pro
+Size <span class="token builtin class-name">:</span> <span class="token number">15,010</span>,424,921 bytes</code></pre></div>
+<p>ちなみに、指定した Index のエディションのみを含む install.wim を作成する場合は、以下のコマンドでエクスポートを行います。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">Dism /Export-Image /SourceImageFile:<span class="token string">"D:\sources\install.wim"</span> /SourceIndex:6 /DestinationImageFile:<span class="token string">"C:\Users\kash1064\Downloads\install.wim"</span></code></pre></div>
+<h2 id="追記ストレージの-efi-パーティションを-os-側から削除する方法" style="position:relative;"><a href="#%E8%BF%BD%E8%A8%98%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%81%AE-efi-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92-os-%E5%81%B4%E3%81%8B%E3%82%89%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95" aria-label="追記ストレージの efi パーティションを os 側から削除する方法 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>追記：ストレージの EFI パーティションを OS 側から削除する方法</h2>
+<p>インストールメディアなどから OS のインストールを行った場合、Windows のディスクマネージャからはシステムパーティションの削除やフォーマットができません。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5ad7a5564e3422c6d83d925d7faa0c42/d2f5c/image-20221211134715898.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 8.333333333333332%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVQI12WL3Q5AIBhAvf/LiIzP8gzE5qeHoKWaoiS3bOfmbOckCFGACWBuGoZzitI2Q12BhxpmQtiPBeO+Kse4RE20FsbI6zpC8ErxXaxy5+5VF8L9wXun5GaNOq2O/QMftGfcm8VMTgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/5ad7a5564e3422c6d83d925d7faa0c42/8ac56/image-20221211134715898.webp 240w,
+/static/5ad7a5564e3422c6d83d925d7faa0c42/d3be9/image-20221211134715898.webp 480w,
+/static/5ad7a5564e3422c6d83d925d7faa0c42/e46b2/image-20221211134715898.webp 960w,
+/static/5ad7a5564e3422c6d83d925d7faa0c42/8ae64/image-20221211134715898.webp 1363w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/5ad7a5564e3422c6d83d925d7faa0c42/8ff5a/image-20221211134715898.png 240w,
+/static/5ad7a5564e3422c6d83d925d7faa0c42/e85cb/image-20221211134715898.png 480w,
+/static/5ad7a5564e3422c6d83d925d7faa0c42/d9199/image-20221211134715898.png 960w,
+/static/5ad7a5564e3422c6d83d925d7faa0c42/d2f5c/image-20221211134715898.png 1363w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/5ad7a5564e3422c6d83d925d7faa0c42/d9199/image-20221211134715898.png"
+            alt="image-20221211134715898"
+            title="image-20221211134715898"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>その場合に、パーティションを削除して新しいシステムドライブとして使用するために diskpart を使用します。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># 対象のディスクの ID を特定します</span>
+DISKPART<span class="token operator">></span> list disk
+  Disk <span class="token comment">###  Status         Size     Free     Dyn  Gpt</span>
+  --------  -------------  -------  -------  ---  ---
+  Disk <span class="token number">0</span>    Online          <span class="token number">465</span> GB  <span class="token number">1024</span> KB        *
+  Disk <span class="token number">2</span>    Online          <span class="token number">238</span> GB  <span class="token number">1024</span> KB        *
+
+<span class="token comment"># 削除したいディスクを設定し、パーティションを確認します</span>
+DISKPART<span class="token operator">></span> <span class="token keyword">select</span> disk <span class="token number">2</span>
+DISKPART<span class="token operator">></span> list partition
+
+  Partition <span class="token comment">###  Type              Size     Offset</span>
+  -------------  ----------------  -------  -------
+  Partition <span class="token number">1</span>    System             <span class="token number">100</span> MB  <span class="token number">1024</span> KB
+  Partition <span class="token number">2</span>    Reserved            <span class="token number">16</span> MB   <span class="token number">101</span> MB
+  Partition <span class="token number">3</span>    Primary            <span class="token number">237</span> GB   <span class="token number">117</span> MB
+  Partition <span class="token number">4</span>    Recovery           <span class="token number">552</span> MB   <span class="token number">237</span> GB
+  
+<span class="token comment"># 削除するパーティションの ID を指定し、delete コマンドで削除を行います</span>
+DISKPART<span class="token operator">></span> <span class="token keyword">select</span> partition <span class="token number">1</span>
+DISKPART<span class="token operator">></span> delete partition override
+DiskPart successfully deleted the selected partition.
+
+<span class="token comment"># 他のパーティションも同じ要領で削除します</span>
+DISKPART<span class="token operator">></span> <span class="token keyword">select</span> partition <span class="token number">2</span>
+DISKPART<span class="token operator">></span> delete partition override
+DiskPart successfully deleted the selected partition.
+
+<span class="token comment"># 削除後にパーティションを確認すると、システムパーティションが削除されていることがわかります</span>
+DISKPART<span class="token operator">></span> list partition
+
+  Partition <span class="token comment">###  Type              Size     Offset</span>
+  -------------  ----------------  -------  -------
+  Partition <span class="token number">3</span>    Primary            <span class="token number">237</span> GB   <span class="token number">117</span> MB
+  Partition <span class="token number">4</span>    Recovery           <span class="token number">552</span> MB   <span class="token number">237</span> GB</code></pre></div>
+<p>上記の手順を実施することで、ディスクマネージャからもシステムパーティションが削除されていることを確認できます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4403d62212e2dfd746ee86f4bde2f5fa/d2f5c/image-20221211135308504.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 7.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVQI123JPQ6AIAxAYe5/FS0DCcUzmKiDCZ5CTPhxoJZKnH35tqecc4gWcQKYx2HptN6M2RGPPx5g7bez1iv5YuYYQ04hxZPoFnnkL2Yq+aq1UC2ttRe7K2b7yAVBlQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4403d62212e2dfd746ee86f4bde2f5fa/8ac56/image-20221211135308504.webp 240w,
+/static/4403d62212e2dfd746ee86f4bde2f5fa/d3be9/image-20221211135308504.webp 480w,
+/static/4403d62212e2dfd746ee86f4bde2f5fa/e46b2/image-20221211135308504.webp 960w,
+/static/4403d62212e2dfd746ee86f4bde2f5fa/8ae64/image-20221211135308504.webp 1363w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4403d62212e2dfd746ee86f4bde2f5fa/8ff5a/image-20221211135308504.png 240w,
+/static/4403d62212e2dfd746ee86f4bde2f5fa/e85cb/image-20221211135308504.png 480w,
+/static/4403d62212e2dfd746ee86f4bde2f5fa/d9199/image-20221211135308504.png 960w,
+/static/4403d62212e2dfd746ee86f4bde2f5fa/d2f5c/image-20221211135308504.png 1363w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4403d62212e2dfd746ee86f4bde2f5fa/d9199/image-20221211135308504.png"
+            alt="image-20221211135308504"
+            title="image-20221211135308504"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h2 id="追記ディスクマネージャからプライマリパーティションが作成できない場合の対処" style="position:relative;"><a href="#%E8%BF%BD%E8%A8%98%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%81%8B%E3%82%89%E3%83%97%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%AA%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AE%E5%AF%BE%E5%87%A6" aria-label="追記ディスクマネージャからプライマリパーティションが作成できない場合の対処 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>追記：ディスクマネージャからプライマリパーティションが作成できない場合の対処</h2>
+<p>ディスクマネージャからパーティションを作成してもプライマリにならない場合、diskpart からパーティションを作成することができます。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># 対象のディスクの ID を特定します</span>
+DISKPART<span class="token operator">></span> list disk
+  Disk <span class="token comment">###  Status         Size     Free     Dyn  Gpt</span>
+  --------  -------------  -------  -------  ---  ---
+  Disk <span class="token number">0</span>    Online          <span class="token number">465</span> GB  <span class="token number">1024</span> KB        *
+  Disk <span class="token number">2</span>    Online          <span class="token number">238</span> GB  <span class="token number">1024</span> KB        *
+
+<span class="token comment"># 対象のディスクを選択して clean します。</span>
+DISKPART<span class="token operator">></span> <span class="token keyword">select</span> disk <span class="token number">2</span>
+clean
+
+
+DISKPART<span class="token operator">></span> create partition primary <span class="token assign-left variable">size</span><span class="token operator">=</span><span class="token number">600</span> <span class="token assign-left variable">offset</span><span class="token operator">=</span><span class="token number">0</span>
+DISKPART<span class="token operator">></span> list partition
+
+  Partition <span class="token comment">###  Type              Size     Offset</span>
+  -------------  ----------------  -------  -------
+* Partition <span class="token number">1</span>    Primary            <span class="token number">600</span> MB  <span class="token number">1024</span> KB
+
+DISKPART<span class="token operator">></span> <span class="token keyword">select</span> partition <span class="token number">1</span>
+DISKPART<span class="token operator">></span> <span class="token function">format</span> <span class="token assign-left variable">fs</span><span class="token operator">=</span>fat32
+DISKPART<span class="token operator">></span> active</code></pre></div>
 <h2 id="追記usbpcapをインストールするとosが起動しなくなる問題" style="position:relative;"><a href="#%E8%BF%BD%E8%A8%98usbpcap%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E3%81%A8os%E3%81%8C%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B%E5%95%8F%E9%A1%8C" aria-label="追記usbpcapをインストールするとosが起動しなくなる問題 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>追記：USBPcapをインストールするとOSが起動しなくなる問題</h2>
 <p>USB接続したSSDに<code class="language-text">USBPcap</code>をインストールして再起動すると、OS起動時に「自動修復中」の表示になり起動しない問題が発生しました。</p>
 <p>残念ながら、外部接続したSSDからインストール時に作成された以下のフォルダとレジストリをすべて削除してみたものの、起動に失敗する問題は解消されませんでした。</p>
@@ -389,4 +564,4 @@ M:\Windows\System32\bcdboot M:\Windows <span class="token operator">/</span>l ja
 <li>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\USBPcap</li>
 </ul>
 <p>確認した限りでは上記を削除すればUSBPcapのインストール前の状態に戻せそうな気がするのですが、いまいち原因がわかりませんね。</p>
-<p>システムファイルを書き換えてるとは考えにくいですが、現状この問題が発生した場合は起動SSDの再セットアップ以外に解消方法が見つかりませんでした。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Mar 3, 2022</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/windows/">Windows</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/備忘録/">備忘録</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたい趣味プログラマ。WinDbgとYARAが好き。HackTheBox ProHacker / AtCoder 緑 / 情報処理安全確保支援士資格 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/yuki_kashiwaba" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/note-how-to-create-bootmedia-external-ssd";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-76f73c1a351d49b8d981.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-bdf4831f5e3511b754dd.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-72f5ba3243f5f1f9add6.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-77ae8427df5aaaec05c4.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-fbb3d90f6a9c5e039ed1.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-8fa29d2422c31b73d8e0.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-76f73c1a351d49b8d981.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-475202403db39cb927d0.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-23b45a0eb82da62a4c67.js" async=""></script></body></html>
+<p>システムファイルを書き換えてるとは考えにくいですが、現状この問題が発生した場合は起動SSDの再セットアップ以外に解消方法が見つかりませんでした。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Mar 3, 2022</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/windows/">Windows</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/備忘録/">備忘録</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたい趣味プログラマ。WinDbgとYARAが好き。HackTheBox ProHacker / AtCoder 緑 / 情報処理安全確保支援士資格 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/yuki_kashiwaba" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/note-how-to-create-bootmedia-external-ssd";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-a40552d3997721f1a522.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-bdf4831f5e3511b754dd.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-72f5ba3243f5f1f9add6.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-77ae8427df5aaaec05c4.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-fbb3d90f6a9c5e039ed1.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-8fa29d2422c31b73d8e0.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-a40552d3997721f1a522.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-f8d9f189f54b1dfba1bf.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-23b45a0eb82da62a4c67.js" async=""></script></body></html>

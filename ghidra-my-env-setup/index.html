@@ -58,7 +58,7 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">CTFのためのGhidra環境構築メモ - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" property="og:site_name" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><link as="script" rel="preload" href="/webpack-runtime-23b45a0eb82da62a4c67.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-f8d9f189f54b1dfba1bf.js"/><link as="script" rel="preload" href="/app-a40552d3997721f1a522.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ghidra-my-env-setup/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">CTFのためのGhidra環境構築メモ</h1><div class="Content-module--content__body--2TrQ-"><p>今回はCTFのためにセットアップしているGhidraの環境構築方法をメモしておきます。</p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">CTFのためのGhidra環境構築メモ - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" property="og:site_name" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><link as="script" rel="preload" href="/webpack-runtime-23b45a0eb82da62a4c67.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-0b2308d747ee8b0e55ba.js"/><link as="script" rel="preload" href="/app-63df202b166df7cd3bc4.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ghidra-my-env-setup/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">CTFのためのGhidra環境構築メモ</h1><div class="Content-module--content__body--2TrQ-"><p>今回はCTFのためにセットアップしているGhidraの環境構築方法をメモしておきます。</p>
 <p>Ghidraのインストールについては公式の<a href="https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/InstallationGuide.html" target="_blank" rel="nofollow noopener noreferrer">Ghidra Installation Guide</a>のままなので割愛します。</p>
 <p>参考：<a href="https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/InstallationGuide.html" target="_blank" rel="nofollow noopener noreferrer">Ghidra Installation Guide</a></p>
 <!-- omit in toc -->
@@ -87,6 +87,8 @@
 <li><a href="#ghidra_scripts%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%99%E3%82%8B">ghidra_scriptsをセットアップする</a></li>
 </ul>
 </li>
+<li><a href="#ghirathon-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%A6-python3-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Blinux">Ghirathon をセットアップして Python3 のインタプリタを使用する(Linux)</a></li>
+<li><a href="#ghirathon-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%A6-python3-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Bwindos">Ghirathon をセットアップして Python3 のインタプリタを使用する(Windos)</a></li>
 <li><a href="#%E3%81%8A%E3%81%BE%E3%81%91ui%E3%81%AE%E5%A4%89%E6%9B%B4">おまけ：UIの変更</a></li>
 <li><a href="#ghidra%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982022%E5%B9%B412%E6%9C%88">Ghidraダークモードで使用する(追記：2022年12月)</a></li>
 <li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
@@ -724,6 +726,159 @@
 <h3 id="ghidra_scriptsをセットアップする" style="position:relative;"><a href="#ghidra_scripts%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%99%E3%82%8B" aria-label="ghidra_scriptsをセットアップする permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ghidra_scriptsをセットアップする</h3>
 <p>以下からダウンロードしたファイルをGhidraに展開します。</p>
 <p>参考：<a href="https://github.com/AllsafeCyberSecurity/ghidra_scripts" target="_blank" rel="nofollow noopener noreferrer">AllsafeCyberSecurity/ghidra_scripts: Ghidra scripts for malware analysis</a></p>
+<h2 id="ghirathon-をセットアップして-python3-のインタプリタを使用するlinux" style="position:relative;"><a href="#ghirathon-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%A6-python3-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Blinux" aria-label="ghirathon をセットアップして python3 のインタプリタを使用するlinux permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghirathon をセットアップして Python3 のインタプリタを使用する(Linux)</h2>
+<p>Ghidra は、デフォルトで Jython ベースの Python2 インタプリタを使用できます。</p>
+<p>ただし、できるだけ Python3 系を使っていきたいという背景もあり、MANDIANT が OSS として提供している拡張機能 <a href="https://github.com/mandiant/ghidrathon" target="_blank" rel="nofollow noopener noreferrer">Ghidrathon</a> を使用して Python3 インタプリタと Ghidra を連携していきます。</p>
+<p>インストール方法については以下を参照します。</p>
+<p>参考：<a href="https://github.com/mandiant/Ghidrathon#installing-ghidrathon" target="_blank" rel="nofollow noopener noreferrer">mandiant/Ghidrathon: The FLARE team’s open-source extension to add Python 3 scripting to Ghidra.</a></p>
+<p>バージョンによって前提要件になるビルドツールのバージョンが異なるので注意です。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># https://gradle.org/releases/ から 7.3 以上の Gradleをダウンロードして PATH を通しておく</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/<span class="token operator">&lt;</span>path to gradle<span class="token operator">></span>/gradle-7.6/bin:<span class="token environment constant">$PATH</span>
+
+<span class="token comment"># Ghidra の使用するバージョンと同じ JDK を使用して JAVA_HOME を設定しておく</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span><span class="token operator">&lt;</span>path to JDK <span class="token number">1</span><span class="token operator"><span class="token file-descriptor important">7</span>></span>
+
+<span class="token comment"># ビルド</span>
+<span class="token function">git</span> clone https://github.com/mandiant/ghidrathon
+<span class="token builtin class-name">cd</span> ghidrathon
+gradle -PGHIDRA_INSTALL_DIR<span class="token operator">=</span><span class="token operator">&lt;</span>full path to Ghidra<span class="token operator">></span></code></pre></div>
+<p>ビルドが完了すると、Ghirathon のソースディレクトリ内の dist というディレクトリに拡張機能のファイルが作成されるのでこれをインポートします。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 793px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/90599d324d8c46e831402aa1a2bacb59/73fd0/image-20221216220649821.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKklEQVQoz5WSW08TURSF578ZTYAW0LYD5V7xGomJiT/A+OSDTz4bKFhKoaUt5VJRGqrQNFx6nQ5tbWegUhBRWvqKgc/DhCiGFzzJl521s7POOjtHamqxYG6VMZlttJitNJsstJisRs9q66Wzy2Fw+44dc5tMa3sHrW2XEPq839Tczs1bJqTI8grhxQiRaIzPsXXi6yli8U2SmS1SmTyJtGqQEjqdzV9FKRhzZb3KsNON5Oh20NYuY7HYsVq6kOVeOuwO5At6+h/Q53iEvXsQW0c/cueAge2cC32jyYxzzIPL7UOaDX8kGNkguJwkGE3hW4zj8YbwTPrxTs8SmFkw8Afn8fnnmA7MiX6IKd8MwdB7Jrx+Xr99g/OdhxcvXyFtpFTiWY3VjMZWtUH4U4L+nkGs4vbOrgGR9i92sUuD7rs8fvKMoafPuXd/iL6+h8aereJ1kqJ+QVUL5AsljmoNFLVIIBxlOZYgk82RTGVFVUlncmQUFSWXN7SmV9B3dtmpVKnuH7D37Tv7B4dI58vP5XVSSpHK3k+iK2u4XBN4pvwUiiXqxw3q9WOORa3V6gZHRzUOD3+IADVq9TonJ7/+IK1tZimWd1EL25T0PUJzHxgZdeIcH0Ur6/zvkTYSCoVSRaQsC8MqC+ElhsfcjLi9bOvbxtDp6SlnZ2fXQoqvp0XCr8JQMxLOL4iEE0HGA0vomvaP4bUSrsaTlwyrzItv5HRNMjY1cyXhdc5vRs+8Okr/Ru0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/90599d324d8c46e831402aa1a2bacb59/8ac56/image-20221216220649821.webp 240w,
+/static/90599d324d8c46e831402aa1a2bacb59/d3be9/image-20221216220649821.webp 480w,
+/static/90599d324d8c46e831402aa1a2bacb59/51ddc/image-20221216220649821.webp 793w"
+              sizes="(max-width: 793px) 100vw, 793px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/90599d324d8c46e831402aa1a2bacb59/8ff5a/image-20221216220649821.png 240w,
+/static/90599d324d8c46e831402aa1a2bacb59/e85cb/image-20221216220649821.png 480w,
+/static/90599d324d8c46e831402aa1a2bacb59/73fd0/image-20221216220649821.png 793w"
+            sizes="(max-width: 793px) 100vw, 793px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/90599d324d8c46e831402aa1a2bacb59/73fd0/image-20221216220649821.png"
+            alt="image-20221216220649821"
+            title="image-20221216220649821"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>続いて、[File]>[Configure] の Ghidra Core から既定の Python プラグインを無効化します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/335e290209ddc1e85dddad4f4ada7f3b/4b2cc/image-20221216220048128.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADFUlEQVQ4y22T2U9bZxTE/e9SKX2oqpSyL4UkrdQlDykiwUkUCqEsCUsogTqE2ODdxivervHdbK6NjW3VMQXDLwcjXqoeaV7O1R3NzJnPtrSyxszLWZ5M2fn18e9MTT/n6fQLpp+9xP5ijqf2VzwTvPpjEfvMAlN2OzPPZfd6DsdHFx/3fTgFLncA10EA2+raMn1DI4yMPmBgeIKhkUn6B3+gTzA8+lB2k/T2j9HbN8b3/eN81zdCz9e9/PzbE4olC1U3MYoWBdVA1QxshUKBY62IdXZOrdakUqlzM1dX11x2Ovx3rq+h/e8FybTC/41NUfJklQJmpYFpVNG0Co1mHbfXg9vtIeD34/f5uggGw0QiUfz+ILOvVwiHI12EQoe332IpbKqqcqyalOufhfAUVS2TSqfoHRjk3v0xeu6P85Wg59tRBiWSiYlHPPrxly76BkYYHBpnbPwhkw9+4t43w9i2HC50LU/nvIph1ARCqulEEjniOQ1XKMm+IK2Vu9EcpXMUNJNW+wKzVEYzStwFs+PYw7b8Zh1DCK/OK5jFM3S9gpLP4z88IhJN4PUGZFfi4hLy4iQaTxEMxzk9a8kxKmQUlWbrEomWjU3HzVH0W4VtHdO8JcwpN4RJEhlFauElLCS1ZptcXidxlCWWSIvaEnqxTL5g8E/7VuO7v4Tw5mfDFAWdK7FbFcJTqYCKT2wqyQyBTweEXR5OrTMyQhgVsuBhHM0soxoWx/oJDVHYuVN4fFwgkytQrjbQhbB00iCZyoq1DI1sjhN/iJJcsF6pdXuXyeQECtXqGZZ1KgJM7tr1fkcy3Hf72N1z4w3E8PgP8QUibG7vsi4Bv931Mrv+gZmV9yw7vGy7Y6x+8PLmbw+L2wdsOsPdnTNawJ+1sC+8wzY3P8/8wgpLfy6x+naj+4SisQRbn4TAFWJtx8nc6jZbzhB7gSQ7+yEOIlmCKQNnKIXDE+Ewd0K62GR2cQNbJBQgHk+giD3rxOpWwSyWJMOE9DGH1xcUi3nqjZZcXyORlIPIIVqfLyUiiSCbl4fQRh6WZLjDF/wkdOgcs1/iAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/335e290209ddc1e85dddad4f4ada7f3b/8ac56/image-20221216220048128.webp 240w,
+/static/335e290209ddc1e85dddad4f4ada7f3b/d3be9/image-20221216220048128.webp 480w,
+/static/335e290209ddc1e85dddad4f4ada7f3b/e46b2/image-20221216220048128.webp 960w,
+/static/335e290209ddc1e85dddad4f4ada7f3b/d5002/image-20221216220048128.webp 1013w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/335e290209ddc1e85dddad4f4ada7f3b/8ff5a/image-20221216220048128.png 240w,
+/static/335e290209ddc1e85dddad4f4ada7f3b/e85cb/image-20221216220048128.png 480w,
+/static/335e290209ddc1e85dddad4f4ada7f3b/d9199/image-20221216220048128.png 960w,
+/static/335e290209ddc1e85dddad4f4ada7f3b/4b2cc/image-20221216220048128.png 1013w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/335e290209ddc1e85dddad4f4ada7f3b/d9199/image-20221216220048128.png"
+            alt="image-20221216220048128"
+            title="image-20221216220048128"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>これで [Window]>[Ghidrathon] を開くと、Python3 が使用できるインタプリタが起動します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 614px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ed9d0d841d73f4dd9fa185ac90447329/e9131/image-20221216221158484.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 78.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6klEQVQ4y6WUyW4TQRCG572yScREQsqFhKAAD8IbkHALEsYIAhxYc0EQLzHesbMRhKIIgawAAnEIkvfxMlvPzE9VmQmIOIfYLf2q7pqur6pa3aNNhWYxPnEOk1PnMfFH45MhhGZmsXD5GubmFzF/6Souzi3SnhnaG5LvbMdEFEPrsekFXLhyHdrztRiePnuNaLyAWKKA+EbfJpJFZLLbomx+R5RMFfEm3VcqU0Q6WxJlckXk3m5hJfwQ2tLyJm4slbB8cxMrt3YQubuH2+Fd3InsYvXBHh4/+YAXa/t4+eqAknxCNldGaesQ795/w/7Bd3wu/8SXrz9wWP6Ie/cfQbNMhVarDdN0YBiWWNtWUMqjuS1SypW1S+rPXbjuXymlwGN9PU5Ay0S1WkG32yVgD51OhyCmbNT1FiqVCnyfQY4E+r6P/0fgi8YS0HRdl6BarUaqo9lsHqter+Po6Bd10KKkVfnOyf4FsTzP6wOjBOz1egJrNBoiBrXbbamUgQzipOznOXdi2/ZxmyeAASAIYijDAiD7DcNA0Anv5QLYDgRihBGc3QkgO4LzOItOrdDz/FEKPR046EoMCRyu5YHXZpTKBl5s07LgOI607VImbwgpelXy9KL09JLpAjZSebBNpoZVXv464cgqfgOjMYijyyc3wAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/ed9d0d841d73f4dd9fa185ac90447329/8ac56/image-20221216221158484.webp 240w,
+/static/ed9d0d841d73f4dd9fa185ac90447329/d3be9/image-20221216221158484.webp 480w,
+/static/ed9d0d841d73f4dd9fa185ac90447329/5316f/image-20221216221158484.webp 614w"
+              sizes="(max-width: 614px) 100vw, 614px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/ed9d0d841d73f4dd9fa185ac90447329/8ff5a/image-20221216221158484.png 240w,
+/static/ed9d0d841d73f4dd9fa185ac90447329/e85cb/image-20221216221158484.png 480w,
+/static/ed9d0d841d73f4dd9fa185ac90447329/e9131/image-20221216221158484.png 614w"
+            sizes="(max-width: 614px) 100vw, 614px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/ed9d0d841d73f4dd9fa185ac90447329/e9131/image-20221216221158484.png"
+            alt="image-20221216221158484"
+            title="image-20221216221158484"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h2 id="ghirathon-をセットアップして-python3-のインタプリタを使用するwindos" style="position:relative;"><a href="#ghirathon-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%A6-python3-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Bwindos" aria-label="ghirathon をセットアップして python3 のインタプリタを使用するwindos permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghirathon をセットアップして Python3 のインタプリタを使用する(Windos)</h2>
+<p>せっかくなので Windows でも Ghirathon をセットアップしていきます。</p>
+<p>Linux と同じく、<a href="https://gradle.org/releases/" target="_blank" rel="nofollow noopener noreferrer">gradle</a> のバージョン 7 系をダウンロードして、PATH を通しておきます。</p>
+<p>また、Ghidra の使用するバージョンと同じ JAVA のフォルダを JAVA_HOME に設定しておきます。</p>
+<p>この状態で、PowerShell を使用して以下のコマンドを実行すると拡張機能をビルドできます。</p>
+<div class="gatsby-highlight" data-language="powershell"><pre class="language-powershell"><code class="language-powershell">git clone https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com/mandiant/ghidrathon
+cd ghidrathon
+gradle <span class="token operator">-</span>PGHIDRA_INSTALL_DIR=&lt;full path to Ghidra></code></pre></div>
+<p>後は Linux の場合と同じく Ghidra に拡張機能をインストールすれば完了です。</p>
 <h2 id="おまけuiの変更" style="position:relative;"><a href="#%E3%81%8A%E3%81%BE%E3%81%91ui%E3%81%AE%E5%A4%89%E6%9B%B4" aria-label="おまけuiの変更 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>おまけ：UIの変更</h2>
 <p>GhidraのUIテーマは[Edit]>[Tool Options]の以下の箇所から変更できます。</p>
 <p><span
@@ -1143,4 +1298,4 @@ python.exe .<span class="token punctuation">\</span>install.py</code></pre></div
   </a>
     </span></p>
 <h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
-<p>また環境を変えたら記事もアップデートします。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Mar 15, 2022</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/reversing/">Reversing</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ghidra/">Ghidra</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/備忘録/">備忘録</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたい趣味プログラマ。WinDbgとYARAが好き。HackTheBox ProHacker / AtCoder 緑 / 情報処理安全確保支援士資格 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/yuki_kashiwaba" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ghidra-my-env-setup";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-a40552d3997721f1a522.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-bdf4831f5e3511b754dd.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-72f5ba3243f5f1f9add6.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-77ae8427df5aaaec05c4.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-fbb3d90f6a9c5e039ed1.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-8fa29d2422c31b73d8e0.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-a40552d3997721f1a522.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-f8d9f189f54b1dfba1bf.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-23b45a0eb82da62a4c67.js" async=""></script></body></html>
+<p>また環境を変えたら記事もアップデートします。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Mar 15, 2022</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/reversing/">Reversing</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ghidra/">Ghidra</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/備忘録/">備忘録</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたい趣味プログラマ。WinDbgとYARAが好き。HackTheBox ProHacker / AtCoder 緑 / 情報処理安全確保支援士資格 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/yuki_kashiwaba" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ghidra-my-env-setup";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-63df202b166df7cd3bc4.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-bdf4831f5e3511b754dd.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-72f5ba3243f5f1f9add6.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-77ae8427df5aaaec05c4.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-fbb3d90f6a9c5e039ed1.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-8fa29d2422c31b73d8e0.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-9bf27003829f242941c6.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-63df202b166df7cd3bc4.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-0b2308d747ee8b0e55ba.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-23b45a0eb82da62a4c67.js" async=""></script></body></html>

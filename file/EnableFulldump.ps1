@@ -9,7 +9,7 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 $crashControlRegPath = "HKLM:System\CurrentControlSet\Control\CrashControl"
 $isExistKey = Test-Path -LiteralPath $crashControlRegPath
 if ($isExistKey -eq $False) {
-	New-Item -Path $parameterRegPath
+	New-Item -Path $crashControlRegPath
 }
 New-ItemProperty -LiteralPath $CrashControlRegPath -Name "CrashDumpEnabled" -PropertyType "DWord" -Value "1" -Force
 New-ItemProperty -LiteralPath $CrashControlRegPath -Name "AutoReboot" -PropertyType "DWord" -Value "1" -Force
@@ -28,6 +28,16 @@ foreach ($parameterRegPath in $parameterRegPaths) {
 	}
 	New-ItemProperty -LiteralPath $parameterRegPath -Name "CrashOnCtrlScroll" -PropertyType "DWord" -Value "0" -Force
 }
+
+# Settings of Full application dump
+$localDumpsRegPath = "HKLM:SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps"
+$isExistKey = Test-Path -LiteralPath $localDumpsRegPath
+if ($isExistKey -eq $False) {
+	New-Item -Path $localDumpsRegPath
+}
+New-ItemProperty -LiteralPath $localDumpsRegPath -Name "DumpFolder" -PropertyType "ExpandString" -Value "%LOCALAPPDATA%\CrashDumps" -Force
+New-ItemProperty -LiteralPath $localDumpsRegPath -Name "DumpCount" -PropertyType "DWord" -Value "2" -Force
+New-ItemProperty -LiteralPath $localDumpsRegPath -Name "DumpType" -PropertyType "DWord" -Value "2" -Force
 
 # Setting alt dump key
 $parameterRegPaths = @("HKLM:System\CurrentControlSet\Services\i8042prt\crashdump",

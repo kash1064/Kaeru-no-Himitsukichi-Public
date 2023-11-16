@@ -58,11 +58,13 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">Cake CTF 2023 Writeup - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="Cake CTF 2023 の Writeup です。"/><meta data-react-helmet="true" property="og:site_name" content="Cake CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/ec6175c6798bb9e1fd1b91a25d0214df/ctf-cakectf-2023.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Cake CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="Cake CTF 2023 の Writeup です。"/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/ec6175c6798bb9e1fd1b91a25d0214df/ctf-cakectf-2023.png"/><link as="script" rel="preload" href="/webpack-runtime-a3c0f166cb4b802ff58f.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-0c55613236457468f588.js"/><link as="script" rel="preload" href="/app-3c6584a5d7e2e261544c.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ctf-cakectf-2023/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Cake CTF 2023 Writeup</h1><div class="Content-module--content__body--2TrQ-"><!-- omit in toc -->
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">Cake CTF 2023 Writeup - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="Cake CTF 2023 の Writeup です。"/><meta data-react-helmet="true" property="og:site_name" content="Cake CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/ec6175c6798bb9e1fd1b91a25d0214df/ctf-cakectf-2023.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Cake CTF 2023 Writeup - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="Cake CTF 2023 の Writeup です。"/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/ec6175c6798bb9e1fd1b91a25d0214df/ctf-cakectf-2023.png"/><link as="script" rel="preload" href="/webpack-runtime-a3c0f166cb4b802ff58f.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-0254dddef07d157c7678.js"/><link as="script" rel="preload" href="/app-9c6ce4573336a0b7cae2.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ctf-cakectf-2023/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Cake CTF 2023 Writeup</h1><div class="Content-module--content__body--2TrQ-"><!-- omit in toc -->
 <h2 id="もくじ" style="position:relative;"><a href="#%E3%82%82%E3%81%8F%E3%81%98" aria-label="もくじ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>もくじ</h2>
 <ul>
 <li><a href="#nanderev">nande(Rev)</a></li>
 <li><a href="#cake-puzzlerev">Cake Puzzle(Rev)</a></li>
+<li><a href="#%E8%BF%BD%E8%A8%98imgchkrev">追記：imgchk(Rev)</a></li>
+<li><a href="#%E8%BF%BD%E8%A8%98vtable4bpwn">追記：vtable4b(Pwn)</a></li>
 <li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
 <li><a href="#%E5%AE%A3%E4%BC%9D">宣伝</a></li>
 </ul>
@@ -588,6 +590,711 @@ target<span class="token punctuation">.</span>interactive<span class="token punc
         </picture>
   </a>
     </span></p>
+<h2 id="追記imgchkrev" style="position:relative;"><a href="#%E8%BF%BD%E8%A8%98imgchkrev" aria-label="追記imgchkrev permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>追記：imgchk(Rev)</h2>
+<blockquote>
+<p>Ordinal flag checker but not for text.</p>
+</blockquote>
+<p>問題バイナリを Ghidra でデコンパイルすると、flag.png のファイルパスをコマンドライン引数から受け取って check_flag 関数による検証を行うプログラムであることがわかります。</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c">undefined8 <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> param_1<span class="token punctuation">,</span>undefined8 <span class="token operator">*</span>param_2<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">int</span> iVar1<span class="token punctuation">;</span>
+  undefined8 uVar2<span class="token punctuation">;</span>
+  
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>param_1 <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    iVar1 <span class="token operator">=</span> <span class="token function">check_flag</span><span class="token punctuation">(</span>param_2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>iVar1 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Correct!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Wrong..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    uVar2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Usage: %s &lt;flag.png>\n"</span><span class="token punctuation">,</span><span class="token operator">*</span>param_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    uVar2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> uVar2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>そのため、check_flag 関数にアクセスしてみましたが、デコンパイル結果が表示されません。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 933px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/69320922b4a716ae669986f76f1f95f8/dc616/image-20231114204036518.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 106.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHUlEQVQ4y41U2VIbSRDk/7/EL37w8g9+1OIAe5ARWiTNfd/Tx8zkZjWChQVjd0RFHzOdlVWV1Rebzd/YbDa4ubnBt6tvuL72cDqdaD6iKEacJkjzDGkSI01ln8H3T4hjH39dfsWnT1f4/NnDly8/cHnp4WJZFshYVyCNU0Rh4/bzskI+jVZBzxb/H+OoEIQ/uFrc3adx0fc95nmG1hpVWaEoOvfB2tnZZDS0NbxEB+sCISDrcRxwPMa8J2Qez+Z5xUVZlg5AAF8OcSKXnZGhAIzjCGOM++77Pu739269MBoBFHsDaJfZzV3XIc9TWoMoHlHXPZSangF3ux08zzsDPqXtBaAhoLUWdUcWliGVGuWpJasJVdthmiY6VViFDfPm/fSwvd2+AnQ5fAKclEbTtMzhhK4H1DBjqDWUXnm+ou1Wt9bmsUB3ZHh7e/sWsKpKJhsISoWMQDkt61ckzUyziCpNMzhlI/x8cv/lA3Dt7bDdbt8HnLk/FQoRmRwYatgs2EUtdmFPs7iLWVGCnXIFvzRI6fTq+08y9N4DrBygT6CoXnC3bxDkBsd0wsOhx/444e7Qum8Jw47pLKayjlGOgJV+KsZ/OSwKUD5kQO+FwSHSZLIgCBY83FO85cyQV4QEFOYSxUM5ISwbKiB/C1gQULbdyFDjDIegRT8BdWsQJiMGSqWnaapJ0bPMYm03IEmSt4ASstMf9ZXyB9+vMY2sOh30naacOpRNxjxZLOycxT5WeRwEMH0n5GdhG+QZ80KGdS3CNhgGAzUN7O+A0inQVC0Gtqq0mugzTX8DmMQJ+7OiiIWBQduyj8kw8COeGSdqe2YYhiFbb/8RoCYIczY8tqDM42jOfb2+7vOVGs0S188fAop3pSykXWW2Vl6RmWGzKFKY88vjGAYHHP7ZfxxyHEbY7yuXQ2HYNCyK6ZiGCHHUufwt58sDixK/V+WXgEVe8JXumTu4ggjoxLDDoCO4orQUHw71DPjLKsuBAKb84XhsIErqe8McWs4d7nc+ARsMWnQ5/jmgvNi5vA4carKUjqb+DOpqYOivC/MrwH8BdbxUuC3NoRIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/69320922b4a716ae669986f76f1f95f8/8ac56/image-20231114204036518.webp 240w,
+/static/69320922b4a716ae669986f76f1f95f8/d3be9/image-20231114204036518.webp 480w,
+/static/69320922b4a716ae669986f76f1f95f8/5431c/image-20231114204036518.webp 933w"
+              sizes="(max-width: 933px) 100vw, 933px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/69320922b4a716ae669986f76f1f95f8/8ff5a/image-20231114204036518.png 240w,
+/static/69320922b4a716ae669986f76f1f95f8/e85cb/image-20231114204036518.png 480w,
+/static/69320922b4a716ae669986f76f1f95f8/dc616/image-20231114204036518.png 933w"
+            sizes="(max-width: 933px) 100vw, 933px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/69320922b4a716ae669986f76f1f95f8/dc616/image-20231114204036518.png"
+            alt="image-20231114204036518"
+            title="image-20231114204036518"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>どうやら、ROP のような形で次の実行コードをスタックにプッシュしてから return するような処理を繰り返すことでデコンパイルを回避しているようです。</p>
+<p>ただし、Ghidra で各セクションを参照することで、それぞれのデコンパイル結果を参照することは可能でした。</p>
+<p>幸いなことに関数のシンボル名はそのままでしたので、以下の Ghidra スクリプトで check_flag 関数から呼び出されている関数名を列挙してみました。</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> ghidra<span class="token punctuation">.</span>program<span class="token punctuation">.</span>flatapi <span class="token keyword">import</span> FlatProgramAPI
+<span class="token keyword">from</span> ghidra<span class="token punctuation">.</span>program<span class="token punctuation">.</span>model<span class="token punctuation">.</span>address <span class="token keyword">import</span> AddressSet
+
+listing <span class="token operator">=</span> currentProgram<span class="token punctuation">.</span>getListing<span class="token punctuation">(</span><span class="token punctuation">)</span>
+fpapi <span class="token operator">=</span> FlatProgramAPI<span class="token punctuation">(</span>currentProgram<span class="token punctuation">)</span>
+start_addr <span class="token operator">=</span> fpapi<span class="token punctuation">.</span>toAddr<span class="token punctuation">(</span><span class="token number">0x1043c9</span><span class="token punctuation">)</span>
+end_addr <span class="token operator">=</span> fpapi<span class="token punctuation">.</span>toAddr<span class="token punctuation">(</span><span class="token number">0x104825</span><span class="token punctuation">)</span>
+
+addr_set <span class="token operator">=</span> AddressSet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+addr_set<span class="token punctuation">.</span>add<span class="token punctuation">(</span>start_addr<span class="token punctuation">,</span> end_addr<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> p <span class="token keyword">in</span> listing<span class="token punctuation">.</span>getInstructions<span class="token punctuation">(</span>addr_set<span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	code <span class="token operator">=</span> p<span class="token punctuation">.</span>toString<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> <span class="token string">"CALL"</span> <span class="token keyword">in</span> code<span class="token punctuation">:</span>
+		func_addr <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>code<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">)</span>
+		fpapi<span class="token punctuation">.</span>getFunctionContaining<span class="token punctuation">(</span>fpapi<span class="token punctuation">.</span>toAddr<span class="token punctuation">(</span>func_addr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getName<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 613px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d7ee5eb130f6310873b9ea604f400387/5754a/image-20231114211206734.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9klEQVQoz61Si4qDMBDM/3/h+cqrjSmcUWjUHqiZZkN7aGlpD29gIVmS2ZndZYgIIaRYlgVCCORZDikkBOcoijzdlZSQUoHH3Mme4JoGzXcD5xy0UvB9T1Rg3ns8AxVYg4rdc3Se53kTlEuERayutcZBH6CURm3q9GCtfE3+WOhRBCNrdW1hjgbGGAzDcPsUNoSfRFJIyprYj7uqdyregWVfGaqySs12rsXl8rOx+2dCUmijZeqj4ALns99HWBYlrLVpFSjCTtusqjjaaLWN+9T3w8vpfkx4jNMlwq7rME3TLru3oeRRWY9xHH+Xc9eUSeF/rQzhCjkNq/ERc5b5AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/d7ee5eb130f6310873b9ea604f400387/8ac56/image-20231114211206734.webp 240w,
+/static/d7ee5eb130f6310873b9ea604f400387/d3be9/image-20231114211206734.webp 480w,
+/static/d7ee5eb130f6310873b9ea604f400387/0abb1/image-20231114211206734.webp 613w"
+              sizes="(max-width: 613px) 100vw, 613px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/d7ee5eb130f6310873b9ea604f400387/8ff5a/image-20231114211206734.png 240w,
+/static/d7ee5eb130f6310873b9ea604f400387/e85cb/image-20231114211206734.png 480w,
+/static/d7ee5eb130f6310873b9ea604f400387/5754a/image-20231114211206734.png 613w"
+            sizes="(max-width: 613px) 100vw, 613px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/d7ee5eb130f6310873b9ea604f400387/5754a/image-20231114211206734.png"
+            alt="image-20231114211206734"
+            title="image-20231114211206734"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>関数名だけ見ていくと、コマンドライン引数で与えられた png ファイルに対しいくつかの処理を行った後、何らかの値を MD5 ハッシュ化して比較する処理であることを予想することができます。</p>
+<p>各関数を 1 つずつチェックしていきます。</p>
+<p>はじめに呼び出されている png<em>create</em>read<em>struct 関数はライブラリ関数で png</em>struct 構造体の初期化を行います。</p>
+<p>続く png<em>create</em>info<em>struct もライブラリ関数で、png</em>info 構造体の初期化を行います。</p>
+<p>参考：<a href="https://refspecs.linuxbase.org/LSB_3.1.0/LSB-Desktop-generic/LSB-Desktop-generic/libpng12.png.create.read.struct.1.html" target="_blank" rel="nofollow noopener noreferrer">png<em>create</em>read_struct</a></p>
+<p>参考：<a href="https://refspecs.linuxbase.org/LSB_3.1.0/LSB-Desktop-generic/LSB-Desktop-generic/libpng12.png.create.info.struct.1.html" target="_blank" rel="nofollow noopener noreferrer">png<em>create</em>info_struct</a></p>
+<p>次の png<em>set</em>longjmp<em>fn 関数、</em>setjmp 関数は、 PDF の読み書き時にエラーが発生した場合の例外処理に使用する longjmp を定義するライブラリ関数のようです。</p>
+<p>参考：<a href="https://www.mm2d.net/main/prog/c/image_io-15.html" target="_blank" rel="nofollow noopener noreferrer">PNG画像の入出力 - 画像ファイル入出力 - 碧色工房</a></p>
+<p>さらに、png<em>init</em>io 関数と png<em>read</em>info もそれぞれライブラリ関数で、png ファイルのデータをメモリに読み込みます。</p>
+<p>参考：<a href="https://refspecs.linuxbase.org/LSB_3.1.0/LSB-Desktop-generic/LSB-Desktop-generic/libpng12.png.init.io.1.html" target="_blank" rel="nofollow noopener noreferrer">png<em>init</em>io</a></p>
+<p>参考：<a href="https://refspecs.linuxbase.org/LSB_3.1.0/LSB-Desktop-generic/LSB-Desktop-generic/libpng12.png.read.image.1.html" target="_blank" rel="nofollow noopener noreferrer">png<em>read</em>image</a></p>
+<p>ここまでくると大体わかりますが、png<em>read</em>info 関数以降も png<em>read</em>image の呼び出しまで libpng のライブラリ関数が使用されます。</p>
+<p>ここまでの一通りの流れを C で実装すると以下のようになります。</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token comment">// gcc read_png.c -lpng</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;png.h></span></span>
+
+<span class="token keyword">void</span> <span class="token function">read_png_file</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    FILE <span class="token operator">*</span>fp <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fp<span class="token punctuation">)</span> <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    png_structp png <span class="token operator">=</span> <span class="token function">png_create_read_struct</span><span class="token punctuation">(</span>PNG_LIBPNG_VER_STRING<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>png<span class="token punctuation">)</span> <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    png_infop info <span class="token operator">=</span> <span class="token function">png_create_info_struct</span><span class="token punctuation">(</span>png<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>info<span class="token punctuation">)</span> <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">setjmp</span><span class="token punctuation">(</span><span class="token function">png_jmpbuf</span><span class="token punctuation">(</span>png<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">png_init_io</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">png_read_info</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> width <span class="token operator">=</span> <span class="token function">png_get_image_width</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> height <span class="token operator">=</span> <span class="token function">png_get_image_height</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    png_byte color_type <span class="token operator">=</span> <span class="token function">png_get_color_type</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    png_byte bit_depth <span class="token operator">=</span> <span class="token function">png_get_bit_depth</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Width: %d, Height: %d\n"</span><span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Color type: %d, Bit depth: %d\n"</span><span class="token punctuation">,</span> color_type<span class="token punctuation">,</span> bit_depth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">size_t</span> row_bytes <span class="token operator">=</span> <span class="token function">png_get_rowbytes</span><span class="token punctuation">(</span>png<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Row bytes: %zu\n"</span><span class="token punctuation">,</span> row_bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">fclose</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>argc <span class="token operator">!=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token constant">stderr</span><span class="token punctuation">,</span> <span class="token string">"Usage: %s &lt;file.png>\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>filename <span class="token operator">=</span> argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">read_png_file</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>これを実行すると対象の png ファイルに関する情報を取得できます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 829px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9119fc4f85944e0c66399d9700ed55a4/9d76a/image-20231115202942736.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 10%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgElEQVQI103GQQuCMABAYY8bQQbSrWBZMZjDyQwsKcUyqUNBh6D+/w95iQR1+HgvOPuGyh0Gp7Si0Udq3eIijw1Tkq/hJw7bM6Ejn3rqWU4939Ct97TLEj/WBO/tnVdx4+mvPFxHqwouq5JdlJDJmEz8kT9OLEh6RiqMUEPtKOYDYR48AlWO7+sAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/9119fc4f85944e0c66399d9700ed55a4/8ac56/image-20231115202942736.webp 240w,
+/static/9119fc4f85944e0c66399d9700ed55a4/d3be9/image-20231115202942736.webp 480w,
+/static/9119fc4f85944e0c66399d9700ed55a4/eb5c2/image-20231115202942736.webp 829w"
+              sizes="(max-width: 829px) 100vw, 829px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/9119fc4f85944e0c66399d9700ed55a4/8ff5a/image-20231115202942736.png 240w,
+/static/9119fc4f85944e0c66399d9700ed55a4/e85cb/image-20231115202942736.png 480w,
+/static/9119fc4f85944e0c66399d9700ed55a4/9d76a/image-20231115202942736.png 829w"
+            sizes="(max-width: 829px) 100vw, 829px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/9119fc4f85944e0c66399d9700ed55a4/9d76a/image-20231115202942736.png"
+            alt="image-20231115202942736"
+            title="image-20231115202942736"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>各処理の内容を理解したところで、 png<em>read</em>image 関数が呼び出されるまでの一連の流れを追ってみます。</p>
+<p>まずは png<em>get</em>image<em>width 関数と png</em>get<em>image</em>height 関数の実行後、Cake83 の箇所で条件分岐が行われます。</p>
+<p>ここでは、png<em>get</em>image<em>width で取得した値が 0x1e0、png</em>get<em>image</em>height で取得した値が 0x14 であるかどうかが検証されています。</p>
+<p>この検証を突破すると、Cake104 以降の箇所で png<em>get</em>color<em>type の結果が 0x0、png</em>get<em>bit</em>depth の値が 1 であるかがチェックされます。</p>
+<p>png<em>get</em>color<em>type 関数で取得できる PNG</em>COLOR_TYPE が 0x0 のものは、2 値のグレースケール画像であることを意味します。</p>
+<p>また、png<em>get</em>bit_depth は 1 画素当たりの bit 数を取得します。</p>
+<p>このような PNG ファイルは以下のコードで生成できます。</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+width<span class="token punctuation">,</span> height <span class="token operator">=</span> <span class="token number">0x1e0</span><span class="token punctuation">,</span> <span class="token number">0x14</span>
+mode <span class="token operator">=</span> <span class="token string">"1"</span>
+image <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span>mode<span class="token punctuation">,</span> <span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">)</span>
+image<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span></code></pre></div>
+<p>実際に自作したプログラムで検証すると想定通りの結果が返却されました。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/92f61ca29f560299be01de84aec3ac76/f4b77/image-20231115210252054.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 10%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiklEQVQI103Luw6CQABEUUrAV6CwUSMsFgjLiuJGIYCQQGFCaeL/f8l1Ey0sTjGTGauXDa2qqZOSUXY00QO9uSOXErnKOPqGl/2yIjWd8s+U6xPNtqDdXRmiCu0lZI7AehVP3npiijtGUTEEN3ozurgHclug3K/c+WOH5hwSzwJi13D2JHNBuoj4APgLOumbxOObAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/92f61ca29f560299be01de84aec3ac76/8ac56/image-20231115210252054.webp 240w,
+/static/92f61ca29f560299be01de84aec3ac76/d3be9/image-20231115210252054.webp 480w,
+/static/92f61ca29f560299be01de84aec3ac76/cf403/image-20231115210252054.webp 770w"
+              sizes="(max-width: 770px) 100vw, 770px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/92f61ca29f560299be01de84aec3ac76/8ff5a/image-20231115210252054.png 240w,
+/static/92f61ca29f560299be01de84aec3ac76/e85cb/image-20231115210252054.png 480w,
+/static/92f61ca29f560299be01de84aec3ac76/f4b77/image-20231115210252054.png 770w"
+            sizes="(max-width: 770px) 100vw, 770px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/92f61ca29f560299be01de84aec3ac76/f4b77/image-20231115210252054.png"
+            alt="image-20231115210252054"
+            title="image-20231115210252054"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>この png ファイルを使用するとすべての検証を突破できるので、Cake160 以降の処理に進むことができるようになります。</p>
+<p>その後は何かを MD5 ハッシュ化した値と answer にハードコードされたバイト列を memcmp で比較するような処理を width の回数ループします。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 843px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1ebb5315f96b136aed67b76a99de6dfd/4ff83/image-20231115211247198.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmklEQVQoz4VSi07DMBDr/38iQmyw7tWubdZHHndpjJMOBAhEJSdtkjq276qoEUM/YBwV4x2EEB5AxDJ3mN2MyVsgcYmDVw9dlYgIGqBRuRawritSSqgkCA6HGpezQ98DzikMCdMqaG8XuBAQRFHoUmH99nxdy6RVIOF+94ozCe8mEwqaZuGm4HXf4fBmobqpyz8XPN5jjJ/IZHmu8tB3A6yVcotKxDSFfB8C1Xkf/1T08ykK8+CcI2JRMk3+QZggzKbkVGZB5NkpzCWzvD77mZHwvJ94RrcMs+Xdyx7H2hbL/mE5QXHvWgytoRWFEJnwQ+VPfCoUBn4+XXBrPa2DlSVRLkoSkl3RNwMWVjqIhbdUPuJbjr8QCk71Cc3Vwwwsit2qDBL25lTaJK4RW9/8nd+mnIRmDnh6PmD35tBQoZkF9WVh/yle9jd0JhFUHhKsEGFD/s5nJmIhx8Ia5O/KB8XxeEbTMuQFrGwsCoUh1/UN1+vCd7YI44tr+h3czLNyrnJ1cobG0BqdCS/oe5cbiEUa0XX2i9X/Lb8DQjVbvfbvHpMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/1ebb5315f96b136aed67b76a99de6dfd/8ac56/image-20231115211247198.webp 240w,
+/static/1ebb5315f96b136aed67b76a99de6dfd/d3be9/image-20231115211247198.webp 480w,
+/static/1ebb5315f96b136aed67b76a99de6dfd/e3019/image-20231115211247198.webp 843w"
+              sizes="(max-width: 843px) 100vw, 843px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/1ebb5315f96b136aed67b76a99de6dfd/8ff5a/image-20231115211247198.png 240w,
+/static/1ebb5315f96b136aed67b76a99de6dfd/e85cb/image-20231115211247198.png 480w,
+/static/1ebb5315f96b136aed67b76a99de6dfd/4ff83/image-20231115211247198.png 843w"
+            sizes="(max-width: 843px) 100vw, 843px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/1ebb5315f96b136aed67b76a99de6dfd/4ff83/image-20231115211247198.png"
+            alt="image-20231115211247198"
+            title="image-20231115211247198"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>さらにそのループの中では、取得した png ファイルの height の回数繰り返される別のループが実行されます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 676px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4a934f6f57a57b83d6f89fd19127612d/9bb7a/image-20231116002338484.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxElEQVQY042QSW7DQAwE9f//BckhgWXJkizL9oyW2ZcKnRxzCYEGiSZRaLBx1uJdJATIubJqyzhsWBupRXxvZO+J0ZOTx6dArQUTdp72CVRMNGinsdKbrp/oBTBeQW0VFwvTzZAq6G3jdL7QdVeWeUbvcqdXtHGkjMCrCEIqhEPjQ6T5agdO/Uo/wrRUdlfoxgMrh8tD8fE58/Z+53H/9Q7/Slf/SsgmFEnYtgwXRYr8xC9FgGf1GinZsm87Sjl5R+E/9Q09aDVdlBFAGgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4a934f6f57a57b83d6f89fd19127612d/8ac56/image-20231116002338484.webp 240w,
+/static/4a934f6f57a57b83d6f89fd19127612d/d3be9/image-20231116002338484.webp 480w,
+/static/4a934f6f57a57b83d6f89fd19127612d/0ed05/image-20231116002338484.webp 676w"
+              sizes="(max-width: 676px) 100vw, 676px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4a934f6f57a57b83d6f89fd19127612d/8ff5a/image-20231116002338484.png 240w,
+/static/4a934f6f57a57b83d6f89fd19127612d/e85cb/image-20231116002338484.png 480w,
+/static/4a934f6f57a57b83d6f89fd19127612d/9bb7a/image-20231116002338484.png 676w"
+            sizes="(max-width: 676px) 100vw, 676px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4a934f6f57a57b83d6f89fd19127612d/9bb7a/image-20231116002338484.png"
+            alt="image-20231116002338484"
+            title="image-20231116002338484"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>このループの中で行われている処理は png<em>read</em>image 関数の第 2 引数で指定された情報の読み取り先アドレスからデータを取得した後に行われていることはわかるのですが、処理が細かくて読み切れませんでした。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 773px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2a59f253c5bd43d2f70b64eee4f6c1ca/612f7/image-20231115234053043.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 95.83333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAACZUlEQVQ4y4WUi5aiMBBE/f+PXGcUFYRAeOVFktpKgFn17GjmMMEQLtXd1TksywJrHZwDQgD6XkMp/kDEsliuL5wdFs/ZezjvILVEiAGznTHqCdoZ9LqH476DaASOfwrcKxAMTJNFXc8EBoxjC9EKzGriZgvFF2OM8MHzc9xBeFgMhYR1jc+egOMAzLND12luXyCagsCGihPQwFBBJu3DUwHVwoyAU3np0NQEHguUNz4jRyn7A6yrEy6XK9quhmJoytmsIv/lGf/ut9+HVrT4/rowTCIWQpm/FHKMSeEXUyBhmOAYU1ghv5hGnuOj3LyIQ9d2KM4lhEAujNZuy6HHMAl4gl7HDsUOfYBn4Ol0RdNQoX8EBkyjYKEMlhRqCE+w+KpuGxl4Pl9RVakgK1AIxco53K4FrwrD0GV7JPvssN+unMPTqWSuVtVaL2hbnUOWUvJDM7x/r+pJoWPitLbYIqL3bLbOa852WPLbZCcaO0LTSsqqbOiZs6fxD73sUZYNK7qGnCyzF0U0KRV3DL3AqAZINeUOSaD0AUtjG5o9dZHhWgYmH55Pt2ybvcqrDz1qUaCfBnaEz8pS630MOXXKmbZpNuA8WxZlM3ZbUI39b/hvi1IUVfZhGulg2DulJXDZgI8vfbRNArbt2ikJ2PeGbxAor/lQeC5M3Hz8DnhegbtCKU3OYU+g968Vz/9/z2E2NouSOiVZ5wdIhZ28sRgrMOQ+Dp9zmICXosxVVvN6OEip+dDRTldeAkbP9JmGNdNbdevx1XQ4fpc8CBgk946TQ1XTpJGd0o+48964QP8lUzPPvHl3/QUUuczsbJAhOwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/2a59f253c5bd43d2f70b64eee4f6c1ca/8ac56/image-20231115234053043.webp 240w,
+/static/2a59f253c5bd43d2f70b64eee4f6c1ca/d3be9/image-20231115234053043.webp 480w,
+/static/2a59f253c5bd43d2f70b64eee4f6c1ca/c99d1/image-20231115234053043.webp 773w"
+              sizes="(max-width: 773px) 100vw, 773px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/2a59f253c5bd43d2f70b64eee4f6c1ca/8ff5a/image-20231115234053043.png 240w,
+/static/2a59f253c5bd43d2f70b64eee4f6c1ca/e85cb/image-20231115234053043.png 480w,
+/static/2a59f253c5bd43d2f70b64eee4f6c1ca/612f7/image-20231115234053043.png 773w"
+            sizes="(max-width: 773px) 100vw, 773px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/2a59f253c5bd43d2f70b64eee4f6c1ca/612f7/image-20231115234053043.png"
+            alt="image-20231115234053043"
+            title="image-20231115234053043"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>ただし、このループの直後に MD5 関数の第 1 引数に与えられる文字列のアドレスは、このループの中で値が格納されているアドレスと一致します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 876px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/916894254f63b3e9d0078933d5b0d110/1b1d5/image-20231116002320041.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 42.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgUlEQVQoz21R2W7bQAzc//+NPDRFi8Cwk5f+RYFchWHZsKxzrcPWStZenFJrJ3HacDAYkiJFgit+Z0s8yRIrVeCl2iA2GR7LJzzLZ6zVEq/dEn/6CJtxi9RlSHyO9MLEZ/9ROOtBHjDao61P0KPj2MEaA2ctnHNMD+sMlO5BREFHq/GViTw/QEpAG0JdD/Ce0NQSSVKw7tGfjmgHBc9TJxI3ec2xOQV/GnBNsY33aFre0BKqSvEmDk1TYb2p0akxTJ0K34xA7951LvyQIXTvzlmWrrE8/lxL5lNPyFvrQs6xkp2Ut7aE6xli1cSI2grRocCy2qIkid2wYkZY9RvkfHzJyPjgsY1RUIGd3SG1adDEJtxTIoBV3KQ/8K36hZl+wPd2hrlf4K67xd3wEzM3x5wWmHDPeGC8+ddYTDUXiijh5640DmbAttyjcwrpXuJlXSE/KJwYAw0fZCiuUa7D0XZQXl1iFb6LWvKL2fMJjo0G8ZmcGdG1ml+S/r3/Z/8L+wsfc68Rsk045wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/916894254f63b3e9d0078933d5b0d110/8ac56/image-20231116002320041.webp 240w,
+/static/916894254f63b3e9d0078933d5b0d110/d3be9/image-20231116002320041.webp 480w,
+/static/916894254f63b3e9d0078933d5b0d110/21dbd/image-20231116002320041.webp 876w"
+              sizes="(max-width: 876px) 100vw, 876px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/916894254f63b3e9d0078933d5b0d110/8ff5a/image-20231116002320041.png 240w,
+/static/916894254f63b3e9d0078933d5b0d110/e85cb/image-20231116002320041.png 480w,
+/static/916894254f63b3e9d0078933d5b0d110/1b1d5/image-20231116002320041.png 876w"
+            sizes="(max-width: 876px) 100vw, 876px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/916894254f63b3e9d0078933d5b0d110/1b1d5/image-20231116002320041.png"
+            alt="image-20231116002320041"
+            title="image-20231116002320041"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>このあたりの動的解析を行ってみると、すべてのピクセルが白い画像を与えた場合には MD5 関数に与えられる 3 バイトが 0x0FFFF になりました。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 958px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b52e36baeb458fa08fdc5c208f11e418/b97f6/image-20231115235853373.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.916666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVQ4y31TaVPaUBTNh06VnYAIBhACsmV52QNkg6BUHDto1bH7TNv//x9Ob561M3bafjhzs92bs9wnqGKEiZhiVo0QtFxEvRSG6EMvqAiOdSSSg/jERtyywIpnUEtDaMUhjPwZr1rpJYS4v4FWdumlhUWDYV43wPJjmPkR7OIYjjiDXcswhU4DdRryPwiKmGBUWWEqrhC1fSS9FVjZIoYKFnWNM1EOelByfah5mYMz+weE9ckSccOHVzax6dN1Z47ghO5rOklmXO6mN0dy6iLukvyuC6M8+sXo7A/QwGt1h7AdgRGjeV1FSk0bal61bTjlCTEcwi6NufxnsIMB9Ncy9AP5Zc0NIARShOg0hV11sGzacGsO3LqPUFpgTYEkWSCELJzg2EDYNHlASdvBquNiTeC161GvAsGVPPidJVxpjt0wRnhEPkoxdnKC9XiOc3OFCyXE5TQixNiOQ9x5V0h7PlfgVmeEKa9maQTBl3zEPZLctOAXpnBqDMYRg1vUwIiJ1dAQVVUKSIfVMmA3DTgSPRc1aCRRLRIKT9AIwrfNI35sP+LRu8atfYUvqwfc2zsYJfprTYPf0OG3swEzGAUKI0dpvupDI8/Y4YCD+5fVLJTP8R0NuceeXeDW2OJTdMuvncoEYddC0CevZgGWfRt6bUL2mEhPPUreR0QKMk/XHQ9hy+Qsha807PvFe7yz3mCvn+PDco8bPlChFVogzhraLgJa+gUxXh7pcCsz7lnmoZ35WJnyyvfwYX6Dt+YeiZxi0XRwOQqxHQSwCnRKylN41Jgx8UUFIaW8oIFPnsm/vXv2j0tOBwmUkotJwQUrMUqY/CqPoefpA9rBrGqH8lPNyRysMPzrMcwY/gSBZoAYbr0ddQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/b52e36baeb458fa08fdc5c208f11e418/8ac56/image-20231115235853373.webp 240w,
+/static/b52e36baeb458fa08fdc5c208f11e418/d3be9/image-20231115235853373.webp 480w,
+/static/b52e36baeb458fa08fdc5c208f11e418/cb8de/image-20231115235853373.webp 958w"
+              sizes="(max-width: 958px) 100vw, 958px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/b52e36baeb458fa08fdc5c208f11e418/8ff5a/image-20231115235853373.png 240w,
+/static/b52e36baeb458fa08fdc5c208f11e418/e85cb/image-20231115235853373.png 480w,
+/static/b52e36baeb458fa08fdc5c208f11e418/b97f6/image-20231115235853373.png 958w"
+            sizes="(max-width: 958px) 100vw, 958px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/b52e36baeb458fa08fdc5c208f11e418/b97f6/image-20231115235853373.png"
+            alt="image-20231115235853373"
+            title="image-20231115235853373"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>一方で、すべてのピクセルが黒い画像を与えると、この値は 0x000000 になりました。</p>
+<p>以上の確認結果から、このプログラムでは画像から取得した何らかの値を 3 バイト分の入力として、MD5 ハッシュ関数としていることがわかります。</p>
+<p>実際に、バイナリ側で 0x0FFFFF のハッシュを取った結果と Python の <code class="language-text">hashlib.md5(b"\xff\xff\x0f").hexdigest()</code> で取得する結果が一致します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7f887efe9cdc95f006f75a354472b577/00172/image-20231116203828245.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZElEQVQ4y42T2VPaUBTG81ItixIWLbghhkSIuVkwCwmriAKKgmvRaavTaWf60pn+/y9fTy5uODrjw2/O3NxzvpztCt/bl/h5MMGlc4QTbR9fqye4co9hxRXYKRVuZgfBqgknrcJaUKBHJLC5ArS5TbD5wjP0zaA74ffgG/4M70joFNfeEHd7V7itjWEnSqjnd1Er2GizOoItByy9jcoqQzvvYm/DRSNnoZ41uW2t2ZSEDOG+c41fvVtcVHoY6V1MghGuKFszpqCxHqCxUuHOoXXEMry0hmqawUvt8LOTIESVn81oEcKkdo5z7wLd7R5qKx6OSk2csi4Xaa973LFJYv4S49nUsxYPDMvUP2/NwEvuSC1ooodSzIYWN9DMmTiQAhzKTXQ2A3KUqF8FbtkDBgkaUYULv0YwltuQEx0o6T7cbIBgYw9qfBdaMkAz30Brw4ed1KFHt2HEykQJ+gOhsBmZ/uBJ0PxCYuI+5NQAftbBWaWPU6OHem6XO4d9Ch3Dcsw3eBR9FswdQkoOUMyMEeQ83O/f4N/kL3pKCwb1xaFphxM3ox8UtFIOtAUbqliDldFhLfswMnWUYzTVtIUmldxY82ZKnVJ+6OVjT6cIJ5IPP6GhvFCFmqHAJR81yrQqKnATtNyLFDxPQZGwbHmGtzIW2qsGDYOhssygU2mMesZISIvTZBclWLTMhijTXZGQX/D6PEW4aZ7jR4deR2OMIetgZHbRp13sl1s0YXodEdqvWPHDCNfuECPjAGPjkNszq4dBqYVuweev473pvofgJtVp0ItdCs/apzx/DeZT42eb/x7/Adw8nYZLQBoVAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/7f887efe9cdc95f006f75a354472b577/8ac56/image-20231116203828245.webp 240w,
+/static/7f887efe9cdc95f006f75a354472b577/d3be9/image-20231116203828245.webp 480w,
+/static/7f887efe9cdc95f006f75a354472b577/e46b2/image-20231116203828245.webp 960w,
+/static/7f887efe9cdc95f006f75a354472b577/bdcfb/image-20231116203828245.webp 1044w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/7f887efe9cdc95f006f75a354472b577/8ff5a/image-20231116203828245.png 240w,
+/static/7f887efe9cdc95f006f75a354472b577/e85cb/image-20231116203828245.png 480w,
+/static/7f887efe9cdc95f006f75a354472b577/d9199/image-20231116203828245.png 960w,
+/static/7f887efe9cdc95f006f75a354472b577/00172/image-20231116203828245.png 1044w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/7f887efe9cdc95f006f75a354472b577/d9199/image-20231116203828245.png"
+            alt="image-20231116203828245"
+            title="image-20231116203828245"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>0x14 回のループの中で画像の情報から取得したを何らかの値を 3 バイト分のデータとしていることから、画像の各ピクセルを 0x14 bit分取得し、4 bit 分は Null としている可能性が考えられます。</p>
+<p>これを確かめるため、以下のようなスクリプトで各ピクセルの白黒を交互に設定した画像を生成して動的解析を行いました。</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> random
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+<span class="token keyword">def</span> <span class="token function">get_pixel_data</span><span class="token punctuation">(</span>image_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>image_path<span class="token punctuation">)</span>
+    image <span class="token operator">=</span> image<span class="token punctuation">.</span>convert<span class="token punctuation">(</span><span class="token string">'L'</span><span class="token punctuation">)</span>
+    pixel_data <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>image<span class="token punctuation">.</span>getdata<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    width<span class="token punctuation">,</span> height <span class="token operator">=</span> image<span class="token punctuation">.</span>size
+    pixel_data_2d <span class="token operator">=</span> <span class="token punctuation">[</span>pixel_data<span class="token punctuation">[</span>i <span class="token operator">*</span> width<span class="token punctuation">:</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> width<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> pixel_data_2d
+
+width<span class="token punctuation">,</span> height <span class="token operator">=</span> <span class="token number">0x1e0</span><span class="token punctuation">,</span> <span class="token number">0x14</span>
+mode <span class="token operator">=</span> <span class="token string">"1"</span>
+image <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span>mode<span class="token punctuation">,</span> <span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>height<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> j <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            data<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            data<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+image<span class="token punctuation">.</span>putdata<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+image<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span>
+
+pixels <span class="token operator">=</span> get_pixel_data<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> pixel <span class="token keyword">in</span> pixels<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>pixel<span class="token punctuation">)</span></code></pre></div>
+<p>ここで生成した画像は以下のように縦に白黒の線となります。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 553px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9eb724a6ce7f9b37e126b9e79f17b796/74cfa/image-20231116204544777.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.916666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABK0lEQVQoz61RW8uCUBD0z0mgBElPgg9SJIThhZRual7QLmoF9eC/3Y8ZOP/gexh22J3Zs2dXm8/nYpqmLBYLAdd1XZbLJXOz2YzRMAyxLIscdeiUTwF1QHs+n9J1nXw+HwE/Ho8yTZO0bStZlrFW17X8fj/yw+FAnfIB0H6/X0Iry5JGJMHDMJRxHJnb7/eMp9NJHo8HeRAE1AF5njN3uVzkfr8TGl4vikJutxsnieNY3u83xWmasgZD3/fkURRRp3wAtGrq/29YVRUT2AU4DK/Xi19JkoS18/lMMThWAh2gmkGLlQCaWvowDGyKqXAA5LA7xOv1yqOB4xF1jKZpCDTHrwBts9nIer2W7XYrnueJbducYrVaieM4jK7rym63ow516JQPgMb3feIPRkZ+0sihWe8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/9eb724a6ce7f9b37e126b9e79f17b796/8ac56/image-20231116204544777.webp 240w,
+/static/9eb724a6ce7f9b37e126b9e79f17b796/d3be9/image-20231116204544777.webp 480w,
+/static/9eb724a6ce7f9b37e126b9e79f17b796/e58ce/image-20231116204544777.webp 553w"
+              sizes="(max-width: 553px) 100vw, 553px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/9eb724a6ce7f9b37e126b9e79f17b796/8ff5a/image-20231116204544777.png 240w,
+/static/9eb724a6ce7f9b37e126b9e79f17b796/e85cb/image-20231116204544777.png 480w,
+/static/9eb724a6ce7f9b37e126b9e79f17b796/74cfa/image-20231116204544777.png 553w"
+            sizes="(max-width: 553px) 100vw, 553px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/9eb724a6ce7f9b37e126b9e79f17b796/74cfa/image-20231116204544777.png"
+            alt="image-20231116204544777"
+            title="image-20231116204544777"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>実際にこの画像を使用してみたところ、MD5 関数への引数が 0x0FFFFF となるものと 0x000000 となるものが交互に現れるようになりました。</p>
+<p>これで、あとは answer の値がわかれば正しい Flag の値を総当たりで求めることができそうです。</p>
+<p>バイト列 answer は 3840 バイト定義されています。</p>
+<p>これは、witdh で指定されている 480 の 8 倍の数です。</p>
+<p>つまり、ちょうど MD5 のハッシュダイジェスト 32 文字分のサイズと一致します。</p>
+<p>ここまで分かれば後は Solver を書くだけです。</p>
+<p>ただ、少々厄介だったのが、比較対象のバイト列がバイト領域 answer にそのまま埋まっているわけではない点です。</p>
+<p>answer の各 8 バイト領域には 0x5004 のような形で回答となるバイト列が格納されている仮想アドレスが示されています。</p>
+<p>ここから適切な値を抽出して Flag 画像を復元するために以下の Solver を作成しました。</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> struct<span class="token punctuation">,</span>hashlib
+<span class="token keyword">import</span> binascii
+
+answer <span class="token operator">=</span> <span class="token operator">&lt;</span>answer のバイト列<span class="token operator">></span>
+table <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token number">0x5000</span> 以降のバイト列<span class="token operator">></span>
+
+A <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3840</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    addr <span class="token operator">=</span> struct<span class="token punctuation">.</span>unpack<span class="token punctuation">(</span><span class="token string">"&lt;Q"</span><span class="token punctuation">,</span> answer<span class="token punctuation">[</span>i<span class="token punctuation">:</span>i<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">0x5000</span>
+    <span class="token comment"># print(hex(addr))</span>
+    A<span class="token punctuation">.</span>append<span class="token punctuation">(</span>binascii<span class="token punctuation">.</span>hexlify<span class="token punctuation">(</span>table<span class="token punctuation">[</span>addr<span class="token punctuation">:</span>addr<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+B <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1048576</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    h <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span>i<span class="token punctuation">.</span>to_bytes<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span>byteorder<span class="token operator">=</span><span class="token string">"little"</span><span class="token punctuation">,</span>signed<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    B<span class="token punctuation">[</span>h<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> i
+
+line <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> a <span class="token keyword">in</span> A<span class="token punctuation">:</span>
+    i <span class="token operator">=</span> B<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
+    line<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">:</span><span class="token format-spec">#020b</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+width<span class="token punctuation">,</span> height <span class="token operator">=</span> <span class="token number">0x1e0</span><span class="token punctuation">,</span> <span class="token number">0x14</span>
+mode <span class="token operator">=</span> <span class="token string">"1"</span>
+image <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span>mode<span class="token punctuation">,</span> <span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0x14</span><span class="token operator">*</span><span class="token number">0x1e0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0x1e0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    l <span class="token operator">=</span> line<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0x14</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> l<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"1"</span><span class="token punctuation">:</span>
+            data<span class="token punctuation">[</span><span class="token number">480</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">0x13</span><span class="token operator">-</span>j<span class="token punctuation">)</span> <span class="token operator">+</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            data<span class="token punctuation">[</span><span class="token number">480</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">0x13</span><span class="token operator">-</span>j<span class="token punctuation">)</span> <span class="token operator">+</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+
+image<span class="token punctuation">.</span>putdata<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+image<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span></code></pre></div>
+<p>この Solver  を実行すると、以下のように正しい Flag を含む画像を生成できます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 778px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/20982/image-20231116221523276.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 23.333333333333332%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnklEQVQY062PzQqEMAyE+wb+nit9rB61tqBWbNVS8OVnSRYXD3tZ2MPHpBmSTkRVVXhS1/XP0Fzbtui6DmKeZ0zTxCzLgr7vGWMMhmGAtRbjODJUO+dYb5/63ntorSGlhMg5I4SA67qYbduwrisvp/o8T/ZTStj3nYkxft7HcYB20AecsCxLjlwUBfM8nfT2SW++9ZumeSdUSuFfUMIXgOSkLCDkLBwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/8ac56/image-20231116221523276.webp 240w,
+/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/d3be9/image-20231116221523276.webp 480w,
+/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/10884/image-20231116221523276.webp 778w"
+              sizes="(max-width: 778px) 100vw, 778px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/8ff5a/image-20231116221523276.png 240w,
+/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/e85cb/image-20231116221523276.png 480w,
+/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/20982/image-20231116221523276.png 778w"
+            sizes="(max-width: 778px) 100vw, 778px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/e97c2c2bd8224feb6fe7b2d5b6c63ae9/20982/image-20231116221523276.png"
+            alt="image-20231116221523276"
+            title="image-20231116221523276"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <h2 id="追記vtable4bpwn" style="position:relative;"><a href="#%E8%BF%BD%E8%A8%98vtable4bpwn" aria-label="追記vtable4bpwn permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>追記：vtable4b(Pwn)</h2>
 <blockquote>
 <p>Do you understand what vtable is?</p>
@@ -966,4 +1673,4 @@ target<span class="token punctuation">.</span>interactive<span class="token punc
         </picture>
   </a>
     </span></p>
-<p>参考：<a href="https://techbookfest.org/product/bnaHM8sVz6AfEiF8jgpELj?productVariantID=bXvgf8g2KDpRRVJ9pBZJXH&#x26;utm_campaign=share&#x26;utm_medium=social&#x26;utm_source=twitter" target="_blank" rel="nofollow noopener noreferrer">Magical WinDbg -雰囲気で楽しむ Windows ダンプ解析とトラブルシューティング-：かえるのほんだな</a></p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Nov 12, 2023</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ctf/">CTF</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/rev/">Rev</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたいCTF Player(Team: 0nePadding)。WinDbgとYARAが好き。OSCP / CISSP / AtCoder 緑 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ctf-cakectf-2023";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-3c6584a5d7e2e261544c.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-70ba56c0f46525baa629.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-3c6584a5d7e2e261544c.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-0c55613236457468f588.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-a3c0f166cb4b802ff58f.js" async=""></script></body></html>
+<p>参考：<a href="https://techbookfest.org/product/bnaHM8sVz6AfEiF8jgpELj?productVariantID=bXvgf8g2KDpRRVJ9pBZJXH&#x26;utm_campaign=share&#x26;utm_medium=social&#x26;utm_source=twitter" target="_blank" rel="nofollow noopener noreferrer">Magical WinDbg -雰囲気で楽しむ Windows ダンプ解析とトラブルシューティング-：かえるのほんだな</a></p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Nov 12, 2023</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ctf/">CTF</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/rev/">Rev</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたいCTF Player(Team: 0nePadding)。WinDbgとYARAが好き。OSCP / CISSP / AtCoder 緑 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ctf-cakectf-2023";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-9c6ce4573336a0b7cae2.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-70ba56c0f46525baa629.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-9c6ce4573336a0b7cae2.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-0254dddef07d157c7678.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-a3c0f166cb4b802ff58f.js" async=""></script></body></html>

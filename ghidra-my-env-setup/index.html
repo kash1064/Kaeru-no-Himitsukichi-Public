@@ -58,16 +58,22 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">CTFのためのGhidra環境構築メモ - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" property="og:site_name" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><link as="script" rel="preload" href="/webpack-runtime-a3c0f166cb4b802ff58f.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-9041e377927b32f01060.js"/><link as="script" rel="preload" href="/app-a3514686dadc4530a86a.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ghidra-my-env-setup/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">CTFのためのGhidra環境構築メモ</h1><div class="Content-module--content__body--2TrQ-"><p>今回はCTFのためにセットアップしているGhidraの環境構築方法をメモしておきます。</p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">CTFのためのGhidra環境構築メモ - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" property="og:site_name" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="CTFのためのGhidra環境構築メモ - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/faaaedfa665aedb5e7d96f2db78d4f94/ghidra-my-env-setup.png"/><link as="script" rel="preload" href="/webpack-runtime-a3c0f166cb4b802ff58f.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-dc4461458952c198375d.js"/><link as="script" rel="preload" href="/app-e02f8e389a3ee69c0504.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-381c1b847824134fa4bd.js"/><link as="fetch" rel="preload" href="/page-data/ghidra-my-env-setup/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">CTFのためのGhidra環境構築メモ</h1><div class="Content-module--content__body--2TrQ-"><p>今回はCTFのためにセットアップしているGhidraの環境構築方法をメモしておきます。</p>
 <p>Ghidraのインストールについては公式の<a href="https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/InstallationGuide.html" target="_blank" rel="nofollow noopener noreferrer">Ghidra Installation Guide</a>のままなので割愛します。</p>
 <p>参考：<a href="https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/InstallationGuide.html" target="_blank" rel="nofollow noopener noreferrer">Ghidra Installation Guide</a></p>
 <!-- omit in toc -->
 <h2 id="もくじ" style="position:relative;"><a href="#%E3%82%82%E3%81%8F%E3%81%98" aria-label="もくじ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>もくじ</h2>
 <ul>
 <li>
-<p><a href="#code-brouser%E3%81%AE%E8%A8%AD%E5%AE%9A">Code Brouserの設定</a></p>
+<p><a href="#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A">基本設定</a></p>
 <ul>
-<li><a href="#listing-binary%E3%81%AE%E8%A1%8C%E9%96%93">Listing Binaryの行間</a></li>
+<li><a href="#markup-register-variable-references-%E3%81%AE%E7%84%A1%E5%8A%B9%E5%8C%962024%E5%B9%B46%E6%9C%88-%E8%BF%BD%E8%A8%98">Markup Register Variable References の無効化(2024年6月 追記)</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#code-brouser-%E3%81%AE%E8%A8%AD%E5%AE%9A">Code Brouser の設定</a></p>
+<ul>
+<li><a href="#listing-binary-%E3%81%AE%E8%A1%8C%E9%96%93">Listing Binary の行間</a></li>
 <li><a href="#key-binding%E3%81%AE%E8%A8%AD%E5%AE%9A">Key bindingの設定</a></li>
 <li><a href="#%E3%83%87%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%81%AE%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88">デコンパイラウィンドウのコメント</a></li>
 <li><a href="#xref%E3%81%AE%E8%A1%A8%E7%A4%BA%E8%A8%AD%E5%AE%9A%E3%81%AE%E8%BF%BD%E5%8A%A0">XRefの表示設定の追加</a></li>
@@ -80,9 +86,6 @@
 <li><a href="#ghidra-develop-tools%E3%82%92eclipse%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B">Ghidra Develop ToolsをEclipseにインストールする</a></li>
 </ul>
 </li>
-<li><a href="#gotools-%E3%81%AE%E5%B0%8E%E5%85%A5">gotools の導入</a></li>
-<li><a href="#ghidrust-%E3%81%AE%E5%B0%8E%E5%85%A5">GhidRust の導入</a></li>
-<li><a href="#ghidra-wasm-plugin-%E3%81%AE%E5%B0%8E%E5%85%A5">ghidra-wasm-plugin の導入</a></li>
 <li><a href="#ghidra-findcrypt-%E3%81%AE%E5%B0%8E%E5%85%A5">ghidra-findcrypt の導入</a></li>
 <li>
 <p><a href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A">スクリプトの設定</a></p>
@@ -93,16 +96,73 @@
 </li>
 <li><a href="#ghirathon-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%A6-python3-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Blinux">Ghirathon をセットアップして Python3 のインタプリタを使用する(Linux)</a></li>
 <li><a href="#ghirathon-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%A6-python3-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Bwindos">Ghirathon をセットアップして Python3 のインタプリタを使用する(Windos)</a></li>
-<li><a href="#%E3%81%8A%E3%81%BE%E3%81%91ui%E3%81%AE%E5%A4%89%E6%9B%B4">おまけ：UIの変更</a></li>
-<li><a href="#ghidra%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982022%E5%B9%B412%E6%9C%88">Ghidraダークモードで使用する(追記：2022年12月)</a></li>
+<li><a href="#ghidra-%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982024%E5%B9%B46%E6%9C%88">Ghidra ダークモードで使用する(追記：2024年6月)</a></li>
 <li><a href="#ghidra-%E3%81%AE%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92-gdb-%E3%81%8B%E3%82%89%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B2023-%E5%B9%B4--1-%E6%9C%88-%E8%BF%BD%E8%A8%98">Ghidra の解析結果を GDB から利用する(2023 年  1 月 追記)</a></li>
 <li><a href="#ghidra-data-type-%E3%81%AE%E8%BF%BD%E5%8A%A02023-%E5%B9%B4-3-%E6%9C%88%E8%BF%BD%E8%A8%98">Ghidra Data Type の追加(2023 年 3 月追記)</a></li>
 <li><a href="#ghidra-%E3%81%AB-pdb-%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B2023-%E5%B9%B4-3-%E6%9C%88%E8%BF%BD%E8%A8%98">Ghidra に PDB をロードする(2023 年 3 月追記)</a></li>
+<li>
+<p><a href="#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96">アーカイブ</a></p>
+<ul>
+<li><a href="#gotools-%E3%81%AE%E5%B0%8E%E5%85%A52024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96">gotools の導入(2024年6月 アーカイブ化)</a></li>
+<li><a href="#%E3%81%8A%E3%81%BE%E3%81%91ui%E3%81%AE%E5%A4%89%E6%9B%B42024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96">おまけ：UIの変更(2024年6月 アーカイブ化)</a></li>
+<li><a href="#ghidra-%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982022%E5%B9%B412%E6%9C%882024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96">Ghidra ダークモードで使用する(追記：2022年12月)(2024年6月 アーカイブ化)</a></li>
+<li><a href="#ghidrust-%E3%81%AE%E5%B0%8E%E5%85%A52024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96">GhidRust の導入(2024年6月 アーカイブ化)</a></li>
+<li><a href="#ghidra-wasm-plugin-%E3%81%AE%E5%B0%8E%E5%85%A52024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96">ghidra-wasm-plugin の導入(2024年6月 アーカイブ化)</a></li>
+</ul>
+</li>
 <li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
 </ul>
-<h2 id="code-brouserの設定" style="position:relative;"><a href="#code-brouser%E3%81%AE%E8%A8%AD%E5%AE%9A" aria-label="code brouserの設定 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Brouserの設定</h2>
+<h2 id="基本設定" style="position:relative;"><a href="#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A" aria-label="基本設定 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基本設定</h2>
+<h3 id="markup-register-variable-references-の無効化2024年6月-追記" style="position:relative;"><a href="#markup-register-variable-references-%E3%81%AE%E7%84%A1%E5%8A%B9%E5%8C%962024%E5%B9%B46%E6%9C%88-%E8%BF%BD%E8%A8%98" aria-label="markup register variable references の無効化2024年6月 追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Markup Register Variable References の無効化(2024年6月 追記)</h3>
+<p>現在の Ghidra のデフォルトの設定では、デコンパイラウインドウなどから変数を変更すると、Listing ウインドウ内のレジスタ情報がまとめてリネームされてしまう場合があるため非常に不便です。</p>
+<p>この問題を解決するため、[Edit]>[Tool Options] から [Listing Fields]>[Operands Field] を開き、この設定を無効化しておきます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ecbed14f584cc019c1408f7942dffa7a/350de/image-20240630015053711.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 63.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3klEQVQ4y22TW2+cMBCF9///l7xUap772qdWSjcLhAVzNRdzMwusWjanM95AIAnSkSUz/jwzZ3wQfghfCMgsR9N2KIoSVVWhLEuEYQgpJeq6XqWU+qQlnnUQIsB0vYK/f/OMolTQWqNpGhPIa5ZlSNPUqGlbdF23U0t7fIbhB/t0RK8vBni73aAIwj9ZLcHiOIbjOHBsB5ZlQ9Udxes1ZoGuwEhY6PsBM2VngOodGEYJrJOFgKpIk9Rk+zG7T8BAnLF8H4FBlOL454jT8wme5+0y2pa7A1rPT8jz0gDn+R14D773sSgKlG8GsDEM2WoH9M4ukjhZM+SDC5BhLJlKCF+Y0uuGDfi65KwwJQtkMsOlv+D2+oqKMtgCfc835bJc10PVfG0K78mcgUGAF8elspQBtt3eOffFNcawbHJa1e3au3YzQnoBRsKHjCP8nQZTdre5Nc9zk6FN47KMTU0ZTtOEcRyN+r5f51CSF4eHH0/49tPH9185Hn/nyKuWgmgGCchjwsEJzyIBGcz7DBqGYQXy5RdaJffQPodwvBh+UiIuNcqqgV6n/14Ku8yZ8qvixuu3EpcesvNmGujsYRoHXKcRV1o13cLveQFJ1UE19AzpAGfL0htDFjGQ28Nn/wOi9NOYKjDaIwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/ecbed14f584cc019c1408f7942dffa7a/8ac56/image-20240630015053711.webp 240w,
+/static/ecbed14f584cc019c1408f7942dffa7a/d3be9/image-20240630015053711.webp 480w,
+/static/ecbed14f584cc019c1408f7942dffa7a/e46b2/image-20240630015053711.webp 960w,
+/static/ecbed14f584cc019c1408f7942dffa7a/7a915/image-20240630015053711.webp 998w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/ecbed14f584cc019c1408f7942dffa7a/8ff5a/image-20240630015053711.png 240w,
+/static/ecbed14f584cc019c1408f7942dffa7a/e85cb/image-20240630015053711.png 480w,
+/static/ecbed14f584cc019c1408f7942dffa7a/d9199/image-20240630015053711.png 960w,
+/static/ecbed14f584cc019c1408f7942dffa7a/350de/image-20240630015053711.png 998w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/ecbed14f584cc019c1408f7942dffa7a/d9199/image-20240630015053711.png"
+            alt="image-20240630015053711"
+            title="image-20240630015053711"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>参考：<a href="https://github.com/NationalSecurityAgency/ghidra/issues/309" target="_blank" rel="nofollow noopener noreferrer">Switch to turn off register naming in disassembler · Issue #309 · NationalSecurityAgency/ghidra · GitHub</a></p>
+<h2 id="code-brouser-の設定" style="position:relative;"><a href="#code-brouser-%E3%81%AE%E8%A8%AD%E5%AE%9A" aria-label="code brouser の設定 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Brouser の設定</h2>
 <p>基本は<a href="https://www.amazon.co.jp/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%84%E3%83%BC%E3%83%ABGhidra%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88%E5%85%A5%E9%96%80%E3%81%8B%E3%82%89%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2%E8%A7%A3%E6%9E%90%E3%81%BE%E3%81%A7-Compass-Books%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E4%B8%AD%E5%B3%B6/dp/4839973776/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&#x26;crid=1LZGMPJ1WOENM&#x26;keywords=Ghidra&#x26;qid=1647343767&#x26;sprefix=ghidr%2Caps%2C181&#x26;sr=8-1" target="_blank" rel="nofollow noopener noreferrer">リバースエンジニアリングツールGhidra実践ガイド</a>を参考にしてセットアップをしています。</p>
-<h3 id="listing-binaryの行間" style="position:relative;"><a href="#listing-binary%E3%81%AE%E8%A1%8C%E9%96%93" aria-label="listing binaryの行間 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing Binaryの行間</h3>
+<h3 id="listing-binary-の行間" style="position:relative;"><a href="#listing-binary-%E3%81%AE%E8%A1%8C%E9%96%93" aria-label="listing binary の行間 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing Binary の行間</h3>
 <p>まずはListing Binaryウィンドウの行間を1に設定します。</p>
 <p>Code Brouserの[Edit]>[Tool Options]から[Listing Fields]>[Bytes Field]の[Maximum Lines To Display]を1に変更しました。</p>
 <p><span
@@ -628,113 +688,10 @@
         </picture>
   </a>
     </span></p>
-<h2 id="gotools-の導入" style="position:relative;"><a href="#gotools-%E3%81%AE%E5%B0%8E%E5%85%A5" aria-label="gotools の導入 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gotools の導入</h2>
-<p>EclipseにGhidra Dev拡張をインストールしたら、gotoolsをセットアップします。</p>
-<p>参考：<a href="https://github.com/felberj/gotools" target="_blank" rel="nofollow noopener noreferrer">GitHub - felberj/gotools: Plugin for Ghidra to assist reversing Golang binaries</a></p>
-<p>gotoolsはGolangでビルドされたx86_64向けのバイナリの解析をサポートしてくれる拡張機能です。</p>
-<p>詳しくは<a href="https://www.amazon.co.jp/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%84%E3%83%BC%E3%83%ABGhidra%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88%E5%85%A5%E9%96%80%E3%81%8B%E3%82%89%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2%E8%A7%A3%E6%9E%90%E3%81%BE%E3%81%A7-Compass-Books%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E4%B8%AD%E5%B3%B6/dp/4839973776/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&#x26;crid=1LZGMPJ1WOENM&#x26;keywords=Ghidra&#x26;qid=1647343767&#x26;sprefix=ghidr%2Caps%2C181&#x26;sr=8-1" target="_blank" rel="nofollow noopener noreferrer">リバースエンジニアリングツールGhidra実践ガイド</a>に書いてあります。</p>
-<p>まずは<a href="https://github.com/felberj/gotools" target="_blank" rel="nofollow noopener noreferrer">gotools</a>からコードをcloneしてEclipseのメニューからプロジェクトファイル(<code class="language-text">.project</code>)を開きます。</p>
-<p>この時、[Package Explorer] で開いたプロジェクトのプロパティから [Linked Resource] の設定を、自分の環境のGhidraのPathに設定します。</p>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/e0f1bd673ef910de6b761b03a44844c9/77672/image-20220307210038684.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 73.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACe0lEQVQ4y2VU246bMBDlaytVVdWHPnQ/Yn+n7Vb73m6b+025QWADBAwESEiAAMnpjAnRKmvlaMaxczzneBzl+48ntNod/P7zgpe//9DudCQ6nS7a7Toyev0B+oMh+v1hHQmD4QgDip1uD/PFAh8+foZiWyaOaYZ4lyCIAjjeBlvfhec7CCgPt1uEYYjdLibsJA6HA5IkQRTF2F+jT7//9OUrlNl0Ck94yPKciI8QroOVqsO2bQghsCVC3/cRBIHM30J4PsGDR9ERPp6fn6GMqWzHcVBVFXjwRiZjkpwO4YqWiyUsy5L5fp8Q9td8f0OyjxFGERRtpcNcm3LD+XyWcnw6Udd1Ket4PMLQDbiOSxZ4iEh+SkryPEOeMVI5571cmKJpKyJcwzKtW2UeSRVkAw/2d2070NYu3DiDGx5geTFEdISzTRCmFeK0xJSsm0wmRKiqsIiQq9A0TVbieYIk2tKGjKrITifkRUk4E+i7U4k0LyR4zjGOY+m5lGyZpiRcrVZwNo5cYMnsIUuryhK4XOhzxoVs4VjPLzKWZSHVpGlaS24IDcPAhnzgGxWukNUxaUmE7C+jqs63vEFB1TM5+/+OkH0sivrE5tSGkC24R01Y3BNaV8m6bA8maAZX2bTU5SrzLXg069wR11uuK3T4Qsi/PD/dPOJNXCVLlxd0B1470B6Wzf2oqKp2k+z7Afm3ldJd15XwqPeaXMh2ErfcpgJa4yW6ExW68YrRaATFoMR8XWN97UW+kDgK5YuJqPObl8D+nKh97pFm/GRTKfnx8RHKz6dfaLXa6PX6GI8nErP5HPP5QoLz2ayeL5fqe1AfL+ifZkOX+e3hAf8BB6xg5a9bFgMAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <picture>
-          <source
-              srcset="/static/e0f1bd673ef910de6b761b03a44844c9/8ac56/image-20220307210038684.webp 240w,
-/static/e0f1bd673ef910de6b761b03a44844c9/d3be9/image-20220307210038684.webp 480w,
-/static/e0f1bd673ef910de6b761b03a44844c9/e46b2/image-20220307210038684.webp 960w,
-/static/e0f1bd673ef910de6b761b03a44844c9/e811e/image-20220307210038684.webp 1060w"
-              sizes="(max-width: 960px) 100vw, 960px"
-              type="image/webp"
-            />
-          <source
-            srcset="/static/e0f1bd673ef910de6b761b03a44844c9/8ff5a/image-20220307210038684.png 240w,
-/static/e0f1bd673ef910de6b761b03a44844c9/e85cb/image-20220307210038684.png 480w,
-/static/e0f1bd673ef910de6b761b03a44844c9/d9199/image-20220307210038684.png 960w,
-/static/e0f1bd673ef910de6b761b03a44844c9/77672/image-20220307210038684.png 1060w"
-            sizes="(max-width: 960px) 100vw, 960px"
-            type="image/png"
-          />
-          <img
-            class="gatsby-resp-image-image"
-            src="/static/e0f1bd673ef910de6b761b03a44844c9/d9199/image-20220307210038684.png"
-            alt="image-20220307210038684"
-            title="image-20220307210038684"
-            loading="lazy"
-            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-          />
-        </picture>
-  </a>
-    </span></p>
-<p>ここまで完了したら、Eclipseの[Ghidra Module Extension…]メニューからgotoolsをビルドしてGhidraにインストールします。</p>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 584px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/6f70b0da3430921d6de2296e2b100d54/e05eb/image-20220307210114259.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 84.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABxElEQVQ4y72Ue6+aQBDF+f4frP2niWCD8hKUN6LyuqAIeDozrZba9No0NyX5ZWDZPZzZmUUZhgFd1+J8PlPscLlc5H6appfcbjeKN4kCAMVzPQR+gKoqcTweURQnnE4nNE2Dsizf5ZDnMv94yHEQDlAsw0ISp3hr31BXNeqaaei+wjCOP1w8u5owjhPatkPb9YiyAp7nwY8zKIHvw7ZtwTItGGsDtmXDNAwUZYU/XaQnXEfgVF+gLlSsDRPKfr+X9GpCIjmrJKUKOaXU0r72fS97O6fvCYrD9UpOGzKyRhRGULbbLdyNi3v0gwC6rsO0LMRxjICefcqC4xzf/znuOA7CKBJDShiGUgSGi8Kwa3bHm/wKXpckCXa7nRRKiUj5uXoVpf2qwne4iGyA3fK6h2BRFP8Ei7wr+LfO7mv+v+CHpfz85Q/dQ37xHarinVkHzLvgtypzY2bZXvqJBbn/uKGZkM64G2ZwgxTbOEeSpojJAL9jkZSeGTb1EOSGdL2dNDSL8gc0TcNSU7HQLXxeOvi0WOGLGcpZ1VQVy+VXOVmmaWKlr+C6rjT2wyEPPMN/D47OxoNDvzh78+v4fB4fPT4tLPgNqp3/uDk+tw4AAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <picture>
-          <source
-              srcset="/static/6f70b0da3430921d6de2296e2b100d54/8ac56/image-20220307210114259.webp 240w,
-/static/6f70b0da3430921d6de2296e2b100d54/d3be9/image-20220307210114259.webp 480w,
-/static/6f70b0da3430921d6de2296e2b100d54/ec52f/image-20220307210114259.webp 584w"
-              sizes="(max-width: 584px) 100vw, 584px"
-              type="image/webp"
-            />
-          <source
-            srcset="/static/6f70b0da3430921d6de2296e2b100d54/8ff5a/image-20220307210114259.png 240w,
-/static/6f70b0da3430921d6de2296e2b100d54/e85cb/image-20220307210114259.png 480w,
-/static/6f70b0da3430921d6de2296e2b100d54/e05eb/image-20220307210114259.png 584w"
-            sizes="(max-width: 584px) 100vw, 584px"
-            type="image/png"
-          />
-          <img
-            class="gatsby-resp-image-image"
-            src="/static/6f70b0da3430921d6de2296e2b100d54/e05eb/image-20220307210114259.png"
-            alt="image-20220307210114259"
-            title="image-20220307210114259"
-            loading="lazy"
-            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-          />
-        </picture>
-  </a>
-    </span></p>
-<p>これでGhidraにgotools拡張がインストールされました。</p>
-<h2 id="ghidrust-の導入" style="position:relative;"><a href="#ghidrust-%E3%81%AE%E5%B0%8E%E5%85%A5" aria-label="ghidrust の導入 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GhidRust の導入</h2>
-<p>GhidRust プラグインもビルドしておきます。</p>
-<p>どうやら 10.2.x だとビルドに失敗するようなので、10.3.x にバージョンアップしておきます。</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/DMaroo/GhidRust
-<span class="token builtin class-name">cd</span> GhidRust
-gradle.bat -PGHIDRA_INSTALL_DIR<span class="token operator">=</span><span class="token operator">&lt;</span>Ghidraのインストールフォルダ<span class="token operator">></span></code></pre></div>
-<p>参考：<a href="https://github.com/DMaroo/GhidRust/tree/master" target="_blank" rel="nofollow noopener noreferrer">DMaroo/GhidRust: GhidRust: Rust decompiler plugin for Ghidra</a></p>
-<p>※ Ghidra の 10.3.x 系だと gotools などの他のプラグインのテンプレート不一致が発生する点に注意がが必要です。</p>
-<h2 id="ghidra-wasm-plugin-の導入" style="position:relative;"><a href="#ghidra-wasm-plugin-%E3%81%AE%E5%B0%8E%E5%85%A5" aria-label="ghidra wasm plugin の導入 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ghidra-wasm-plugin の導入</h2>
-<p>10.2.x 系でインストールします。</p>
-<p>参考：<a href="https://github.com/nneonneo/ghidra-wasm-plugin" target="_blank" rel="nofollow noopener noreferrer">GitHub - nneonneo/ghidra-wasm-plugin: Ghidra Wasm plugin with disassembly and decompilation support</a></p>
 <h2 id="ghidra-findcrypt-の導入" style="position:relative;"><a href="#ghidra-findcrypt-%E3%81%AE%E5%B0%8E%E5%85%A5" aria-label="ghidra findcrypt の導入 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ghidra-findcrypt の導入</h2>
 <p>10.2.x 系でインストールします。</p>
 <p>参考：<a href="https://github.com/TorgoTorgo/ghidra-findcrypt" target="_blank" rel="nofollow noopener noreferrer">GitHub - TorgoTorgo/ghidra-findcrypt: Ghidra analysis plugin to locate cryptographic constants</a></p>
+<p>※ Ghidra の 10.3.x 系だと gotools などの他のプラグインのテンプレート不一致が発生する点に注意がが必要です。</p>
 <h2 id="スクリプトの設定" style="position:relative;"><a href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A" aria-label="スクリプトの設定 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スクリプトの設定</h2>
 <p>次にGhidra Scriptの設定を行います。</p>
 <p>Ghidraにスクリプトを追加する方法はとても簡単で、Script ManagerからBundle Managerを開いて、スクリプトの配置されたフォルダを開くだけです。</p>
@@ -941,7 +898,344 @@ gradle -PGHIDRA_INSTALL_DIR<span class="token operator">=</span><span class="tok
 cd ghidrathon
 gradle <span class="token operator">-</span>PGHIDRA_INSTALL_DIR=&lt;full path to Ghidra></code></pre></div>
 <p>後は Linux の場合と同じく Ghidra に拡張機能をインストールすれば完了です。</p>
-<h2 id="おまけuiの変更" style="position:relative;"><a href="#%E3%81%8A%E3%81%BE%E3%81%91ui%E3%81%AE%E5%A4%89%E6%9B%B4" aria-label="おまけuiの変更 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>おまけ：UIの変更</h2>
+<h2 id="ghidra-ダークモードで使用する追記2024年6月" style="position:relative;"><a href="#ghidra-%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982024%E5%B9%B46%E6%9C%88" aria-label="ghidra ダークモードで使用する追記2024年6月 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra ダークモードで使用する(追記：2024年6月)</h2>
+<p>前項を記載した後のバージョンである Ghidra 10.3 以降では、デフォルトで Ghidra のテーマを設定する機能が追加されています。</p>
+<p>参考：<a href="https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/Ghidra_10.3.1_build/Ghidra/Configurations/Public_Release/src/global/docs/WhatsNew.html" target="_blank" rel="nofollow noopener noreferrer">Ghidra What’s New</a></p>
+<p>使い方は簡単で、以下のように [Edit]>[Theme]>[Switch] からデフォルト、もしくは後から追加したテーマを選択するだけです。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 507px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c10dde1553e17a306cd82abfd9d00e31/3ebb1/image-20240630014107968.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6UlEQVQ4y6WTSY7TQBSGfTGOgQQL4AAsWHEBboBADTsWSOxYMkgsWgIhgTu00rTVmTzFwXY8xEPFQ+y4/FNVSZp00q2AKOmTX71X/uuvZ5fUPT5G5E5w9P4ct558gdztwdQ1mKYJdaRiNBzBsizEcYzZbCYIwxCmYcBgaJoGx3ERRZGoSR1ZxnDQR0dRIY9CTCY2XLYgSRIsFgsUeSEWE0KuwDfYkKTpZV66UAYwNQO+awNtA386FYJZloOPpmmEIN/gb5Defn6Jd/In/By6zFGJqevB9wLkzFnTUFRVzQRjpGz3NF2x63Yb6WvnI056Z3DsgPlpQZIIZT4HiSPkc8JyFPM0ZnG6gqRI2DG565itiaOrSLzxev8b9LEN0yPoDsZQVBunFwb6Yx92VKBnBRjaMYa/IvZkL5IceblAVpR7SF7gMxclPpzauP30Ox6/UXD/xQ/cfd7BnWcneHAk4x6bP3p9joevzkRN94job9tib0h+EIqgrJYI0gLhNqSEH2eIsgq65ULpG7B99vVZX1eC7R6Xgrx/149W4DkOyqIQcV1XhwUppaDrJF3D4+VyKWqu7cD3AzSUf/k/gjceebe4mfP/kAvqqipuBKXt/wnStaPNbeG3p67rfxe8KXeodtDhdY3fru2O33ggKGPySAwVAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/c10dde1553e17a306cd82abfd9d00e31/8ac56/image-20240630014107968.webp 240w,
+/static/c10dde1553e17a306cd82abfd9d00e31/d3be9/image-20240630014107968.webp 480w,
+/static/c10dde1553e17a306cd82abfd9d00e31/25a46/image-20240630014107968.webp 507w"
+              sizes="(max-width: 507px) 100vw, 507px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/c10dde1553e17a306cd82abfd9d00e31/8ff5a/image-20240630014107968.png 240w,
+/static/c10dde1553e17a306cd82abfd9d00e31/e85cb/image-20240630014107968.png 480w,
+/static/c10dde1553e17a306cd82abfd9d00e31/3ebb1/image-20240630014107968.png 507w"
+            sizes="(max-width: 507px) 100vw, 507px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/c10dde1553e17a306cd82abfd9d00e31/3ebb1/image-20240630014107968.png"
+            alt="image-20240630014107968"
+            title="image-20240630014107968"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>この機能を使用すると、非公式のモジュールを使用することなく、Ghidra をダークモード化できます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/17bc763f499f65ce8842589a9e0f48d9/22284/image-20240630014154964.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 44.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfElEQVQoz32R3XbaMBCE/RoEW5Zkyb+yISShAWMbSAopp5dN3v9NJiOV0/QmXMzZlXf1accbnS6/cHw9YbObsBlGTD8vmM4f1DsOpz/o97+pC/rpDcP+jJE6vL5hPLxgy/4f2x7r5y2eNj2e+wHRer1GkgjM4wQiTVHULdxiwv3jGauHE7rFEd3yiNoNaNoBrpuwetxCZQaJSBFf786TJOTR8n6F2d08yBeMLSiLvKyQas2mBFXd8DHJuiBEEtx9gQJMIL7mUT/u0biOlxynYGwcNF8vGJWxVA6bF/8uJ0LAtYswnT978P+Kji9jaPCgqmlRVDUyY2CKCoITCqlg8hxxsJcG0E2gVBKz2V/Ld5TShhCJVGpYS9tChamEUpQOlh0tfwv0r/rEN/jmzObhf/lcKQOpM07HOr/5aX28CdzterSLZbDcMTa04wsiVbCmhBB+GXGApYR7UOPa74HLpxWk1FeIDAvxWy0oU5acUEPSalaUsFyc5qLqG8BP+qcEGESnqLUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/17bc763f499f65ce8842589a9e0f48d9/8ac56/image-20240630014154964.webp 240w,
+/static/17bc763f499f65ce8842589a9e0f48d9/d3be9/image-20240630014154964.webp 480w,
+/static/17bc763f499f65ce8842589a9e0f48d9/e46b2/image-20240630014154964.webp 960w,
+/static/17bc763f499f65ce8842589a9e0f48d9/f992d/image-20240630014154964.webp 1440w,
+/static/17bc763f499f65ce8842589a9e0f48d9/882b9/image-20240630014154964.webp 1920w,
+/static/17bc763f499f65ce8842589a9e0f48d9/fd281/image-20240630014154964.webp 2428w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/17bc763f499f65ce8842589a9e0f48d9/8ff5a/image-20240630014154964.png 240w,
+/static/17bc763f499f65ce8842589a9e0f48d9/e85cb/image-20240630014154964.png 480w,
+/static/17bc763f499f65ce8842589a9e0f48d9/d9199/image-20240630014154964.png 960w,
+/static/17bc763f499f65ce8842589a9e0f48d9/07a9c/image-20240630014154964.png 1440w,
+/static/17bc763f499f65ce8842589a9e0f48d9/29114/image-20240630014154964.png 1920w,
+/static/17bc763f499f65ce8842589a9e0f48d9/22284/image-20240630014154964.png 2428w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/17bc763f499f65ce8842589a9e0f48d9/d9199/image-20240630014154964.png"
+            alt="image-20240630014154964"
+            title="image-20240630014154964"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>また、サードパーティのテーマファイルをインポートして使用することもできます。</p>
+<h2 id="ghidra-の解析結果を-gdb-から利用する2023-年--1-月-追記" style="position:relative;"><a href="#ghidra-%E3%81%AE%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92-gdb-%E3%81%8B%E3%82%89%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B2023-%E5%B9%B4--1-%E6%9C%88-%E8%BF%BD%E8%A8%98" aria-label="ghidra の解析結果を gdb から利用する2023 年  1 月 追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra の解析結果を GDB から利用する(2023 年  1 月 追記)</h2>
+<p>Ghidra の解析結果を GDB から利用できるようにするため、ghidra2dwarf というスクリプトを環境にセットアップします。</p>
+<p>まず、<a href="https://github.com/cesena/ghidra2dwarf/releases/download/latest/ghidra2dwarf.zip" target="_blank" rel="nofollow noopener noreferrer">https://github.com/cesena/ghidra2dwarf/releases/download/latest/ghidra2dwarf.zip</a> からダウンロードしたファイルを任意の場所に展開しておきます。</p>
+<p>次に、Ghidra の Bundle Manager から展開したフォルダパスを登録します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/85b00d0d20540fa4021e554934c0c9a2/73b94/image-20230121173602778.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcUlEQVQoz4WSOZPTQBCF9esJiAgoAjYgItgEMjagKKjdWi+2bNm6rPuaSzO6D1uHvbYYG1hCXn3VmppqzevuGYElcdMU7a5ud1XTVvuu6frdeBiOx/HAOQzjeIGrv2jY7/f90I9DX5WlcPfl7v5Bk8RwvQyVNdQVaGjQ9xmCGcElpWWaVnle13VbN3VWJhjAB3Eub6Stqgmr+dO79/evbn68/jB783Hx9la8+by+vbM/fbW+fVd+zg19C2wHhgEBGFuB7VqObro+wK4XCJGvgYwsC2lVyEqpS7ks5Srq0uN5Opym8Xkanqf+OHWHaT+cx+MUs8z2QYQYAEgIHNWKwAyJM7iUiLYkyhxLCjN599146sfzC91wGo5TCJDthRCzmDLBtTZWBB8dceasloE69zZioLg5Ym2960+7/vxC2526cQpCZNpBhBJMqOA7Mnd+DJeP4WpNjAVURKigJr8UfPwHL3g4nHkjEUCWG0KSkJgKgas6Adwo4kaRLMtU1LWsyQlN+7qvmr6oO05e7fN6z2PVjj53dsIQsYuzbcqWB0XjYWU+re2lHqw9ZCMCCQFp1ifJgSXjH9iYZc+ej03H5z1fnLfqQjccN/Isn0cfUkyTlMQMx5TSjLHiSk5pjnFC48xwIoM7w6uzuV0wloII8AxejSJrqmZARCjLLNvVtoZumFvD9PyAphmPiLAIxeD3tA1dKso6iGDR9CGk86Usa2aS81kfLDdSNFvW7Y1q+lHM79kLMc/hkY+JT04oiiItKn5YWfG33ZZldXmK7Y6v67qpLtSXvYZv7PjnmtAUVcv/FzDB5Cr8VwDyUwH+nwCIfgG/beynSIbLrwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/85b00d0d20540fa4021e554934c0c9a2/8ac56/image-20230121173602778.webp 240w,
+/static/85b00d0d20540fa4021e554934c0c9a2/d3be9/image-20230121173602778.webp 480w,
+/static/85b00d0d20540fa4021e554934c0c9a2/e46b2/image-20230121173602778.webp 960w,
+/static/85b00d0d20540fa4021e554934c0c9a2/22cc9/image-20230121173602778.webp 1004w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/85b00d0d20540fa4021e554934c0c9a2/8ff5a/image-20230121173602778.png 240w,
+/static/85b00d0d20540fa4021e554934c0c9a2/e85cb/image-20230121173602778.png 480w,
+/static/85b00d0d20540fa4021e554934c0c9a2/d9199/image-20230121173602778.png 960w,
+/static/85b00d0d20540fa4021e554934c0c9a2/73b94/image-20230121173602778.png 1004w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/85b00d0d20540fa4021e554934c0c9a2/d9199/image-20230121173602778.png"
+            alt="image-20230121173602778"
+            title="image-20230121173602778"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>Script Manager に追加された<code class="language-text">ghidra2dwarf.py</code>を実行すると、<code class="language-text">FileName_dbg</code>と<code class="language-text">FileName_dbg.c</code>という 2 つのファイルが生成されます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/5caea/image-20230121173818579.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEklEQVQY0y2Ib0+CUBxG+f5fwdZ6YRnlrDlJabbZLMCBLGEgcPmXxNCS4ML93XtdbzLXs/PiOUdw/CiOt2m6y7KvI0VRVhXBNWkbIIQCcABGKaeMAz2OccaAMgLQEiJ0zqWzznO3q4k99VZULy6Vq4E5kN6kJ3c6szVlZa/8YB0kceQhJ0ZeaJsh8m1raem6EAdKud8SoEsv0ZP6/tXrv3g3c3+82k7tYqK640Ugab5sRBoqzfdW1pGR4EcjmplICD01/8gaQtV1Iq/xaJkN1Lg3D++MXHa+h/qmv9hcK6mopCOrnLj4wfqcONXQLIYaEnxnnucZY7wu95xgRjCH5gDN32/rk+LDf6lPHHv1wyHfJL/1mADta6heYgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/8ac56/image-20230121173818579.webp 240w,
+/static/8b91d78568e7b1519cc7cd2d66a8ca9e/d3be9/image-20230121173818579.webp 480w,
+/static/8b91d78568e7b1519cc7cd2d66a8ca9e/e46b2/image-20230121173818579.webp 960w,
+/static/8b91d78568e7b1519cc7cd2d66a8ca9e/ef2bd/image-20230121173818579.webp 996w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/8ff5a/image-20230121173818579.png 240w,
+/static/8b91d78568e7b1519cc7cd2d66a8ca9e/e85cb/image-20230121173818579.png 480w,
+/static/8b91d78568e7b1519cc7cd2d66a8ca9e/d9199/image-20230121173818579.png 960w,
+/static/8b91d78568e7b1519cc7cd2d66a8ca9e/5caea/image-20230121173818579.png 996w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/d9199/image-20230121173818579.png"
+            alt="image-20230121173818579"
+            title="image-20230121173818579"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>この、<code class="language-text">FileName_dbg</code>というファイルはデバッグシンボルとして利用できるため、以下のようなコマンドで生成されたデバッグシンボルを添えて gdb を起動することで、Ghida の解析情報を gdb から利用できるようになります。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">gdb -exec<span class="token operator">=</span>./FileName -s<span class="token operator">=</span>./FileName_dbg</code></pre></div>
+<p>参考：<a href="https://zenn.dev/iwancof/articles/c659364aac0b3f" target="_blank" rel="nofollow noopener noreferrer">Ghidraのデコンパイル結果をGDBから使いたい</a></p>
+<p>TODO：ghidra2dwarf で生成したシンボルを peda で読み込ませるとレジスタやスタックの情報が表示されなくなる問題を解消する(<code class="language-text">info registers</code>などは普通に使えるので peda との競合っぽい？)</p>
+<h2 id="ghidra-data-type-の追加2023-年-3-月追記" style="position:relative;"><a href="#ghidra-data-type-%E3%81%AE%E8%BF%BD%E5%8A%A02023-%E5%B9%B4-3-%E6%9C%88%E8%BF%BD%E8%A8%98" aria-label="ghidra data type の追加2023 年 3 月追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra Data Type の追加(2023 年 3 月追記)</h2>
+<p>Ghidra でバイナリ解析を行う際には、適切な構造体や関数型を「Data Type Manager」としてインポートしておくとよいです。</p>
+<p>特に、WinAPI 関連の gtd をインポートしていきます。</p>
+<p>まずは、下記からダウンロードしたファイルを任意のフォルダに展開します。</p>
+<p>参考：<a href="https://github.com/0x6d696368/ghidra-data/tree/master/typeinfo" target="_blank" rel="nofollow noopener noreferrer">ghidra-data/typeinfo at master · 0x6d696368/ghidra-data</a></p>
+<p>参考：<a href="https://github.com/NationalSecurityAgency/ghidra/issues/581" target="_blank" rel="nofollow noopener noreferrer">How can I configure ghidra to show more WinAPI function parameters? · Issue #581 · NationalSecurityAgency/ghidra</a></p>
+<p>次に、Data type manager の Open Achive File から展開した gdt を指定し、インポートします。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 888px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/555d735b244c59e6bd92d88ccb20450d/b04e4/image-20230325201919683.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 16.249999999999996%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmElEQVQI15WOsQ6CMBiEef9XcFF3V2ZcdDDRhAHRmPJbamkhAq24YOhZ+gAmXvLlcsNdLlouNlivtojjFElyxW5/w/FEyLISjElIWUNr7fHeNHjcCYIKCFlBCAFjTGAYBrRthyhPDyjpAvsy+EdvP1CwAvk5R+XHrbWBKOOEun2i73qM4wfOOUyTC/6Lucw5BxFBKRXy/PQL7lnhvyEIx3YAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/555d735b244c59e6bd92d88ccb20450d/8ac56/image-20230325201919683.webp 240w,
+/static/555d735b244c59e6bd92d88ccb20450d/d3be9/image-20230325201919683.webp 480w,
+/static/555d735b244c59e6bd92d88ccb20450d/60055/image-20230325201919683.webp 888w"
+              sizes="(max-width: 888px) 100vw, 888px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/555d735b244c59e6bd92d88ccb20450d/8ff5a/image-20230325201919683.png 240w,
+/static/555d735b244c59e6bd92d88ccb20450d/e85cb/image-20230325201919683.png 480w,
+/static/555d735b244c59e6bd92d88ccb20450d/b04e4/image-20230325201919683.png 888w"
+            sizes="(max-width: 888px) 100vw, 888px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/555d735b244c59e6bd92d88ccb20450d/b04e4/image-20230325201919683.png"
+            alt="image-20230325201919683"
+            title="image-20230325201919683"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>最後に、インポートした gdt を右クリックして [Apply Function Datatype] をクリックすれば適用完了です。</p>
+<h2 id="ghidra-に-pdb-をロードする2023-年-3-月追記" style="position:relative;"><a href="#ghidra-%E3%81%AB-pdb-%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B2023-%E5%B9%B4-3-%E6%9C%88%E8%BF%BD%E8%A8%98" aria-label="ghidra に pdb をロードする2023 年 3 月追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra に PDB をロードする(2023 年 3 月追記)</h2>
+<p>WinDbg での解析時にキャッシュされた pdb ファイルを PE ファイルの解析時に適宜読み込ませていきます。</p>
+<p>特に ntdll などは入れておくとスムーズに解析ができる場合があります。</p>
+<p>※ ちなみに経験上、恐らく Ghidra 側の問題で ntdll の関数名を解決してくれない場合があるので、念のため同じ関数アドレスについては WinDbg でも見ておくとよいかもしれません。</p>
+<h2 id="アーカイブ" style="position:relative;"><a href="#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96" aria-label="アーカイブ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>アーカイブ</h2>
+<p>このセクションには、Ghidra のアップデートなどによって情報が古くなった項目を記載しています。</p>
+<h3 id="gotools-の導入2024年6月-アーカイブ化" style="position:relative;"><a href="#gotools-%E3%81%AE%E5%B0%8E%E5%85%A52024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96" aria-label="gotools の導入2024年6月 アーカイブ化 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gotools の導入(2024年6月 アーカイブ化)</h3>
+<p>EclipseにGhidra Dev拡張をインストールしたら、gotoolsをセットアップします。</p>
+<p>参考：<a href="https://github.com/felberj/gotools" target="_blank" rel="nofollow noopener noreferrer">GitHub - felberj/gotools: Plugin for Ghidra to assist reversing Golang binaries</a></p>
+<p>gotoolsはGolangでビルドされたx86_64向けのバイナリの解析をサポートしてくれる拡張機能です。</p>
+<p>詳しくは<a href="https://www.amazon.co.jp/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%84%E3%83%BC%E3%83%ABGhidra%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88%E5%85%A5%E9%96%80%E3%81%8B%E3%82%89%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2%E8%A7%A3%E6%9E%90%E3%81%BE%E3%81%A7-Compass-Books%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E4%B8%AD%E5%B3%B6/dp/4839973776/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&#x26;crid=1LZGMPJ1WOENM&#x26;keywords=Ghidra&#x26;qid=1647343767&#x26;sprefix=ghidr%2Caps%2C181&#x26;sr=8-1" target="_blank" rel="nofollow noopener noreferrer">リバースエンジニアリングツールGhidra実践ガイド</a>に書いてあります。</p>
+<p>まずは<a href="https://github.com/felberj/gotools" target="_blank" rel="nofollow noopener noreferrer">gotools</a>からコードをcloneしてEclipseのメニューからプロジェクトファイル(<code class="language-text">.project</code>)を開きます。</p>
+<p>この時、[Package Explorer] で開いたプロジェクトのプロパティから [Linked Resource] の設定を、自分の環境のGhidraのPathに設定します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e0f1bd673ef910de6b761b03a44844c9/77672/image-20220307210038684.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACe0lEQVQ4y2VU246bMBDlaytVVdWHPnQ/Yn+n7Vb73m6b+025QWADBAwESEiAAMnpjAnRKmvlaMaxczzneBzl+48ntNod/P7zgpe//9DudCQ6nS7a7Toyev0B+oMh+v1hHQmD4QgDip1uD/PFAh8+foZiWyaOaYZ4lyCIAjjeBlvfhec7CCgPt1uEYYjdLibsJA6HA5IkQRTF2F+jT7//9OUrlNl0Ck94yPKciI8QroOVqsO2bQghsCVC3/cRBIHM30J4PsGDR9ERPp6fn6GMqWzHcVBVFXjwRiZjkpwO4YqWiyUsy5L5fp8Q9td8f0OyjxFGERRtpcNcm3LD+XyWcnw6Udd1Ket4PMLQDbiOSxZ4iEh+SkryPEOeMVI5571cmKJpKyJcwzKtW2UeSRVkAw/2d2070NYu3DiDGx5geTFEdISzTRCmFeK0xJSsm0wmRKiqsIiQq9A0TVbieYIk2tKGjKrITifkRUk4E+i7U4k0LyR4zjGOY+m5lGyZpiRcrVZwNo5cYMnsIUuryhK4XOhzxoVs4VjPLzKWZSHVpGlaS24IDcPAhnzgGxWukNUxaUmE7C+jqs63vEFB1TM5+/+OkH0sivrE5tSGkC24R01Y3BNaV8m6bA8maAZX2bTU5SrzLXg069wR11uuK3T4Qsi/PD/dPOJNXCVLlxd0B1470B6Wzf2oqKp2k+z7Afm3ldJd15XwqPeaXMh2ErfcpgJa4yW6ExW68YrRaATFoMR8XWN97UW+kDgK5YuJqPObl8D+nKh97pFm/GRTKfnx8RHKz6dfaLXa6PX6GI8nErP5HPP5QoLz2ayeL5fqe1AfL+ifZkOX+e3hAf8BB6xg5a9bFgMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/e0f1bd673ef910de6b761b03a44844c9/8ac56/image-20220307210038684.webp 240w,
+/static/e0f1bd673ef910de6b761b03a44844c9/d3be9/image-20220307210038684.webp 480w,
+/static/e0f1bd673ef910de6b761b03a44844c9/e46b2/image-20220307210038684.webp 960w,
+/static/e0f1bd673ef910de6b761b03a44844c9/e811e/image-20220307210038684.webp 1060w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/e0f1bd673ef910de6b761b03a44844c9/8ff5a/image-20220307210038684.png 240w,
+/static/e0f1bd673ef910de6b761b03a44844c9/e85cb/image-20220307210038684.png 480w,
+/static/e0f1bd673ef910de6b761b03a44844c9/d9199/image-20220307210038684.png 960w,
+/static/e0f1bd673ef910de6b761b03a44844c9/77672/image-20220307210038684.png 1060w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/e0f1bd673ef910de6b761b03a44844c9/d9199/image-20220307210038684.png"
+            alt="image-20220307210038684"
+            title="image-20220307210038684"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>ここまで完了したら、Eclipseの[Ghidra Module Extension…]メニューからgotoolsをビルドしてGhidraにインストールします。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 584px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6f70b0da3430921d6de2296e2b100d54/e05eb/image-20220307210114259.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABxElEQVQ4y72Ue6+aQBDF+f4frP2niWCD8hKUN6LyuqAIeDozrZba9No0NyX5ZWDZPZzZmUUZhgFd1+J8PlPscLlc5H6appfcbjeKN4kCAMVzPQR+gKoqcTweURQnnE4nNE2Dsizf5ZDnMv94yHEQDlAsw0ISp3hr31BXNeqaaei+wjCOP1w8u5owjhPatkPb9YiyAp7nwY8zKIHvw7ZtwTItGGsDtmXDNAwUZYU/XaQnXEfgVF+gLlSsDRPKfr+X9GpCIjmrJKUKOaXU0r72fS97O6fvCYrD9UpOGzKyRhRGULbbLdyNi3v0gwC6rsO0LMRxjICefcqC4xzf/znuOA7CKBJDShiGUgSGi8Kwa3bHm/wKXpckCXa7nRRKiUj5uXoVpf2qwne4iGyA3fK6h2BRFP8Ei7wr+LfO7mv+v+CHpfz85Q/dQ37xHarinVkHzLvgtypzY2bZXvqJBbn/uKGZkM64G2ZwgxTbOEeSpojJAL9jkZSeGTb1EOSGdL2dNDSL8gc0TcNSU7HQLXxeOvi0WOGLGcpZ1VQVy+VXOVmmaWKlr+C6rjT2wyEPPMN/D47OxoNDvzh78+v4fB4fPT4tLPgNqp3/uDk+tw4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/6f70b0da3430921d6de2296e2b100d54/8ac56/image-20220307210114259.webp 240w,
+/static/6f70b0da3430921d6de2296e2b100d54/d3be9/image-20220307210114259.webp 480w,
+/static/6f70b0da3430921d6de2296e2b100d54/ec52f/image-20220307210114259.webp 584w"
+              sizes="(max-width: 584px) 100vw, 584px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/6f70b0da3430921d6de2296e2b100d54/8ff5a/image-20220307210114259.png 240w,
+/static/6f70b0da3430921d6de2296e2b100d54/e85cb/image-20220307210114259.png 480w,
+/static/6f70b0da3430921d6de2296e2b100d54/e05eb/image-20220307210114259.png 584w"
+            sizes="(max-width: 584px) 100vw, 584px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/6f70b0da3430921d6de2296e2b100d54/e05eb/image-20220307210114259.png"
+            alt="image-20220307210114259"
+            title="image-20220307210114259"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>これでGhidraにgotools拡張がインストールされました。</p>
+<h3 id="おまけuiの変更2024年6月-アーカイブ化" style="position:relative;"><a href="#%E3%81%8A%E3%81%BE%E3%81%91ui%E3%81%AE%E5%A4%89%E6%9B%B42024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96" aria-label="おまけuiの変更2024年6月 アーカイブ化 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>おまけ：UIの変更(2024年6月 アーカイブ化)</h3>
 <p>GhidraのUIテーマは[Edit]>[Tool Options]の以下の箇所から変更できます。</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -1265,7 +1559,7 @@ gradle <span class="token operator">-</span>PGHIDRA_INSTALL_DIR=&lt;full path to
   </a>
     </span></p>
 <p>Ghidraの設定ファイルを直接編集するともっと細かいUIカスタマイズもできますが、僕の環境では特にいじっていないので割愛します。</p>
-<h2 id="ghidraダークモードで使用する追記2022年12月" style="position:relative;"><a href="#ghidra%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982022%E5%B9%B412%E6%9C%88" aria-label="ghidraダークモードで使用する追記2022年12月 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidraダークモードで使用する(追記：2022年12月)</h2>
+<h3 id="ghidra-ダークモードで使用する追記2022年12月2024年6月-アーカイブ化" style="position:relative;"><a href="#ghidra-%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%BF%BD%E8%A8%982022%E5%B9%B412%E6%9C%882024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96" aria-label="ghidra ダークモードで使用する追記2022年12月2024年6月 アーカイブ化 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra ダークモードで使用する(追記：2022年12月)(2024年6月 アーカイブ化)</h3>
 <p>Ghidara の UI をテーマから選択すると、色の反転しかできないため非常に気持ち悪い配色のダークモードになります。</p>
 <p>そこで、<a href="https://github.com/zackelia/ghidra-dark" target="_blank" rel="nofollow noopener noreferrer">ghidra-dark</a> という非公式のスクリプトを使用することで Ghidra UI をダークモードに変更します。</p>
 <p>手順は以下の順にコマンドを実行するだけです。(以下は Windowsの場合の実行例)</p>
@@ -1359,153 +1653,16 @@ python.exe .<span class="token punctuation">\</span>install.py</code></pre></div
         </picture>
   </a>
     </span></p>
-<h2 id="ghidra-の解析結果を-gdb-から利用する2023-年--1-月-追記" style="position:relative;"><a href="#ghidra-%E3%81%AE%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92-gdb-%E3%81%8B%E3%82%89%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B2023-%E5%B9%B4--1-%E6%9C%88-%E8%BF%BD%E8%A8%98" aria-label="ghidra の解析結果を gdb から利用する2023 年  1 月 追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra の解析結果を GDB から利用する(2023 年  1 月 追記)</h2>
-<p>Ghidra の解析結果を GDB から利用できるようにするため、ghidra2dwarf というスクリプトを環境にセットアップします。</p>
-<p>まず、<a href="https://github.com/cesena/ghidra2dwarf/releases/download/latest/ghidra2dwarf.zip" target="_blank" rel="nofollow noopener noreferrer">https://github.com/cesena/ghidra2dwarf/releases/download/latest/ghidra2dwarf.zip</a> からダウンロードしたファイルを任意の場所に展開しておきます。</p>
-<p>次に、Ghidra の Bundle Manager から展開したフォルダパスを登録します。</p>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/85b00d0d20540fa4021e554934c0c9a2/73b94/image-20230121173602778.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 68.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcUlEQVQoz4WSOZPTQBCF9esJiAgoAjYgItgEMjagKKjdWi+2bNm6rPuaSzO6D1uHvbYYG1hCXn3VmppqzevuGYElcdMU7a5ud1XTVvuu6frdeBiOx/HAOQzjeIGrv2jY7/f90I9DX5WlcPfl7v5Bk8RwvQyVNdQVaGjQ9xmCGcElpWWaVnle13VbN3VWJhjAB3Eub6Stqgmr+dO79/evbn68/jB783Hx9la8+by+vbM/fbW+fVd+zg19C2wHhgEBGFuB7VqObro+wK4XCJGvgYwsC2lVyEqpS7ks5Srq0uN5Opym8Xkanqf+OHWHaT+cx+MUs8z2QYQYAEgIHNWKwAyJM7iUiLYkyhxLCjN599146sfzC91wGo5TCJDthRCzmDLBtTZWBB8dceasloE69zZioLg5Ym2960+7/vxC2526cQpCZNpBhBJMqOA7Mnd+DJeP4WpNjAVURKigJr8UfPwHL3g4nHkjEUCWG0KSkJgKgas6Adwo4kaRLMtU1LWsyQlN+7qvmr6oO05e7fN6z2PVjj53dsIQsYuzbcqWB0XjYWU+re2lHqw9ZCMCCQFp1ifJgSXjH9iYZc+ej03H5z1fnLfqQjccN/Isn0cfUkyTlMQMx5TSjLHiSk5pjnFC48xwIoM7w6uzuV0wloII8AxejSJrqmZARCjLLNvVtoZumFvD9PyAphmPiLAIxeD3tA1dKso6iGDR9CGk86Usa2aS81kfLDdSNFvW7Y1q+lHM79kLMc/hkY+JT04oiiItKn5YWfG33ZZldXmK7Y6v67qpLtSXvYZv7PjnmtAUVcv/FzDB5Cr8VwDyUwH+nwCIfgG/beynSIbLrwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-  ></span>
-  <picture>
-          <source
-              srcset="/static/85b00d0d20540fa4021e554934c0c9a2/8ac56/image-20230121173602778.webp 240w,
-/static/85b00d0d20540fa4021e554934c0c9a2/d3be9/image-20230121173602778.webp 480w,
-/static/85b00d0d20540fa4021e554934c0c9a2/e46b2/image-20230121173602778.webp 960w,
-/static/85b00d0d20540fa4021e554934c0c9a2/22cc9/image-20230121173602778.webp 1004w"
-              sizes="(max-width: 960px) 100vw, 960px"
-              type="image/webp"
-            />
-          <source
-            srcset="/static/85b00d0d20540fa4021e554934c0c9a2/8ff5a/image-20230121173602778.png 240w,
-/static/85b00d0d20540fa4021e554934c0c9a2/e85cb/image-20230121173602778.png 480w,
-/static/85b00d0d20540fa4021e554934c0c9a2/d9199/image-20230121173602778.png 960w,
-/static/85b00d0d20540fa4021e554934c0c9a2/73b94/image-20230121173602778.png 1004w"
-            sizes="(max-width: 960px) 100vw, 960px"
-            type="image/png"
-          />
-          <img
-            class="gatsby-resp-image-image"
-            src="/static/85b00d0d20540fa4021e554934c0c9a2/d9199/image-20230121173602778.png"
-            alt="image-20230121173602778"
-            title="image-20230121173602778"
-            loading="lazy"
-            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-          />
-        </picture>
-  </a>
-    </span></p>
-<p>Script Manager に追加された<code class="language-text">ghidra2dwarf.py</code>を実行すると、<code class="language-text">FileName_dbg</code>と<code class="language-text">FileName_dbg.c</code>という 2 つのファイルが生成されます。</p>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/5caea/image-20230121173818579.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 25.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEklEQVQY0y2Ib0+CUBxG+f5fwdZ6YRnlrDlJabbZLMCBLGEgcPmXxNCS4ML93XtdbzLXs/PiOUdw/CiOt2m6y7KvI0VRVhXBNWkbIIQCcABGKaeMAz2OccaAMgLQEiJ0zqWzznO3q4k99VZULy6Vq4E5kN6kJ3c6szVlZa/8YB0kceQhJ0ZeaJsh8m1raem6EAdKud8SoEsv0ZP6/tXrv3g3c3+82k7tYqK640Ugab5sRBoqzfdW1pGR4EcjmplICD01/8gaQtV1Iq/xaJkN1Lg3D++MXHa+h/qmv9hcK6mopCOrnLj4wfqcONXQLIYaEnxnnucZY7wu95xgRjCH5gDN32/rk+LDf6lPHHv1wyHfJL/1mADta6heYgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-  ></span>
-  <picture>
-          <source
-              srcset="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/8ac56/image-20230121173818579.webp 240w,
-/static/8b91d78568e7b1519cc7cd2d66a8ca9e/d3be9/image-20230121173818579.webp 480w,
-/static/8b91d78568e7b1519cc7cd2d66a8ca9e/e46b2/image-20230121173818579.webp 960w,
-/static/8b91d78568e7b1519cc7cd2d66a8ca9e/ef2bd/image-20230121173818579.webp 996w"
-              sizes="(max-width: 960px) 100vw, 960px"
-              type="image/webp"
-            />
-          <source
-            srcset="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/8ff5a/image-20230121173818579.png 240w,
-/static/8b91d78568e7b1519cc7cd2d66a8ca9e/e85cb/image-20230121173818579.png 480w,
-/static/8b91d78568e7b1519cc7cd2d66a8ca9e/d9199/image-20230121173818579.png 960w,
-/static/8b91d78568e7b1519cc7cd2d66a8ca9e/5caea/image-20230121173818579.png 996w"
-            sizes="(max-width: 960px) 100vw, 960px"
-            type="image/png"
-          />
-          <img
-            class="gatsby-resp-image-image"
-            src="/static/8b91d78568e7b1519cc7cd2d66a8ca9e/d9199/image-20230121173818579.png"
-            alt="image-20230121173818579"
-            title="image-20230121173818579"
-            loading="lazy"
-            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-          />
-        </picture>
-  </a>
-    </span></p>
-<p>この、<code class="language-text">FileName_dbg</code>というファイルはデバッグシンボルとして利用できるため、以下のようなコマンドで生成されたデバッグシンボルを添えて gdb を起動することで、Ghida の解析情報を gdb から利用できるようになります。</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">gdb -exec<span class="token operator">=</span>./FileName -s<span class="token operator">=</span>./FileName_dbg</code></pre></div>
-<p>参考：<a href="https://zenn.dev/iwancof/articles/c659364aac0b3f" target="_blank" rel="nofollow noopener noreferrer">Ghidraのデコンパイル結果をGDBから使いたい</a></p>
-<p>TODO：ghidra2dwarf で生成したシンボルを peda で読み込ませるとレジスタやスタックの情報が表示されなくなる問題を解消する(<code class="language-text">info registers</code>などは普通に使えるので peda との競合っぽい？)</p>
-<h2 id="ghidra-data-type-の追加2023-年-3-月追記" style="position:relative;"><a href="#ghidra-data-type-%E3%81%AE%E8%BF%BD%E5%8A%A02023-%E5%B9%B4-3-%E6%9C%88%E8%BF%BD%E8%A8%98" aria-label="ghidra data type の追加2023 年 3 月追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra Data Type の追加(2023 年 3 月追記)</h2>
-<p>Ghidra でバイナリ解析を行う際には、適切な構造体や関数型を「Data Type Manager」としてインポートしておくとよいです。</p>
-<p>特に、WinAPI 関連の gtd をインポートしていきます。</p>
-<p>まずは、下記からダウンロードしたファイルを任意のフォルダに展開します。</p>
-<p>参考：<a href="https://github.com/0x6d696368/ghidra-data/tree/master/typeinfo" target="_blank" rel="nofollow noopener noreferrer">ghidra-data/typeinfo at master · 0x6d696368/ghidra-data</a></p>
-<p>参考：<a href="https://github.com/NationalSecurityAgency/ghidra/issues/581" target="_blank" rel="nofollow noopener noreferrer">How can I configure ghidra to show more WinAPI function parameters? · Issue #581 · NationalSecurityAgency/ghidra</a></p>
-<p>次に、Data type manager の Open Achive File から展開した gdt を指定し、インポートします。</p>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 888px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/555d735b244c59e6bd92d88ccb20450d/b04e4/image-20230325201919683.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 16.249999999999996%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmElEQVQI15WOsQ6CMBiEef9XcFF3V2ZcdDDRhAHRmPJbamkhAq24YOhZ+gAmXvLlcsNdLlouNlivtojjFElyxW5/w/FEyLISjElIWUNr7fHeNHjcCYIKCFlBCAFjTGAYBrRthyhPDyjpAvsy+EdvP1CwAvk5R+XHrbWBKOOEun2i73qM4wfOOUyTC/6Lucw5BxFBKRXy/PQL7lnhvyEIx3YAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <picture>
-          <source
-              srcset="/static/555d735b244c59e6bd92d88ccb20450d/8ac56/image-20230325201919683.webp 240w,
-/static/555d735b244c59e6bd92d88ccb20450d/d3be9/image-20230325201919683.webp 480w,
-/static/555d735b244c59e6bd92d88ccb20450d/60055/image-20230325201919683.webp 888w"
-              sizes="(max-width: 888px) 100vw, 888px"
-              type="image/webp"
-            />
-          <source
-            srcset="/static/555d735b244c59e6bd92d88ccb20450d/8ff5a/image-20230325201919683.png 240w,
-/static/555d735b244c59e6bd92d88ccb20450d/e85cb/image-20230325201919683.png 480w,
-/static/555d735b244c59e6bd92d88ccb20450d/b04e4/image-20230325201919683.png 888w"
-            sizes="(max-width: 888px) 100vw, 888px"
-            type="image/png"
-          />
-          <img
-            class="gatsby-resp-image-image"
-            src="/static/555d735b244c59e6bd92d88ccb20450d/b04e4/image-20230325201919683.png"
-            alt="image-20230325201919683"
-            title="image-20230325201919683"
-            loading="lazy"
-            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-          />
-        </picture>
-  </a>
-    </span></p>
-<p>最後に、インポートした gdt を右クリックして [Apply Function Datatype] をクリックすれば適用完了です。</p>
-<h2 id="ghidra-に-pdb-をロードする2023-年-3-月追記" style="position:relative;"><a href="#ghidra-%E3%81%AB-pdb-%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B2023-%E5%B9%B4-3-%E6%9C%88%E8%BF%BD%E8%A8%98" aria-label="ghidra に pdb をロードする2023 年 3 月追記 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ghidra に PDB をロードする(2023 年 3 月追記)</h2>
-<p>WinDbg での解析時にキャッシュされた pdb ファイルを PE ファイルの解析時に適宜読み込ませていきます。</p>
-<p>特に ntdll などは入れておくとスムーズに解析ができる場合があります。</p>
-<p>※ ちなみに経験上、恐らく Ghidra 側の問題で ntdll の関数名を解決してくれない場合があるので、念のため同じ関数アドレスについては WinDbg でも見ておくとよいかもしれません。</p>
+<h3 id="ghidrust-の導入2024年6月-アーカイブ化" style="position:relative;"><a href="#ghidrust-%E3%81%AE%E5%B0%8E%E5%85%A52024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96" aria-label="ghidrust の導入2024年6月 アーカイブ化 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GhidRust の導入(2024年6月 アーカイブ化)</h3>
+<p>GhidRust プラグインもビルドしておきます。</p>
+<p>どうやら 10.2.x だとビルドに失敗するようなので、10.3.x にバージョンアップしておきます。</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/DMaroo/GhidRust
+<span class="token builtin class-name">cd</span> GhidRust
+gradle.bat -PGHIDRA_INSTALL_DIR<span class="token operator">=</span><span class="token operator">&lt;</span>Ghidraのインストールフォルダ<span class="token operator">></span></code></pre></div>
+<p>参考：<a href="https://github.com/DMaroo/GhidRust/tree/master" target="_blank" rel="nofollow noopener noreferrer">DMaroo/GhidRust: GhidRust: Rust decompiler plugin for Ghidra</a></p>
+<p>※ Ghidra の 10.3.x 系だと gotools などの他のプラグインのテンプレート不一致が発生する点に注意がが必要です。</p>
+<h3 id="ghidra-wasm-plugin-の導入2024年6月-アーカイブ化" style="position:relative;"><a href="#ghidra-wasm-plugin-%E3%81%AE%E5%B0%8E%E5%85%A52024%E5%B9%B46%E6%9C%88-%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E5%8C%96" aria-label="ghidra wasm plugin の導入2024年6月 アーカイブ化 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ghidra-wasm-plugin の導入(2024年6月 アーカイブ化)</h3>
+<p>10.2.x 系でインストールします。</p>
+<p>参考：<a href="https://github.com/nneonneo/ghidra-wasm-plugin" target="_blank" rel="nofollow noopener noreferrer">GitHub - nneonneo/ghidra-wasm-plugin: Ghidra Wasm plugin with disassembly and decompilation support</a></p>
 <h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
-<p>また環境を変えたら記事もアップデートします。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Mar 15, 2022</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/reversing/">Reversing</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ghidra/">Ghidra</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/備忘録/">備忘録</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたいCTF Player(Team: 0nePadding)。WinDbgとYARAが好き。OSCP / CISSP / AtCoder 緑 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ghidra-my-env-setup";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-a3514686dadc4530a86a.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-70ba56c0f46525baa629.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-a3514686dadc4530a86a.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-9041e377927b32f01060.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-a3c0f166cb4b802ff58f.js" async=""></script></body></html>
+<p>また環境を変えたら記事もアップデートします。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Mar 15, 2022</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/reversing/">Reversing</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/ghidra/">Ghidra</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/備忘録/">備忘録</a></li></ul></div><div class="Author-module--author--2Yefr"><p>リバースエンジニアになりたいCTF Player(Team: 0nePadding)。WinDbgとYARAが好き。OSCP / CISSP / AtCoder 緑 Microsoft Japanに所属してます。発言はすべて個人の見解。<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ghidra-my-env-setup";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-e02f8e389a3ee69c0504.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-70ba56c0f46525baa629.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-381c1b847824134fa4bd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-381c1b847824134fa4bd.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-e02f8e389a3ee69c0504.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-dc4461458952c198375d.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-a3c0f166cb4b802ff58f.js" async=""></script></body></html>

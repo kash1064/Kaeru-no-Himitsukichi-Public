@@ -58,7 +58,7 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">Cheat Sheet for Dump Analysis and Live Debugging with WinDbg - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="A cheat sheet summarizing the WinDbg commands I often use personally. I plan to add more content in the future."/><meta data-react-helmet="true" property="og:site_name" content="Cheat Sheet for Dump Analysis and Live Debugging with WinDbg - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/b0fbf9e03e8ff058d29fe4543b9d3f45/windbg-basics-001.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Cheat Sheet for Dump Analysis and Live Debugging with WinDbg - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="A cheat sheet summarizing the WinDbg commands I often use personally. I plan to add more content in the future."/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/b0fbf9e03e8ff058d29fe4543b9d3f45/windbg-basics-001.png"/><link as="script" rel="preload" href="/webpack-runtime-39116c87b6893a5523f0.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-70b9fa3c3d7503c09b7d.js"/><link as="script" rel="preload" href="/app-1b4c767f65d3cd23a6a6.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"/><link as="fetch" rel="preload" href="/page-data/windbg-basics-001-en/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Cheat Sheet for Dump Analysis and Live Debugging with WinDbg</h1><div class="Content-module--content__body--2TrQ-"><blockquote>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">Cheat Sheet for Dump Analysis and Live Debugging with WinDbg - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="A cheat sheet summarizing the WinDbg commands I often use personally. I plan to add more content in the future."/><meta data-react-helmet="true" property="og:site_name" content="Cheat Sheet for Dump Analysis and Live Debugging with WinDbg - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/b0fbf9e03e8ff058d29fe4543b9d3f45/windbg-basics-001.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Cheat Sheet for Dump Analysis and Live Debugging with WinDbg - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="A cheat sheet summarizing the WinDbg commands I often use personally. I plan to add more content in the future."/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/b0fbf9e03e8ff058d29fe4543b9d3f45/windbg-basics-001.png"/><link as="script" rel="preload" href="/webpack-runtime-39116c87b6893a5523f0.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-e38835de71f2914852ce.js"/><link as="script" rel="preload" href="/app-03bde0da95f02ca5adfe.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"/><link as="fetch" rel="preload" href="/page-data/windbg-basics-001-en/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Cheat Sheet for Dump Analysis and Live Debugging with WinDbg</h1><div class="Content-module--content__body--2TrQ-"><blockquote>
 <p>This page has been machine-translated from the <a href="/windbg-basics-001">original page</a>.</p>
 </blockquote>
 <p>A cheat sheet summarizing the WinDbg commands I often use personally.</p>
@@ -153,6 +153,14 @@
 <li><a href="#exploring-system-registry-information">Exploring System Registry Information</a></li>
 <li><a href="#reading-cpu-statistics-by-referencing-kpcr-and-kprcb">Reading CPU Statistics by Referencing KPCR and KPRCB</a></li>
 <li><a href="#investigating-pool">Investigating Pool</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#analyzing-the-net-runtime-using-the-sos-debugger-extension">Analyzing the .NET Runtime Using the SOS Debugger Extension</a></p>
+<ul>
+<li><a href="#displaying-stack-traces-for-managed-code">Displaying Stack Traces for Managed Code</a></li>
+<li><a href="#examining-objects-on-the-managed-stack">Examining Objects on the Managed Stack</a></li>
+<li><a href="#displaying-managed-threads-in-the-process">Displaying Managed Threads in the Process</a></li>
 </ul>
 </li>
 <li>
@@ -482,7 +490,7 @@ dt ntdll<span class="token operator">!</span>_EPROCESS -b <span class="token ope
 <p>When the structure to be analyzed contains bidirectional lists, the dt command can recursively obtain information linked in the list. (Enumerating _EPROCESS structures during kernel debugging, etc.)</p>
 <p>Also, the dv command does not work effectively in 64-bit calling conventions or <code class="language-text">Fast calling convention</code> (calling conventions that pass arguments as much as possible via registers).</p>
 <p>For example, the <code class="language-text">__cdecl</code> calling convention commonly used in x86 Windows stably passes all arguments via stack, so local arguments can be referenced stably with dv command.</p>
-<p>Reference: <a href="https://www.glamenv-septzen.net/view/581#id2d585d" target="_blank" rel="nofollow noopener noreferrer">抄訳メモ/Calling Conventions Demystified - Glamenv-Septzen.net</a></p>
+<p>Reference: <a href="https://www.glamenv-septzen.net/view/581#id2d585d" target="_blank" rel="nofollow noopener noreferrer">Calling Conventions Demystified (Japanese translation memo) - Glamenv-Septzen.net</a></p>
 <h3 id="referencing-pe-binary-information" style="position:relative;"><a href="#referencing-pe-binary-information" aria-label="referencing pe binary information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Referencing PE Binary Information</h3>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Reference table information</span>
 <span class="token operator">!</span>dh -f <span class="token operator">!</span><span class="token operator">&lt;</span>module_name<span class="token operator">></span>
@@ -651,43 +659,43 @@ ph</code></pre></div>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/pct--step-to-next-call-or-return-" target="_blank" rel="nofollow noopener noreferrer">pct (Step to Next Call or Return) - Windows drivers | Microsoft Learn</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/ph--step-to-next-branching-instruction-" target="_blank" rel="nofollow noopener noreferrer">ph (Step to Next Branching Instruction) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="step-into-t" style="position:relative;"><a href="#step-into-t" aria-label="step into t permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step Into (t)</h3>
-<p>TODO: To be added</p>
+<p>Planned to be added later.</p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/t--trace-" target="_blank" rel="nofollow noopener noreferrer">t (Trace) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="go-g" style="position:relative;"><a href="#go-g" aria-label="go g permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>go (g)</h3>
-<p>TODO: To be added</p>
+<p>Planned to be added later.</p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/g--go-" target="_blank" rel="nofollow noopener noreferrer">g (Go) - Windows drivers | Microsoft Learn</a></p>
 <h2 id="saving-command-output-to-a-file" style="position:relative;"><a href="#saving-command-output-to-a-file" aria-label="saving command output to a file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Saving Command Output to a File</h2>
-<p>Using the .logopen command, you can save WinDbg command executions and their output results to an arbitrary file.</p>
-<p>By default, the output text is ASCII strings, but you can specify Unicode strings with the /u option.</p>
-<p>Especially useful when outputting a large amount of information like the process command at once.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Record command output in arbitrary log file (ASCII text)</span>
+<p>Using the <code class="language-text">.logopen</code> command, you can save WinDbg command execution and its output to any file.</p>
+<p>By default, the output text is ASCII, but you can specify Unicode text with the <code class="language-text">/u</code> option.</p>
+<p>This is especially useful when outputting a large amount of information at once, such as with the process command.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Record command output in any log file (ASCII text)</span>
 .logopen C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>Public<span class="token punctuation">\</span>windbg.log
 
-<span class="token comment"># Record in arbitrary log file with process ID and current date/time (/t)</span>
+<span class="token comment"># Record command output in any log file with the process ID and current date/time added (/t)</span>
 .logopen /t C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>Public<span class="token punctuation">\</span>windbg.log
 
-<span class="token comment"># Automatically determine file name from process or file information and save</span>
+<span class="token comment"># Automatically determine the file name from process or file information and save it</span>
 .logopen /d
 
-<span class="token comment"># Append to existing log file</span>
+<span class="token comment"># Append to an existing log file</span>
 .logappend C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>Public<span class="token punctuation">\</span>windbg.log
 
-<span class="token comment"># Close and end recording</span>
+<span class="token comment"># Close the file and stop recording</span>
 .logclose</code></pre></div>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/keeping-a-log-file-in-windbg" target="_blank" rel="nofollow noopener noreferrer">Keeping a Log File in WinDbg - Windows drivers | Microsoft Learn</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-logopen--open-log-file-" target="_blank" rel="nofollow noopener noreferrer">.logopen (Open Log File) - Windows drivers | Microsoft Learn</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-logappend--append-log-file-" target="_blank" rel="nofollow noopener noreferrer">.logappend (Append Log File) - Windows drivers | Microsoft Learn</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-logclose--close-log-file-" target="_blank" rel="nofollow noopener noreferrer">.logclose (Close Log File) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="saving-output-to-a-file-using-command-line-options" style="position:relative;"><a href="#saving-output-to-a-file-using-command-line-options" aria-label="saving output to a file using command line options permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Saving Output to a File Using Command Line Options</h3>
-<p>Using the <code class="language-text">-logo FilePath</code> option to launch WinDbg saves all command window outputs to the specified file.</p>
-<p>This can also be used when specifying the Debugger flag of the application to the WinDbg path.</p>
-<p>Also, you can specify the <code class="language-text">-logo</code> option when launching WinDbg by editing the shortcut.</p>
-<p>For example, setting the following command line in the shortcut will always save output results to <code class="language-text">C:\Users\Public\debug.log</code>.</p>
+<p>By starting WinDbg with the <code class="language-text">-logo FilePath</code> option, you can record all output from the command window to the specified file.</p>
+<p>This can also be used when specifying the path to WinDbg in an application’s Debugger flag.</p>
+<p>You can also specify the <code class="language-text">-logo</code> option when launching WinDbg by editing a shortcut.</p>
+<p>For example, if you set the following command line in a shortcut, the output will always be saved to <code class="language-text">C:\Users\Public\debug.log</code>.</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">C:<span class="token punctuation">\</span>Program Files <span class="token punctuation">(</span>x86<span class="token punctuation">)</span><span class="token punctuation">\</span>Windows Kits<span class="token punctuation">\</span><span class="token number">10</span><span class="token punctuation">\</span>Debuggers<span class="token punctuation">\</span>x64<span class="token punctuation">\</span>windbg.exe -logo  C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>Public<span class="token punctuation">\</span>debug.log</code></pre></div>
-<p>Note that when using the <code class="language-text">-logo</code> option as in the example above, the file is overwritten each time WinDbg is launched.</p>
+<p>Note that when using the <code class="language-text">-logo</code> option as above, the file is overwritten each time WinDbg starts.</p>
 <h2 id="extensions" style="position:relative;"><a href="#extensions" aria-label="extensions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extensions</h2>
-<p>Loaded extensions can be confirmed with <code class="language-text">.chain</code>.</p>
-<p>Default extensions are of the following types, each loaded as DLL.</p>
+<p>Loaded extensions can be checked with <code class="language-text">.chain</code>.</p>
+<p>The default extensions are of the following types, and each is loaded as a DLL.</p>
 <ul>
 <li>ext</li>
 <li>wow64exts</li>
@@ -697,9 +705,9 @@ ph</code></pre></div>
 <li>ntsdexts</li>
 </ul>
 <h3 id="help-extension-help" style="position:relative;"><a href="#help-extension-help" aria-label="help extension help permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>!help: Extension Help</h3>
-<p>The !help extension outputs the command list of ext extension by default.</p>
-<p>However, the help extension exists in several other extensions as well, and you can access the command lists of each extension with notations like <code class="language-text">!ext.help</code> or <code class="language-text">!wow64exts.help</code>.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output ext extension help</span>
+<p>The <code class="language-text">!help</code> extension outputs the command list for the ext extension by default.</p>
+<p>However, help commands also exist in several other extensions, and you can access each extension’s command list with notation such as <code class="language-text">!ext.help</code> or <code class="language-text">!wow64exts.help</code>.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output help for the ext extension</span>
 <span class="token operator">!</span>ext.help
 
 analyze <span class="token punctuation">[</span>-v<span class="token punctuation">]</span><span class="token punctuation">[</span>level<span class="token punctuation">]</span>        - Analyzes current exception or bugcheck <span class="token punctuation">(</span>levels are <span class="token number">0</span><span class="token punctuation">..</span><span class="token number">9</span><span class="token punctuation">)</span>
@@ -735,60 +743,60 @@ obja <span class="token operator">&lt;</span>address<span class="token operator"
 rtlavl <span class="token operator">&lt;</span>address<span class="token operator">></span>           - Displays RTL_AVL_TABLE
 std_map <span class="token operator">&lt;</span>address<span class="token operator">></span>          - Displays a std::map<span class="token operator">&lt;></span></code></pre></div>
 <h3 id="analyze-obtaining-information-on-exceptions-or-bug-checks" style="position:relative;"><a href="#analyze-obtaining-information-on-exceptions-or-bug-checks" aria-label="analyze obtaining information on exceptions or bug checks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>!analyze: Obtaining Information on Exceptions or Bug Checks</h3>
-<p>!analyze is a command in ext extension, very useful for crash dump analysis, etc.</p>
-<p>It includes the output results of the <code class="language-text">.ecxr</code> command that displays the Register Context linked to the occurred exception. (<code class="language-text">.exr -1</code> displays information on the latest exception that occurred in the system.)</p>
-<p>For system dumps, you can also refer to information on the cause of system crash with the <code class="language-text">.bugcheck</code> command.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Perform main analysis</span>
+<p><code class="language-text">!analyze</code> is a command included in the ext extension and is very useful when analyzing crash dumps and similar data.</p>
+<p>It also includes information such as the output of the <code class="language-text">.ecxr</code> command, which displays the register context associated with the exception that occurred. (<code class="language-text">.exr -1</code> displays information about the most recent exception that occurred in the system.)</p>
+<p>For system dumps, you can also examine information about the cause of the system crash with the <code class="language-text">.bugcheck</code> command.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Run the main analysis</span>
 <span class="token operator">!</span>analyze -v
 
 <span class="token comment"># Global flags</span>
 NTGLOBALFLAG
 
-<span class="token comment"># Information recorded for processes or applications</span>
+<span class="token comment"># Information related to the process or application is recorded</span>
 PROCESS_BAM_CURRENT_THROTTLED
 PROCESS_BAM_PREVIOUS_THROTTLED
 APPLICATION_VERIFIER_FLAGS
 
-<span class="token comment"># EXCEPTION_RECORD records information on the process that caused the exception and crash</span>
+<span class="token comment"># EXCEPTION_RECORD contains information about the exception and the process that crashed</span>
 EXCEPTION_RECORD:  <span class="token punctuation">(</span>.exr -1<span class="token punctuation">)</span>
 ExceptionAddress: 00007ffce5c60910 <span class="token punctuation">(</span>ntdll<span class="token operator">!</span>LdrpDoDebuggerBreak+0x0000000000000030<span class="token punctuation">)</span>
-	ExceptionCode: <span class="token number">80000003</span> <span class="token punctuation">(</span>Break instruction exception<span class="token punctuation">)</span>
-	ExceptionFlags: 00000000
+ExceptionCode: <span class="token number">80000003</span> <span class="token punctuation">(</span>Break instruction exception<span class="token punctuation">)</span>
+ExceptionFlags: 00000000
 
-<span class="token comment"># Stack callback at exception occurrence is recorded</span>
-<span class="token comment"># ~0s ; .cxr ; kb can output the same content</span>
+<span class="token comment"># The call stack at the time of the exception is recorded</span>
+<span class="token comment"># The same content can also be output with the command ~0s ; .cxr ; kb</span>
 STACK_TEXT
 
-<span class="token comment"># Display failure category</span>
+<span class="token comment"># Display the problem category</span>
 FAILURE_BUCKET_ID</code></pre></div>
 <p>Reference: <a href="https://degiuli.github.io/WinDBG/WinDBG.html" target="_blank" rel="nofollow noopener noreferrer">WinDBG !analyze extension command</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-analyze" target="_blank" rel="nofollow noopener noreferrer">analyze (WinDbg) - Windows drivers | Microsoft Learn</a></p>
-<p>Reference: <a href="/magical-windbg-vol1-04#analyze-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%A7%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%80%E3%83%B3%E3%83%97%E3%82%92%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B">Magical WinDbg VOL.1【4章 アプリケーションのクラッシュダンプを解析する】 - !analyze 拡張機能でクラッシュダンプを分析する</a></p>
-<p>Reference: <a href="/magical-windbg-vol1-05#analyze-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%A7%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%80%E3%83%B3%E3%83%97%E3%82%92%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B">Magical WinDbg VOL.1【5章 システムクラッシュ時のフルメモリダンプを解析する】 - !analyze 拡張機能でクラッシュダンプを分析する</a></p>
+<p>Reference: <a href="/magical-windbg-vol1-04#analyze-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%A7%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%80%E3%83%B3%E3%83%97%E3%82%92%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B">Magical WinDbg VOL.1 (Chapter 4: Analyzing Application Crash Dumps) - Analyzing crash dumps with the !analyze extension</a></p>
+<p>Reference: <a href="/magical-windbg-vol1-05#analyze-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%A7%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%80%E3%83%B3%E3%83%97%E3%82%92%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B">Magical WinDbg VOL.1 (Chapter 5: Analyzing Full Memory Dumps After a System Crash) - Analyzing crash dumps with the !analyze extension</a></p>
 <h3 id="address-referencing-information-on-memory-or-processes" style="position:relative;"><a href="#address-referencing-information-on-memory-or-processes" aria-label="address referencing information on memory or processes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>!address: Referencing Information on Memory or Processes</h3>
-<p>!address is also a command in ext extension, to display information on the memory area or process of the specified address.</p>
-<p>For example, issuing the !address command on the return value address of the <code class="language-text">malloc</code> function, etc., allows obtaining information on the target memory area.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output information on each memory block </span>
+<p><code class="language-text">!address</code> is also a command included in the ext extension and displays information about the memory region or process for the specified address.</p>
+<p>For example, by issuing the <code class="language-text">!address</code> command for the return value address of the <code class="language-text">malloc</code> function, you can obtain information about the target memory region.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output information for each memory block</span>
 <span class="token operator">!</span>address
 
-<span class="token comment"># Output information on specified address</span>
+<span class="token comment"># Output information for the specified address</span>
 <span class="token operator">!</span>address <span class="token operator">&lt;</span>Address<span class="token operator">></span>
 
-<span class="token comment"># Output statistical information on memory in user mode debugging</span>
-<span class="token operator">!</span>address -summary </code></pre></div>
-<p>As per the parameter table in the following Docs, you can obtain various information such as the usage, status, and protection status of the target memory area.</p>
+<span class="token comment"># Output memory statistics in user-mode debugging</span>
+<span class="token operator">!</span>address -summary</code></pre></div>
+<p>As shown in the parameter table in the Docs below, you can obtain various information such as the purpose of the target memory region, its state, and its protection.</p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-address" target="_blank" rel="nofollow noopener noreferrer">address (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="handle-referencing-system-or-process-handle-information" style="position:relative;"><a href="#handle-referencing-system-or-process-handle-information" aria-label="handle referencing system or process handle information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>!handle: Referencing System or Process Handle Information</h3>
-<p>!handle is also a command in ext extension, to obtain information on system or process handles.</p>
-<p>When used in user mode debugging, you can obtain a list of handle information of that process or statistical information.</p>
-<p>The information obtainable with the !handle command without options is very similar to the handle view in Process Explorer.</p>
+<p><code class="language-text">!handle</code> is also a command included in the ext extension and can obtain information about system or process handles.</p>
+<p>When used in user-mode debugging, it can display a list of handle information and statistics for that process.</p>
+<p>The information you can obtain with <code class="language-text">!handle</code> without options is very similar to the handle view in Process Explorer.</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Obtain handle information</span>
 <span class="token operator">!</span>handle
 
-<span class="token comment"># Dump detailed information on all handles</span>
+<span class="token comment"># Dump detailed information for all handles</span>
 <span class="token operator">!</span>handle <span class="token number">0</span> 0xf
 
-<span class="token comment"># Obtain detailed information on handle with handle ID 430</span>
+<span class="token comment"># Obtain detailed information for the handle whose handle ID is 430</span>
 <span class="token operator">!</span>handle <span class="token number">430</span> 0xf</code></pre></div>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-handle" target="_blank" rel="nofollow noopener noreferrer">handle (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="obtaining-thread-environment-block-teb-information" style="position:relative;"><a href="#obtaining-thread-environment-block-teb-information" aria-label="obtaining thread environment block teb information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Obtaining Thread Environment Block (TEB) Information</h3>
@@ -799,72 +807,76 @@ FAILURE_BUCKET_ID</code></pre></div>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Dump PEB information</span>
 <span class="token operator">!</span>peb</code></pre></div>
 <h3 id="extracting-pe-files-using-dumpext-extension" style="position:relative;"><a href="#extracting-pe-files-using-dumpext-extension" aria-label="extracting pe files using dumpext extension permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extracting PE Files Using !dumpext Extension</h3>
-<p>Using the open-source !dumpext extension, you can easily dump PE header information or extract PE binaries from dump files.</p>
-<p>Build the extension in advance following the steps in the following Github repository.</p>
+<p>By using the open-source <code class="language-text">!dumpext</code> extension, you can easily dump PE header information or extract PE binaries from dump files.</p>
+<p>Beforehand, build the extension by following the steps in the GitHub repository below.</p>
 <p>Reference: <a href="https://github.com/pstolarz/dumpext" target="_blank" rel="nofollow noopener noreferrer">pstolarz/dumpext: WinDbg debugger extension library providing various tools to analyse, dump and fix (restore) Microsoft Portable Executable files for both 32 (PE) and 64-bit (PE+) platforms.</a></p>
-<p>Then, you can export PE binaries from dump files as follows.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Download pre-built binary from https://kashiwaba-yuki.com/file/dumpext.dll.</span>
+<p>After that, you can export a PE binary from a dump file as follows.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Download the built binary in advance from https://kashiwaba-yuki.com/file/dumpext.dll.</span>
 .load C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>User<span class="token punctuation">\</span>Downloads<span class="token punctuation">\</span>dumpext.dll
 
-<span class="token comment"># Export PE binary from process dump to "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64" as dump.out</span>
+<span class="token comment"># Export the PE binary from a process dump as dump.out to "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64"</span>
 <span class="token operator">!</span>dumpext.dump_pe <span class="token operator">!</span><span class="token operator">&lt;</span>module_name<span class="token operator">></span></code></pre></div>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-peb" target="_blank" rel="nofollow noopener noreferrer">peb (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="using-mex" style="position:relative;"><a href="#using-mex" aria-label="using mex permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using MEX</h3>
-<p>Reference: <a href="/magical-windbg-vol1-50">Magical WinDbg VOL.1【付録 A WinDbg の Tips】</a></p>
+<p>Reference: <a href="/magical-windbg-vol1-50">Magical WinDbg VOL.1 (Appendix A: WinDbg Tips)</a></p>
 <h2 id="config-commands" style="position:relative;"><a href="#config-commands" aria-label="config commands permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Config Commands</h2>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Confirm symbol settings</span>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Check symbol settings</span>
 .sympath
 
-<span class="token comment"># Set symbol cache and source</span>
+<span class="token comment"># Set the symbol cache and source</span>
 .sympath cache*C:<span class="token punctuation">\</span>symbols<span class="token punctuation">;</span>srv*https://msdl.microsoft.com/download/symbols
 .reload
 
-<span class="token comment"># Output/suppress details when loading symbols</span>
+<span class="token comment"># Output or suppress detailed information when loading symbols</span>
 <span class="token operator">!</span>sym noisy
 <span class="token operator">!</span>sym quiet
 
-<span class="token comment"># Force loading of mismatched symbols (not recommended)</span>
+<span class="token comment"># Force-load mismatched symbols (not recommended)</span>
 .reload /f /i <span class="token operator">&lt;</span>modulename<span class="token operator">></span>
 
-<span class="token comment"># Output list of loaded extensions</span>
+<span class="token comment"># Output the list of loaded extensions</span>
 .chain
 
-<span class="token comment"># Load additional extensions</span>
+<span class="token comment"># Load an additional extension</span>
 .load <span class="token operator">&lt;</span>Extension DLL path<span class="token operator">></span>
 
 <span class="token comment"># Display extension details</span>
 .extmatch /D /e <span class="token operator">&lt;</span>Module<span class="token operator">></span> *
 
-<span class="token comment"># Launch help window</span>
+<span class="token comment"># Open the help window</span>
 .hh
 
-<span class="token comment"># Save as dump file</span>
+<span class="token comment"># Save as a dump file</span>
 <span class="token comment"># https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-dump--create-dump-file-</span>
 .dump <span class="token punctuation">[</span>options<span class="token punctuation">]</span> FileName</code></pre></div>
 <h2 id="other-commands" style="position:relative;"><a href="#other-commands" aria-label="other commands permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other Commands</h2>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># ?&lt;Hex> allows decimal conversion</span>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># ?&lt;Hex> can convert to decimal</span>
 ?ff
 <span class="token operator">></span> Evaluate expression: <span class="token number">255</span> <span class="token operator">=</span> 000000ff
 
-<span class="token comment"># Display status of current process in user mode debugging</span>
+<span class="token comment"># You can also evaluate arithmetic results like this</span>
+?ffff-f
+<span class="token operator">></span> Evaluate expression: <span class="token number">65520</span> <span class="token operator">=</span> 0000fff0
+
+<span class="token comment"># Display the status of the current process in user-mode debugging</span>
 <span class="token operator">|</span>
 
-<span class="token comment"># Display debugging system</span>
+<span class="token comment"># Display the systems being debugged</span>
 <span class="token operator">||</span></code></pre></div>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/commands" target="_blank" rel="nofollow noopener noreferrer">Commands - Windows drivers | Microsoft Learn</a></p>
 <h2 id="using-script-files" style="position:relative;"><a href="#using-script-files" aria-label="using script files permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Script Files</h2>
-<p>By using text files containing WinDbg commands, you can automate WinDbg command execution to some extent.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Execute script defined in file</span>
+<p>By using a text file that contains WinDbg commands, you can automate WinDbg command execution to some extent.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Run the script defined in the file</span>
 $<span class="token operator">&lt;</span>C:<span class="token punctuation">\</span>windbgcmd.txt
 
-<span class="token comment"># Execute as single command block (better for using breakpoints)</span>
+<span class="token comment"># Run as a single command block (better if you use breakpoints)</span>
 $<span class="token operator">></span><span class="token operator">&lt;</span>C:<span class="token punctuation">\</span>windbgcmd.txt
 
 <span class="token comment"># Set command arguments (not standard input)</span>
-<span class="token comment"># Can be used when using commands like .echo argument is ${$arg1}</span>
+<span class="token comment"># Can be used with commands such as .echo argument is ${$arg1}</span>
 <span class="token variable">$$</span><span class="token operator">></span>a<span class="token operator">&lt;</span>C:<span class="token punctuation">\</span>windbgcmd.txt test_text
 
-<span class="token comment"># Recursively call the script eaxstep that continues execution until 1234 is contained in eax register</span>
+<span class="token comment"># Recursively call the eaxstep script that continues execution until eax contains 1234</span>
 <span class="token comment"># .if (@eax == 1234) { .echo 1234 } .else { t "$&lt;eaxstep" }</span>
 t <span class="token string">"$&lt;C:<span class="token entity" title="\\">\\</span>eaxstep"</span></code></pre></div>
 <p><span
@@ -911,102 +923,622 @@ t <span class="token string">"$&lt;C:<span class="token entity" title="\\">\\</s
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-----------------------a---run-script-file-" target="_blank" rel="nofollow noopener noreferrer"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span></span></span></span> , <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span></span></span></span> , $$ a (Run Script File) - Windows drivers | Microsoft Learn</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/executing-until-a-specified-state-is-reached" target="_blank" rel="nofollow noopener noreferrer">Executing Until a Specified State is Reached - Windows drivers | Microsoft Learn</a></p>
 <h3 id="conditional-branching" style="position:relative;"><a href="#conditional-branching" aria-label="conditional branching permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditional Branching</h3>
-<p>WinDbg commands or script internals can handle conditional expressions like the following.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Using IF token</span>
-.if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> 
-.if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> .else <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> 
-.if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> .elsif <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> 
+<p>Within WinDbg commands or scripts, you can use conditional expressions like the following.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Using the IF token</span>
+.if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span>
+.if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> .else <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span>
+.if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> .elsif <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span>
 .if <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> .elsif <span class="token punctuation">(</span>Condition<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> .else <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span></code></pre></div>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-if" target="_blank" rel="nofollow noopener noreferrer">.if (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/control-flow-tokens" target="_blank" rel="nofollow noopener noreferrer">Control Flow Tokens - Windows drivers | Microsoft Learn</a></p>
-<p>In this case, various limits can be included in Condition.</p>
-<p>In WinDbg, MASM operators and C++ operators are supported.</p>
-<p>Especially, address resolution with <code class="language-text">poi</code> of MASM operators and non-numeric operators like <code class="language-text">$scmp("String1", "String2")</code> for string comparison are frequently used.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># $scmp performs evaluation equivalent to C++ strcmp, returns 0 when strings match</span>
-.if <span class="token punctuation">(</span><span class="token variable">$scmp</span><span class="token punctuation">(</span><span class="token string">"<span class="token variable">${$ImageName}</span>"</span>,<span class="token string">"notepad.exe"</span><span class="token punctuation">))</span> <span class="token punctuation">{</span>  <span class="token punctuation">}</span> .else <span class="token punctuation">{</span> .echo match <span class="token punctuation">}</span></code></pre></div>
+<p>At this point, <code class="language-text">Condition</code> can include various operators.</p>
+<p>In WinDbg, both MASM operators and C++ operators are supported.</p>
+<p>In particular, address dereferencing with the MASM operator <code class="language-text">poi</code> and string comparison with the non-numeric operator <code class="language-text">$scmp("String1", "String2")</code> are used frequently.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># $scmp evaluates like C++ strcmp, so it returns 0 when the strings match</span>
+.if <span class="token punctuation">(</span><span class="token variable">$scmp</span><span class="token punctuation">(</span><span class="token string">"<span class="token variable">${$ImageName}</span>"</span>,<span class="token string">"notepad.exe"</span><span class="token punctuation">))</span> <span class="token punctuation">{</span>  <span class="token punctuation">}</span> .else <span class="token punctuation">{</span> .echo match <span class="token punctuation">}</span>
+
+<span class="token comment"># Reassign to pseudo-register $t1 the value pointed to by the address in $t1</span>
+r <span class="token variable">$t1</span> <span class="token operator">=</span> poi<span class="token punctuation">(</span>@<span class="token variable">$t1</span><span class="token punctuation">)</span></code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/masm-numbers-and-operators" target="_blank" rel="nofollow noopener noreferrer">MASM Numbers and Operators - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/c---numbers-and-operators" target="_blank" rel="nofollow noopener noreferrer">C++ numbers and operators - Windows drivers | Microsoft Learn</a></p>
+<p>You can look for other operators that can be used in conditions at the following link as well.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/numerical-expression-syntax" target="_blank" rel="nofollow noopener noreferrer">Numerical Expression Syntax - Windows drivers | Microsoft Learn</a></p>
 <h3 id="loop-commands" style="position:relative;"><a href="#loop-commands" aria-label="loop commands permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop Commands</h3>
-<p>TODO: To be added</p>
+<p>WinDbg’s <code class="language-text">.for</code> command behaves almost the same as C’s <code class="language-text">for</code>.</p>
+<p>Also, the <code class="language-text">.foreach</code> command can split the output of a WinDbg command or the contents of a file into elements and pass them one by one to the specified command.</p>
+<p>The elements given to <code class="language-text">.foreach</code> replace the placeholder currently being processed.</p>
+<p>Also, <code class="language-text">.while</code> and <code class="language-text">.do</code> can be used as loop commands.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># WinDbg for syntax (separated with semicolons, not commas)</span>
+.for <span class="token punctuation">(</span>InitialCommand <span class="token punctuation">;</span> Condition <span class="token punctuation">;</span> IncrementCommands<span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span>
+
+<span class="token comment"># foreach syntax</span>
+.foreach <span class="token punctuation">[</span>Options<span class="token punctuation">]</span> <span class="token punctuation">(</span> Variable  <span class="token punctuation">{</span> InCommands <span class="token punctuation">}</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> OutCommands <span class="token punctuation">}</span>
+.foreach <span class="token punctuation">[</span>Options<span class="token punctuation">]</span> /s <span class="token punctuation">(</span> Variable  <span class="token string">"InString"</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> OutCommands <span class="token punctuation">}</span>
+.foreach <span class="token punctuation">[</span>Options<span class="token punctuation">]</span> /f <span class="token punctuation">(</span> Variable  <span class="token string">"InFile"</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> OutCommands <span class="token punctuation">}</span>
+
+<span class="token comment"># If you want to keep looping</span>
+.while <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span></code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-for" target="_blank" rel="nofollow noopener noreferrer">.for (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-foreach" target="_blank" rel="nofollow noopener noreferrer">.foreach (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-while" target="_blank" rel="nofollow noopener noreferrer">.while (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-do" target="_blank" rel="nofollow noopener noreferrer">.do (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>The <code class="language-text">.for</code> command can be used with syntax like the following.</p>
+<p>Loop control with <code class="language-text">.continue</code> and <code class="language-text">.break</code> works the same as in C.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Run a for loop using pseudo-registers</span>
+.for <span class="token punctuation">(</span>r <span class="token variable">$t1</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$t1</span> <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">;</span> r <span class="token variable">$t1</span> <span class="token operator">=</span> <span class="token variable">$t1</span> + <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> r <span class="token variable">$t1</span> <span class="token punctuation">}</span>
+
+<span class="token comment"># Jump to the next loop with continue</span>
+.for <span class="token punctuation">(</span>r <span class="token variable">$t1</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$t1</span> <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">;</span> r <span class="token variable">$t1</span> <span class="token operator">=</span> <span class="token variable">$t1</span> + <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> .if <span class="token punctuation">(</span> <span class="token variable">$t1</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> .echo skip <span class="token punctuation">;</span> .continue <span class="token punctuation">}</span> <span class="token punctuation">;</span> r <span class="token variable">$t1</span> <span class="token punctuation">}</span>
+
+<span class="token comment"># Stop the loop with break</span>
+.for <span class="token punctuation">(</span>r <span class="token variable">$t1</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$t1</span> <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">;</span> r <span class="token variable">$t1</span> <span class="token operator">=</span> <span class="token variable">$t1</span> + <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> .if <span class="token punctuation">(</span> <span class="token variable">$t1</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> .echo stop <span class="token punctuation">;</span> .break <span class="token punctuation">}</span> <span class="token punctuation">;</span> r <span class="token variable">$t1</span> <span class="token punctuation">}</span></code></pre></div>
+<p>The following is a sample that can dump all arguments at the time of each call inside a function to a file.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">.logopen /t C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>Public<span class="token punctuation">\</span>windbg.log
+.while <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> pc<span class="token punctuation">;</span>.echo rcd<span class="token punctuation">;</span><span class="token function">dc</span> @rcx L10<span class="token punctuation">;</span>.echo rdx<span class="token punctuation">;</span> <span class="token function">dc</span> @rdx L10<span class="token punctuation">;</span>.echo r8<span class="token punctuation">;</span> <span class="token function">dc</span> @r8 L10<span class="token punctuation">;</span>.echo r9<span class="token punctuation">;</span> <span class="token function">dc</span> @r9 L10<span class="token punctuation">;</span>.echo stack<span class="token punctuation">;</span> <span class="token function">dc</span> @rsp L10<span class="token punctuation">;</span>.echo rip<span class="token punctuation">;</span> u rip L1 <span class="token punctuation">}</span></code></pre></div>
 <h3 id="creating-blocks" style="position:relative;"><a href="#creating-blocks" aria-label="creating blocks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating Blocks</h3>
-<p>TODO: To be added</p>
+<p>The <code class="language-text">.block</code> command adds a new block inside the code.</p>
+<p>This is often used, for example, when you want to use the Alias described later like a variable.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">Commands <span class="token punctuation">;</span> .block <span class="token punctuation">{</span> Commands <span class="token punctuation">}</span> <span class="token punctuation">;</span> Commands</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-block" target="_blank" rel="nofollow noopener noreferrer">.block (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="creating-and-deleting-aliases" style="position:relative;"><a href="#creating-and-deleting-aliases" aria-label="creating and deleting aliases permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating and Deleting Aliases</h3>
-<p>TODO: To be added</p>
+<p>The <code class="language-text">as</code> and <code class="language-text">aS</code> commands define aliases.</p>
+<p>In WinDbg, you can use aliases like variables, just as you do pseudo-registers.</p>
+<p>However, defined aliases do not work in the current block, so after defining an alias you need to create a new block with the <code class="language-text">.block</code> command.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Define a string or number</span>
+as Name <span class="token number">10</span>
+aS Name <span class="token string">"Test Value"</span> <span class="token punctuation">;</span> .block <span class="token punctuation">{</span> .echo Name <span class="token punctuation">}</span>
+
+<span class="token comment"># Define an ASCII string from Address up to the null terminator</span>
+as /ma Name Address
+
+<span class="token comment"># Define a Unicode string from Address up to the null terminator</span>
+as /mu Name Address
+
+<span class="token comment"># Define a 64-bit value from Address</span>
+as /x Name Expression
+
+<span class="token comment"># Define a value equivalent to the contents of a file</span>
+aS /f Name File
+
+<span class="token comment"># Define a value from command output</span>
+as /c Name CommandString</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/as--as--set-alias-" target="_blank" rel="nofollow noopener noreferrer">as, aS (Set Alias) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="using-pseudo-registers" style="position:relative;"><a href="#using-pseudo-registers" aria-label="using pseudo registers permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Pseudo Registers</h3>
-<p>TODO: To be added</p>
+<p>WinDbg supports pseudo-registers for holding values, and you can refer to values through the default pseudo-registers or define your own pseudo-registers.</p>
+<p>Pseudo-registers start with a <code class="language-text">$</code> mark. When using MASM syntax, you can add <code class="language-text">@</code>.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output the value of a pseudo-register</span>
+? <span class="token variable">$ip</span>
+? @<span class="token variable">$ip</span>
+r <span class="token variable">$ip</span>
+r @<span class="token variable">$ip</span>
+
+<span class="token comment"># Define an arbitrary pseudo-register</span>
+r <span class="token variable">$t0</span> <span class="token operator">=</span> <span class="token number">7</span>
+
+<span class="token comment"># Use a pseudo-register to dereference a pointer at an arbitrary address with poi</span>
+r <span class="token variable">$t0</span> <span class="token operator">=</span> nt<span class="token operator">!</span>PsActiveProcessHead<span class="token punctuation">;</span>r <span class="token variable">$t1</span> <span class="token operator">=</span> poi<span class="token punctuation">(</span>@<span class="token variable">$t0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>r <span class="token variable">$t1</span>
+
+<span class="token comment"># Perform arithmetic using pseudo-registers</span>
+?? @<span class="token variable">$t0</span>+10
+
+<span class="token comment"># Define a pseudo-register with a type using the r command</span>
+r? <span class="token variable">$t15</span> <span class="token operator">=</span> * <span class="token punctuation">(</span>UNICODE_STRING*<span class="token punctuation">)</span> 0x12ffbc
+
+<span class="token comment"># Stop execution only when the current thread calls ntopenfile</span>
+bp /t @<span class="token variable">$thread</span> nt<span class="token operator">!</span>ntopenfile</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/pseudo-register-syntax" target="_blank" rel="nofollow noopener noreferrer">Pseudo-Register Syntax - Windows drivers | Microsoft Learn</a></p>
+<p>The pseudo-registers set by default are summarized in <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/pseudo-register-syntax#automatic-pseudo-registers" target="_blank" rel="nofollow noopener noreferrer">Pseudo-Registers</a>, but several are listed below.</p>
+<ul>
+<li><code class="language-text">$ea</code>: effective address of the last instruction</li>
+<li><code class="language-text">$ip</code>: instruction pointer register</li>
+<li><code class="language-text">$scopeip</code>: instruction pointer for the current local context</li>
+<li><code class="language-text">$exentry</code>: address of the entry point of the executable file for the current process</li>
+<li><code class="language-text">$thread</code>: address of the current thread (the ETHREAD block in kernel debugging, or the TEB address in user mode)</li>
+<li><code class="language-text">$peb</code>: address of the PEB for the current process</li>
+<li><code class="language-text">$teb</code>: address of the TEB for the current process</li>
+<li><code class="language-text">$tpid</code>: get the PID of the current process</li>
+</ul>
 <h3 id="sample-enumerating-processes-and-obtaining-file-names" style="position:relative;"><a href="#sample-enumerating-processes-and-obtaining-file-names" aria-label="sample enumerating processes and obtaining file names permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample: Enumerating Processes and Obtaining File Names</h3>
-<p>TODO: To be added</p>
+<ul>
+<li>A script that enumerates processes during kernel debugging and obtains the address of <code class="language-text">notepad.exe</code>.</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token variable">$$</span>  Get process list LIST_ENTRY <span class="token keyword">in</span> <span class="token variable">$t0</span><span class="token builtin class-name">.</span>
+r <span class="token variable">$t0</span> <span class="token operator">=</span> nt<span class="token operator">!</span>PsActiveProcessHead
+
+<span class="token variable">$$</span>  Iterate over all processes <span class="token keyword">in</span> list.
+.for <span class="token punctuation">(</span>r <span class="token variable">$t1</span> <span class="token operator">=</span> poi<span class="token punctuation">(</span>@<span class="token variable">$t0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">(</span>@<span class="token variable">$t1</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token punctuation">(</span>@<span class="token variable">$t1</span> <span class="token operator">!=</span> @<span class="token variable">$t0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      r <span class="token variable">$t1</span> <span class="token operator">=</span> poi<span class="token punctuation">(</span>@<span class="token variable">$t1</span><span class="token punctuation">))</span>
+<span class="token punctuation">{</span>
+    r? <span class="token variable">$t2</span> <span class="token operator">=</span> <span class="token comment">#CONTAINING_RECORD(@$t1, nt!_EPROCESS, ActiveProcessLinks);</span>
+    as /x Procc @<span class="token variable">$t2</span>
+
+    <span class="token variable">$$</span>  Get image name into <span class="token variable">$ImageName</span><span class="token builtin class-name">.</span>
+    as /ma <span class="token variable">$ImageName</span> @@c++<span class="token punctuation">(</span><span class="token operator">&amp;</span>@<span class="token variable">$t2</span>-<span class="token operator">></span>ImageFileName<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    .block
+    <span class="token punctuation">{</span>
+.if <span class="token punctuation">(</span><span class="token variable">$scmp</span><span class="token punctuation">(</span><span class="token string">"notepad.exe"</span>,<span class="token string">"<span class="token variable">${$ImageName}</span>"</span><span class="token punctuation">))</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span> .else <span class="token punctuation">{</span>.echo <span class="token variable">${$ImageName}</span> at <span class="token variable">${Procc}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    ad <span class="token variable">$ImageName</span>
+    ad Procc
+<span class="token punctuation">}</span></code></pre></div>
 <h3 id="sample-one-liner-to-rewrite-zf-while-continuing-loop-processing" style="position:relative;"><a href="#sample-one-liner-to-rewrite-zf-while-continuing-loop-processing" aria-label="sample one liner to rewrite zf while continuing loop processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample: One-liner to Rewrite ZF While Continuing Loop Processing</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">g <span class="token punctuation">;</span>p <span class="token punctuation">;</span>.if <span class="token punctuation">(</span>@zf <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> .printf <span class="token string">"Solver: R8 is %d<span class="token entity" title="\n">\n</span>"</span>, @r8 <span class="token punctuation">;</span> <span class="token variable">$$</span><span class="token operator">&lt;</span> C:<span class="token punctuation">\</span>CTF<span class="token punctuation">\</span>script.txt <span class="token punctuation">}</span> .else <span class="token punctuation">{</span> .echo <span class="token string">"Fail."</span> <span class="token punctuation">;</span> .kill <span class="token punctuation">}</span></code></pre></div>
+<p>Reference: <a href="/magical-windbg-vol2-04#%E7%B7%8F%E5%BD%93%E3%81%9F%E3%82%8A%E6%94%BB%E6%92%83%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%84-flag-%E3%82%92%E7%89%B9%E5%AE%9A%E3%81%99%E3%82%8B">Magical WinDbg VOL.2 (Chapter 4: Dynamically Analyzing DoPClient) - Identify the correct Flag by brute-force attack</a></p>
 <h2 id="javascript-based-debugging-scripts" style="position:relative;"><a href="#javascript-based-debugging-scripts" aria-label="javascript based debugging scripts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript-based Debugging Scripts</h2>
-<p>TODO: To be added</p>
+<p>Reference: <a href="/magical-windbg-vol2-04#javascript-%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B">Magical WinDbg VOL.2 (Chapter 4: Dynamically Analyzing DoPClient) - Using JavaScript-based debugging scripts</a></p>
+<p>Reference: <a href="/magical-windbg-vol2-06#javascript-%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%AC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%A7%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%82%92%E7%89%B9%E5%AE%9A%E3%81%99%E3%82%8B">Magical WinDbg VOL.2 (Chapter 6: Dynamically Analyzing DoPDriver) - Identifying the image file name with a JavaScript-based debugger script</a></p>
 <h2 id="user-mode-process-analysis" style="position:relative;"><a href="#user-mode-process-analysis" aria-label="user mode process analysis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Mode Process Analysis</h2>
 <h3 id="user-mode-threads" style="position:relative;"><a href="#user-mode-threads" aria-label="user mode threads permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Mode Threads</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># In user-mode debugging or process dump analysis, dump the call stacks of all threads</span>
+~*k
+
+<span class="token comment"># Set thread number 3 as the current context</span>
+~3s
+
+<span class="token comment"># Dump TEB information</span>
+<span class="token operator">!</span>teb
+
+<span class="token comment"># Output the structure using the TEB address identified by !teb</span>
+dt ntdll<span class="token operator">!</span>_TEB <span class="token operator">&lt;</span>TEB address<span class="token operator">></span></code></pre></div>
 <h3 id="user-mode-processes" style="position:relative;"><a href="#user-mode-processes" aria-label="user mode processes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Mode Processes</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Dump PEB information</span>
+<span class="token operator">!</span>peb
+
+<span class="token comment"># Output the structure using the PEB address identified by !peb</span>
+dt ntdll<span class="token operator">!</span>_PEB <span class="token operator">&lt;</span>PEB address<span class="token operator">></span></code></pre></div>
 <h3 id="displaying-stack-backtrace-and-frames" style="position:relative;"><a href="#displaying-stack-backtrace-and-frames" aria-label="displaying stack backtrace and frames permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Displaying Stack Backtrace and Frames</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Display the stack backtrace (the leading number is the frame number)</span>
+<span class="token comment"># Display it together with the frame number (n), frame pointer (v), and memory size used by the frame (f)</span>
+kvnf
+
+<span class="token comment"># Display the stack backtrace of all threads</span>
+~*kvnf
+
+<span class="token comment"># Display only the stack backtrace of a specific thread</span>
+~1kvnf
+
+<span class="token comment"># Display the call stacks of all threads in the current process</span>
+<span class="token operator">!</span>uniqstack</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/k--kb--kc--kd--kp--kp--kv--display-stack-backtrace-" target="_blank" rel="nofollow noopener noreferrer">k, kb, kc, kd, kp, kP, kv (Display Stack Backtrace) - Windows drivers | Microsoft Learn</a></p>
+<p>By running commands such as <code class="language-text">kvn</code>, you can obtain <code class="language-text">ChildEBP</code> (saved EBP), <code class="language-text">RetAddr</code>, and <code class="language-text">Args to Child</code> from the stack trace, but these values basically come from information on the stack.</p>
+<p>Because of that, note that they do not contain valid values in the 64-bit binary calling convention.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/cpp/build/x64-calling-convention?view=msvc-170" target="_blank" rel="nofollow noopener noreferrer">x64 calling convention | Microsoft Learn</a></p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Display local variables for the specified frame number</span>
+<span class="token comment"># /t displays variable types, and /V displays relative addresses of local variables</span>
+.frame 01<span class="token punctuation">;</span>dv
+.frame 01<span class="token punctuation">;</span>dv /t /V
+
+<span class="token comment"># Display register information for the specified frame number</span>
+.frame /r <span class="token number">9</span>
+
+<span class="token comment"># Specify a frame number and set that frame as the current context</span>
+.frame /c <span class="token number">9</span></code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/dv--display-local-variables-" target="_blank" rel="nofollow noopener noreferrer">dv (Display Local Variables) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-frame--set-local-context-" target="_blank" rel="nofollow noopener noreferrer">.frame (Set Local Context) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="investigating-user-mode-heaps" style="position:relative;"><a href="#investigating-user-mode-heaps" aria-label="investigating user mode heaps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Investigating User Mode Heaps</h3>
-<p>TODO: To be added</p>
+<p>Reference: <a href="https://kashiwaba-yuki.com/magical-windbg-vol1-06#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%83%80%E3%83%B3%E3%83%97%E3%81%8B%E3%82%89-heap-%E9%A0%98%E5%9F%9F%E3%82%92%E8%AA%BF%E6%9F%BB%E3%81%99%E3%82%8B" target="_blank" rel="nofollow noopener noreferrer">Magical WinDbg VOL.1 (Chapter 6: Investigating a User-mode Application Memory Leak from a Process Dump) - Investigating the Heap area from a process dump</a></p>
 <h2 id="kernel-mode-dump-analysis" style="position:relative;"><a href="#kernel-mode-dump-analysis" aria-label="kernel mode dump analysis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kernel Mode Dump Analysis</h2>
 <h3 id="setting-up-full-memory-dump-acquisition" style="position:relative;"><a href="#setting-up-full-memory-dump-acquisition" aria-label="setting up full memory dump acquisition permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting Up Full Memory Dump Acquisition</h3>
-<p>TODO: To be added</p>
+<p>This is summarized in the following article.</p>
+<p>Reference: <a href="/windows-windbg-005-kernel-dump">How to manually capture a kernel memory dump on Windows and analyze it with WinDbg</a></p>
 <h3 id="enumerating-kernel-structure-information" style="position:relative;"><a href="#enumerating-kernel-structure-information" aria-label="enumerating kernel structure information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerating Kernel Structure Information</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Enumerate information about NT kernel structures</span>
+dt nt<span class="token operator">!</span>_*
+dt nt<span class="token operator">!</span>_*interrupt*
+
+<span class="token comment"># Dump information about a kernel structure</span>
+dt nt<span class="token operator">!</span>_KINTERRUPT</code></pre></div>
 <h3 id="enumerating-process-information" style="position:relative;"><a href="#enumerating-process-information" aria-label="enumerating process information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerating Process Information</h3>
-<p>TODO: To be added</p>
+<p>When performing kernel debugging or analyzing a full dump, you can dump process information with the following commands.</p>
+<p><code class="language-text">.process</code> is a very useful command that can change the debugger context.</p>
+<p>Normally, kernel debugging does not display most information from user-mode address spaces, but by switching the context to a specific user-mode process with <code class="language-text">.process</code>, you can analyze that user-mode process during kernel debugging.</p>
+<p>Note: I do not know how to return to the original state where kernel information is displayed after changing the context, so I reconnect the kernel debugger each time.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Enumerate all processes in the system</span>
+<span class="token operator">!</span>process <span class="token number">0</span> <span class="token number">0</span>
+
+<span class="token comment"># Get full detailed information for a specific process</span>
+<span class="token operator">!</span>process <span class="token number">0</span> <span class="token number">7</span> notepad.exe
+
+<span class="token comment"># Get information about the EPROCESS structure for the specified process</span>
+dt nt_EPROCESS <span class="token operator">&lt;</span>address of the EPROCESS block identified by <span class="token operator">!</span>process<span class="token operator">></span>
+
+<span class="token comment"># Change the debugger context to the specified process (so that commands like !peb become available)</span>
+.process /r /P <span class="token operator">&lt;</span>address of the EPROCESS block identified by <span class="token operator">!</span>process<span class="token operator">></span>
+
+<span class="token comment"># Traverse all processes (you can also issue commands to all processes)</span>
+<span class="token operator">!</span>for_each_process</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-process" target="_blank" rel="nofollow noopener noreferrer">!process (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-process--set-process-context-" target="_blank" rel="nofollow noopener noreferrer">.process (Set Process Context) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-for-each-process" target="_blank" rel="nofollow noopener noreferrer">for<em>each</em>process - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/changing-contexts" target="_blank" rel="nofollow noopener noreferrer">Changing Contexts - Windows drivers | Microsoft Learn</a></p>
+<p>You can also enumerate process information directly from <code class="language-text">nt!_EPROCESS</code>.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Get the pointer address to ActiveProcessLinks of the System process</span>
+r <span class="token variable">$t0</span> <span class="token operator">=</span> nt<span class="token operator">!</span>PsActiveProcessHead<span class="token punctuation">;</span>r <span class="token variable">$t1</span> <span class="token operator">=</span> poi<span class="token punctuation">(</span>@<span class="token variable">$t0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>r <span class="token variable">$t1</span>
+
+<span class="token comment"># Check the offset of ActiveProcessLinks.Flink</span>
+dt nt<span class="token operator">!</span>_EPROCESS ActiveProcessLinks
+<span class="token operator">></span> +0x448 ActiveProcessLinks
+
+<span class="token comment"># Dump _EPROCESS (output equivalent to .process 0 0)</span>
+dt nt<span class="token operator">!</span>_EPROCESS -l ActiveProcessLinks.Flink -y Ima -yoi Uni <span class="token variable">$t1</span>-0x448</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/windows-hardware/drivers/debugger/debugger-command-program-examples" target="_blank" rel="nofollow noopener noreferrer">Debugger command program examples - Windows drivers | Microsoft Learn</a></p>
 <h3 id="enumerating-thread-information" style="position:relative;"><a href="#enumerating-thread-information" aria-label="enumerating thread information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerating Thread Information</h3>
-<p>TODO: To be added</p>
+<p>Even in kernel debugging, you can reference the TEB with the <code class="language-text">!teb</code> command in the same way as in user mode.</p>
+<p>In that case, specify the target TEB address as follows.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Reference TEB information</span>
+<span class="token operator">!</span>teb <span class="token operator">&lt;</span>TEB address<span class="token operator">></span></code></pre></div>
 <h3 id="enumerating-process-handle-information" style="position:relative;"><a href="#enumerating-process-handle-information" aria-label="enumerating process handle information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerating Process Handle Information</h3>
-<p>TODO: To be added</p>
+<p>The <code class="language-text">!handle</code> command is used a little differently between user-mode debugging and kernel debugging.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token operator">!</span>handle notepad.exe</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-handle" target="_blank" rel="nofollow noopener noreferrer">handle (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="outputting-physical-and-virtual-memory-information" style="position:relative;"><a href="#outputting-physical-and-virtual-memory-information" aria-label="outputting physical and virtual memory information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Outputting Physical and Virtual Memory Information</h3>
-<p>TODO: To be added</p>
+<p>With the <code class="language-text">!memusage</code> command, you can obtain usage statistics for physical memory, and with the <code class="language-text">!vm</code> command, usage statistics for virtual memory.</p>
+<p>The output of <code class="language-text">!memusage</code> is especially large, so I think it is better to enable output logging in advance.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output physical memory usage statistics</span>
+<span class="token operator">!</span>memusage
+
+<span class="token comment"># Output virtual memory usage statistics</span>
+<span class="token operator">!</span>vm</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-memusage" target="_blank" rel="nofollow noopener noreferrer">memusage (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-vm" target="_blank" rel="nofollow noopener noreferrer">vm (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Also, the <code class="language-text">!address</code> command can be used in kernel debugging.</p>
+<p>However, when debugging the kernel, the amount of output information is slightly smaller.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Identify the memory region used by a specific process</span>
+<span class="token operator">!</span>address <span class="token operator">&lt;</span>address of the EPROCESS block identified by <span class="token operator">!</span>process<span class="token operator">></span></code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/windows-hardware/drivers/debugger/-address" target="_blank" rel="nofollow noopener noreferrer">address (WinDbg) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="aligning-context-in-kernel-memory-dump" style="position:relative;"><a href="#aligning-context-in-kernel-memory-dump" aria-label="aligning context in kernel memory dump permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aligning Context in Kernel Memory Dump</h3>
-<p>TODO: To be added</p>
+<p>After identifying the context record from the output of <code class="language-text">!analyze -v</code>, use the <code class="language-text">.cxr</code> command.</p>
+<p>You can align the register context with the context record by using it as follows.</p>
+<div class="gatsby-highlight" data-language="powershell"><pre class="language-powershell"><code class="language-powershell"><span class="token punctuation">.</span>cxr &lt;Address> <span class="token punctuation">;</span> kb</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/windows-hardware/drivers/debuggercmds/-cxr--display-context-record-" target="_blank" rel="nofollow noopener noreferrer">.cxr (Display Context Record) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="investigating-session-id-and-processes" style="position:relative;"><a href="#investigating-session-id-and-processes" aria-label="investigating session id and processes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Investigating Session ID and Processes</h3>
-<p>TODO: To be added</p>
+<p>By examining the session ID, you can determine which session a process belongs to.</p>
+<p>You can also dump structure information by using the <code class="language-text">_MM_SESSION_SPACE</code> address obtained with <code class="language-text">!sprocess</code>.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Get a list of active sessions</span>
+<span class="token operator">!</span>session
+
+<span class="token comment"># Set session ID 1 as the current active session</span>
+<span class="token operator">!</span>session -s <span class="token number">1</span>
+
+<span class="token comment"># Enumerate processes in the current session</span>
+<span class="token operator">!</span>sprocess
+
+<span class="token comment"># View detailed information for the session</span>
+dt nt<span class="token operator">!</span>_MM_SESSION_SPACE ffffd080ba83d000
+
+<span class="token comment"># You can also output memory usage for each session region</span>
+<span class="token operator">!</span>vm <span class="token number">4</span></code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-session" target="_blank" rel="nofollow noopener noreferrer">session (WinDbg) - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/sysinternals/resources/windows-internals" target="_blank" rel="nofollow noopener noreferrer">Inside Windows, 7th Edition, Part 1, p.389</a></p>
+<p>Reference: <a href="https://www.nirsoft.net/kernel_struct/vista/MM_SESSION_SPACE.html" target="_blank" rel="nofollow noopener noreferrer">struct MM<em>SESSION</em>SPACE</a></p>
 <h3 id="exploring-system-registry-information" style="position:relative;"><a href="#exploring-system-registry-information" aria-label="exploring system registry information permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exploring System Registry Information</h3>
-<p>TODO: To be added</p>
+<p>Reference: <a href="https://kashiwaba-yuki.com/magical-windbg-vol1-07#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E6%83%85%E5%A0%B1%E3%82%92%E6%8E%A2%E7%B4%A2%E3%81%99%E3%82%8B" target="_blank" rel="nofollow noopener noreferrer">Magical WinDbg VOL.1 (Chapter 7: Investigating a User-mode Memory Leak from a Full Memory Dump) - Exploring system registry information</a></p>
 <h3 id="reading-cpu-statistics-by-referencing-kpcr-and-kprcb" style="position:relative;"><a href="#reading-cpu-statistics-by-referencing-kpcr-and-kprcb" aria-label="reading cpu statistics by referencing kpcr and kprcb permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading CPU Statistics by Referencing KPCR and KPRCB</h3>
-<p>TODO: To be added</p>
+<p>The Kernel Processor Control Region (KPCR) and Kernel Processor Control Block (KPRCB) contain information about processor-specific data, state, and statistics.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Output KPRCB information for the specified processor</span>
+<span class="token operator">!</span>prcb <span class="token operator">&lt;</span>CPU number<span class="token operator">></span>
+
+<span class="token comment"># Dump KPCR information</span>
+dt nt<span class="token operator">!</span>_KPCR @<span class="token variable">$pcr</span></code></pre></div>
 <h3 id="investigating-pool" style="position:relative;"><a href="#investigating-pool" aria-label="investigating pool permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Investigating Pool</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Investigate a pool tag name</span>
+<span class="token operator">!</span>poolused <span class="token number">0</span> <span class="token operator">&lt;</span>tag name<span class="token operator">></span>
+
+<span class="token comment"># Investigate pool</span>
+<span class="token operator">!</span>pool <span class="token operator">&lt;</span>address of pool region<span class="token operator">></span>
+
+<span class="token comment"># Find the pool address from a pool tag (very slow, so use PoolHitTag in live debugging)</span>
+<span class="token operator">!</span>poolfind -tag <span class="token string">"&lt;tag name>"</span></code></pre></div>
+<p>Reference: <a href="/magical-windbg-vol2-06#%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%97%E3%83%BC%E3%83%AB%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">Magical WinDbg VOL.2 (Chapter 6: Dynamically Analyzing DoPDriver) - Checking page pool information</a></p>
+<p>Reference: <a href="https://kashiwaba-yuki.com/magical-windbg-vol2-06#%E3%83%97%E3%83%BC%E3%83%AB%E3%82%BF%E3%82%B0%E3%81%8B%E3%82%89%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AE%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E7%89%B9%E5%AE%9A%E3%81%99%E3%82%8B" target="_blank" rel="nofollow noopener noreferrer">Magical WinDbg VOL.2 (Chapter 6: Dynamically Analyzing DoPDriver) - Identifying the address of a memory block from a pool tag</a></p>
+<h2 id="analyzing-the-net-runtime-using-the-sos-debugger-extension" style="position:relative;"><a href="#analyzing-the-net-runtime-using-the-sos-debugger-extension" aria-label="analyzing the net runtime using the sos debugger extension permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Analyzing the .NET Runtime Using the SOS Debugger Extension</h2>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/dotnet/core/diagnostics/sos-debugging-extension" target="_blank" rel="nofollow noopener noreferrer">SOS debugging extension for .NET - .NET | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/dotnet/framework/tools/sos-dll-sos-debugging-extension" target="_blank" rel="nofollow noopener noreferrer">SOS.dll (SOS Debugging Extension) - .NET Framework | Microsoft Learn</a></p>
+<h3 id="displaying-stack-traces-for-managed-code" style="position:relative;"><a href="#displaying-stack-traces-for-managed-code" aria-label="displaying stack traces for managed code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Displaying Stack Traces for Managed Code</h3>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Display a managed code stack trace</span>
+<span class="token operator">!</span>clrstack
+
+<span class="token comment"># Switch to a specific thread context and display a managed code stack trace</span>
+~9s <span class="token punctuation">;</span> <span class="token operator">!</span>clrstack
+
+<span class="token comment"># Display the managed stacks of all threads</span>
+~*e <span class="token operator">!</span>clrstack
+
+<span class="token comment"># Display a managed code stack trace together with parameter and local variable information</span>
+<span class="token operator">!</span>clrstack -p -l
+<span class="token operator">!</span>clrstack -a</code></pre></div>
+<h3 id="examining-objects-on-the-managed-stack" style="position:relative;"><a href="#examining-objects-on-the-managed-stack" aria-label="examining objects on the managed stack permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examining Objects on the Managed Stack</h3>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># DumpStackObjects: display all managed objects found within the current stack range</span>
+<span class="token operator">!</span>dso
+
+<span class="token comment"># DumpObj: display information about the object at the specified address</span>
+<span class="token operator">!</span>do <span class="token operator">&lt;</span>object address<span class="token operator">></span></code></pre></div>
+<h3 id="displaying-managed-threads-in-the-process" style="position:relative;"><a href="#displaying-managed-threads-in-the-process" aria-label="displaying managed threads in the process permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Displaying Managed Threads in the Process</h3>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Display all managed threads in the process</span>
+<span class="token operator">!</span>threads</code></pre></div>
+<ul>
+<li>With <code class="language-text">!threads</code>, you can check information such as the Lock Count of managed threads and the thread’s Apt (Apartment) information.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/54138fe98fc661fd36545466fe6f5409/81315/image-20260515185001457.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2klEQVQY05WOYXKCMBCFOYdEIRWEQrKQOIGZ1kSSqRUpdRDL2PufpJv2BP3+7L6383ZeYIw5aM0Yp0/bKKbRfwicc0brLNsRQtYkJCT8Y+XxC/okXOFps0a8wrH5JUjThNdSNa2UItllBYiqqrBI07RCCA6csZLV+23OswIV5HlOKcUXPgwcXTj1w9Cf1YuBw8V2nbX28fj+vF6nGzK173dm76XSdQWddcZoznkUx0FZPOdcnvqP4XJutWOv/bE7YnhZlnEc53m+TZN6m5n9KpTBHnLvAYAkTX8ATQk2lA2gL0kAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/54138fe98fc661fd36545466fe6f5409/8ac56/image-20260515185001457.webp 240w,
+/static/54138fe98fc661fd36545466fe6f5409/d3be9/image-20260515185001457.webp 480w,
+/static/54138fe98fc661fd36545466fe6f5409/e46b2/image-20260515185001457.webp 960w,
+/static/54138fe98fc661fd36545466fe6f5409/f992d/image-20260515185001457.webp 1440w,
+/static/54138fe98fc661fd36545466fe6f5409/87a8c/image-20260515185001457.webp 1656w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/54138fe98fc661fd36545466fe6f5409/8ff5a/image-20260515185001457.png 240w,
+/static/54138fe98fc661fd36545466fe6f5409/e85cb/image-20260515185001457.png 480w,
+/static/54138fe98fc661fd36545466fe6f5409/d9199/image-20260515185001457.png 960w,
+/static/54138fe98fc661fd36545466fe6f5409/07a9c/image-20260515185001457.png 1440w,
+/static/54138fe98fc661fd36545466fe6f5409/81315/image-20260515185001457.png 1656w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/54138fe98fc661fd36545466fe6f5409/d9199/image-20260515185001457.png"
+            alt="image-20260515185001457"
+            title="image-20260515185001457"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/windows/win32/com/processes--threads--and-apartments" target="_blank" rel="nofollow noopener noreferrer">Processes, Threads, and Apartments - Win32 apps | Microsoft Learn</a></p>
 <h2 id="remote-debugging" style="position:relative;"><a href="#remote-debugging" aria-label="remote debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remote Debugging</h2>
 <h3 id="debugging-a-process-in-a-virtual-machine-from-the-client-side-windbg" style="position:relative;"><a href="#debugging-a-process-in-a-virtual-machine-from-the-client-side-windbg" aria-label="debugging a process in a virtual machine from the client side windbg permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Debugging a Process in a Virtual Machine from the Client-side WinDbg</h3>
-<p>TODO: To be added</p>
+<p>As a way to debug a process in a remote machine from the client-side WinDbg, you can either remotely attach to WinDbg started on the remote machine or use <code class="language-text">dbgsrv.exe</code>.</p>
+<p>I mainly want to manage symbol resources and similar items on the client side rather than on the virtual machine side, so I use <code class="language-text">dbgsrv.exe</code> instead of WinDbg.</p>
+<ol>
+<li>Run the following command on the host (remote machine) side.</li>
+</ol>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Host side</span>
+dbgsrv.exe -t tcp:port<span class="token operator">=</span><span class="token number">1234</span></code></pre></div>
+<ol start="2">
+<li>Run the following command on the client side to start WinDbg and begin debugging.</li>
+</ol>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Client side (after WinDbg starts, you can attach to a process and so on)</span>
+WinDbgX.exe -premote tcp:port<span class="token operator">=</span><span class="token number">1234</span>,server<span class="token operator">=</span><span class="token number">192.168</span>.50.8
+
+<span class="token comment"># Start the notepad.exe process in the virtual machine and debug it</span>
+WinDbgX.exe -premote tcp:port<span class="token operator">=</span><span class="token number">1234</span>,server<span class="token operator">=</span><span class="token number">192.168</span>.50.8 C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>notepad.exe</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/windows-hardware/drivers/debugger/remote-debugging-using-windbg" target="_blank" rel="nofollow noopener noreferrer">Remote Debugging Using WinDbg - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/ja-jp/windows-hardware/drivers/debugger/process-servers--user-mode-" target="_blank" rel="nofollow noopener noreferrer">Process Servers (User Mode) - Windows drivers | Microsoft Learn</a></p>
 <h2 id="live-debugging" style="position:relative;"><a href="#live-debugging" aria-label="live debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Live Debugging</h2>
 <h3 id="connecting-kernel-debugger-hyper-v-virtualbox" style="position:relative;"><a href="#connecting-kernel-debugger-hyper-v-virtualbox" aria-label="connecting kernel debugger hyper v virtualbox permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting Kernel Debugger (Hyper-V, VirtualBox)</h3>
-<p>TODO: To be added</p>
+<p>This is summarized in the following article.</p>
+<p>Reference: <a href="/windows-windbg-004-kernel-debug">First steps for kernel debugging a Windows 10 environment with WinDbg</a></p>
 <h3 id="setting-debugger-operations-for-exceptions-or-specific-events" style="position:relative;"><a href="#setting-debugger-operations-for-exceptions-or-specific-events" aria-label="setting debugger operations for exceptions or specific events permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting Debugger Operations for Exceptions or Specific Events</h3>
-<p>TODO: To be added</p>
+<p>Planned to be added later.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/sx--sxd--sxe--sxi--sxn--sxr--sx---set-exceptions-" target="_blank" rel="nofollow noopener noreferrer">sx, sxd, sxe, sxi, sxn, sxr, sx- (Set exceptions) - Windows drivers | Microsoft Learn</a></p>
 <h2 id="filter-driver-investigation" style="position:relative;"><a href="#filter-driver-investigation" aria-label="filter driver investigation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filter Driver Investigation</h2>
 <h3 id="commands-of-fltkd-extension" style="position:relative;"><a href="#commands-of-fltkd-extension" aria-label="commands of fltkd extension permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commands of fltkd Extension</h3>
-<p>TODO: To be added</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># Enumerate filter driver information (the fltmc command is also useful)</span>
+<span class="token operator">!</span>fltkd.filters <span class="token number">1</span>
+
+<span class="token comment"># Get detailed information for a specific filter by specifying that filter's FLT_FILTER address</span>
+<span class="token operator">!</span>fltkd.filter ffffac8ce4df1010
+
+<span class="token comment"># Use the DeviceObject address identified here to display detailed information</span>
+dt nt<span class="token operator">!</span>_DRIVER_OBJECT ffffac8ce357c850
+<span class="token operator">></span>
++0x000 Type             <span class="token builtin class-name">:</span> 0n4
++0x030 DriverExtension  <span class="token builtin class-name">:</span> 0xffffac8c<span class="token variable"><span class="token variable">`</span>e357c9a0 _DRIVER_EXTENSION
++0x070 MajorFunction    <span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token number">28</span><span class="token punctuation">]</span> 0xfffff800<span class="token variable">`</span></span>65e72000     long  +fffff80065e72000
+
+<span class="token comment"># Next, identify the offset to MajorFunction in DeviceObject and display information for MajorFunction</span>
+<span class="token comment"># You can also get similar information by clicking the MajorFunction link</span>
+dps ffffac8ce357c850 + 0x70 L0n28
+
+<span class="token comment"># You can also investigate the structure from the DRIVER_EXTENSION address</span>
+dt nt<span class="token operator">!</span>_DRIVER_EXTENSION ffffac8ce357c850+0x30</code></pre></div>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/development-and-testing-tools#fltkd-debugger-extension" target="_blank" rel="nofollow noopener noreferrer">Tools for minifilter development and testing - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="http://fsfilters.blogspot.com/2011/12/debugging-minifilters-finding-callbacks.html" target="_blank" rel="nofollow noopener noreferrer">Of Filesystems And Other Demons: Debugging Minifilters: Finding the Callbacks</a></p>
 <h2 id="knowledge-required-for-analysis" style="position:relative;"><a href="#knowledge-required-for-analysis" aria-label="knowledge required for analysis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Knowledge Required for Analysis</h2>
 <h3 id="understanding-32-bit-and-64-bit-calling-conventions" style="position:relative;"><a href="#understanding-32-bit-and-64-bit-calling-conventions" aria-label="understanding 32 bit and 64 bit calling conventions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understanding 32-bit and 64-bit Calling Conventions</h3>
-<p>TODO: To be added</p>
+<p>Planned as a separate article.</p>
 <h3 id="ntglobalflag" style="position:relative;"><a href="#ntglobalflag" aria-label="ntglobalflag permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>NTGLOBALFLAG</h3>
-<p>TODO: To be added</p>
+<p><code class="language-text">NTGLOBALFLAG</code> exists in the PEB, and its default value is 0, but a value is set during debugging.</p>
+<p>For 32-bit processes it is at offset <code class="language-text">0x68</code>, and for 64-bit processes it is at offset <code class="language-text">0xBC</code>.</p>
+<p>Because of this, a program may access the PEB structure address through <code class="language-text">ZwQueryInformationProcess</code> or similar APIs and use it for anti-debugging purposes.</p>
+<p>Reference: <a href="https://ctf-wiki.mahaloz.re/reverse/windows/anti-debug/ntglobalflag/" target="_blank" rel="nofollow noopener noreferrer">NtGlobalFlag - CTF Wiki EN</a></p>
+<p>Reference: <a href="https://osandamalith.com/2016/04/23/debugger-detection-using-ntglobalflag/" target="_blank" rel="nofollow noopener noreferrer">Debugger Detection Using NtGlobalFlag | 🔐Blog of Osanda</a></p>
 <h3 id="exception_record" style="position:relative;"><a href="#exception_record" aria-label="exception_record permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EXCEPTION_RECORD</h3>
-<p>TODO: To be added</p>
+<p><code class="language-text">EXCEPTION_RECORD</code> contains information about exceptions and crashes.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-exception_record?redirectedfrom=MSDN" target="_blank" rel="nofollow noopener noreferrer">EXCEPTION_RECORD (winnt.h) - Win32 apps | Microsoft Learn</a></p>
+<p><code class="language-text">ExceptionCode</code> contains the reason why the exception occurred.</p>
+<p>Common exception types are listed on the page above.</p>
 <h3 id="eprocess-ethread" style="position:relative;"><a href="#eprocess-ethread" aria-label="eprocess ethread permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EPROCESS, ETHREAD</h3>
-<p>TODO: To be added</p>
+<p>The <code class="language-text">EPROCESS</code> structure is undocumented, but it is known as a kernel memory structure that describes a system process and can be accessed as <code class="language-text">nt!_EPROCESS</code>.</p>
+<p>This structure is linked by the doubly linked list (<code class="language-text">LIST_ENTRY</code>) <code class="language-text">ActiveProcessLinks</code>. When a command such as <code class="language-text">cmd /c tasklist</code> is run, the list is followed and <code class="language-text">EPROCESS</code> structures are traversed, so the processes are displayed as a list.</p>
+<p>For that reason, in WinDbg you can also inspect active processes by following this list with the kernel debugger.</p>
+<p>On the other hand, if malware or similar code can access kernel memory, it may rewrite the <code class="language-text">ActiveProcessLinks</code> pointers so that a malicious process does not appear in the process list.</p>
+<p>Reference: <a href="https://www.nirsoft.net/kernel_struct/vista/EPROCESS.html" target="_blank" rel="nofollow noopener noreferrer">struct EPROCESS</a></p>
+<p>Reference: <a href="https://www.nirsoft.net/kernel_struct/vista/ETHREAD.html" target="_blank" rel="nofollow noopener noreferrer">struct ETHREAD</a></p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/eprocess" target="_blank" rel="nofollow noopener noreferrer">Windows kernel opaque structures - Windows drivers | Microsoft Learn</a></p>
+<p>Reference: <a href="https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/manipulating-activeprocesslinks-to-unlink-processes-in-userland" target="_blank" rel="nofollow noopener noreferrer">Manipulating ActiveProcessLinks to Hide Processes in Userland - Red Team Notes</a></p>
 <h3 id="guard-page" style="position:relative;"><a href="#guard-page" aria-label="guard page permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Guard page</h3>
-<p>TODO: To be added</p>
+<p>When a program accesses memory that was created as a Guard Page, a <code class="language-text">STATUS_GUARD_PAGE_VIOLATION (0x80000001)</code> exception occurs.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows/win32/memory/creating-guard-pages" target="_blank" rel="nofollow noopener noreferrer">Creating Guard Pages - Win32 apps | Microsoft Learn</a></p>
 <h3 id="sysenter-instruction" style="position:relative;"><a href="#sysenter-instruction" aria-label="sysenter instruction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sysenter instruction</h3>
-<p>TODO: To be added</p>
+<p>Planned to be added.</p>
+<p>Reference: <a href="https://wiki.osdev.org/SYSENTER" target="_blank" rel="nofollow noopener noreferrer">SYSENTER - OSDev Wiki</a></p>
 <h2 id="common-exceptions" style="position:relative;"><a href="#common-exceptions" aria-label="common exceptions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Exceptions</h2>
 <h3 id="access-violation-exception" style="position:relative;"><a href="#access-violation-exception" aria-label="access violation exception permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access Violation Exception</h3>
-<p>TODO: To be added</p>
+<p>An Access Violation exception (error code: <code class="language-text">C0000005</code>) occurs when a program tries to read from or write to protected memory, corrupted memory, or a nonexistent pointer address.</p>
+<p>For example, this exception is also triggered when accessing freed memory, such as in a use-after-free.</p>
+<p>Also, if memory in the range from <code class="language-text">0x0</code> to <code class="language-text">0x10000</code> (64K) is accessed, the exception is triggered by a NULL pointer dereference.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/shows/Inside/C0000005" target="_blank" rel="nofollow noopener noreferrer">Access Violation C0000005 | Microsoft Learn</a></p>
 <h2 id="environment-settings" style="position:relative;"><a href="#environment-settings" aria-label="environment settings permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Environment Settings</h2>
 <h3 id="changing-visual-studio-linker-settings" style="position:relative;"><a href="#changing-visual-studio-linker-settings" aria-label="changing visual studio linker settings permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing Visual Studio Linker Settings</h3>
-<p>TODO: To be added</p>
+<p>In the default settings of recent Visual Studio versions, the export table is not included in symbol files.</p>
+<p>Therefore, configure <code class="language-text">/DEBUG:FULL</code> in the project settings as shown below.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 897px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/17c37100f84508e3d99da94643445558/3a737/image-20230401113053380.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVQoz5VT227TQBD1//8AVAhekCp4QDwBago8IFFqSKImTezE8XV9t3OxHSeRwM5hZlNHog+VGOlodjWzZ+fMziq2bSOOY3iehyiKkec5qvUJW0K9OWGTJzKP48vl8uwZQRAgyzIMBgMopmnCtCwwMQf8MMbVnY8PQx/vfgq8vfXwRhV4r1rQ9BkWlO+4LhUg6JxNaw/TqSaLuVVVKFEUwaWEerdDVZVEmOD7LMXXscDHoYfraYYbccBAbCEcC4FrI40C7LcFSlZQrAhrsBkzDUqSpCQlkRJWqxVCumlXFsgiH82hRmdVvcezqwleftHx/FrHxec5Ln8IXKoRXt8IvFBXePXpFxTWniQJyrJERYiIvCi3iOmiTVHhT3vE8QjUh98Yu0voYSn9nZPDSGuY+YH8Dvamwbf+PRTfjxCQTMv2SHqANE3x2I7M+KSd4o5lcg8TehAPhmFRpVxteibp0O1bqrbtfLcmNE176qFhQOG+5XkG01xI6Sm1gK1t239InwLnngm7Hi4WJ8LsgfB/rFPBHAqT+ELI0eGX5uHtsKNRYtR1ffYdeL/f7yV43zQNzeMUShiG8pe4NKBVVclH4dJ1XZekHPd9X3rHcWSu93B5URRYr9cSTDoej6FMJhNZKpOw5x8jDxGY4DFYyXw+x2g0gqZp6Pf7YI7hcIher4e/+6x+teeBCeQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/17c37100f84508e3d99da94643445558/8ac56/image-20230401113053380.webp 240w,
+/static/17c37100f84508e3d99da94643445558/d3be9/image-20230401113053380.webp 480w,
+/static/17c37100f84508e3d99da94643445558/10735/image-20230401113053380.webp 897w"
+              sizes="(max-width: 897px) 100vw, 897px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/17c37100f84508e3d99da94643445558/8ff5a/image-20230401113053380.png 240w,
+/static/17c37100f84508e3d99da94643445558/e85cb/image-20230401113053380.png 480w,
+/static/17c37100f84508e3d99da94643445558/3a737/image-20230401113053380.png 897w"
+            sizes="(max-width: 897px) 100vw, 897px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/17c37100f84508e3d99da94643445558/3a737/image-20230401113053380.png"
+            alt="image-20230401113053380"
+            title="image-20230401113053380"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <h3 id="disabling-optimization-in-release-builds" style="position:relative;"><a href="#disabling-optimization-in-release-builds" aria-label="disabling optimization in release builds permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disabling Optimization in Release Builds</h3>
-<p>TODO: To be added</p>
+<p>When building a program for WinDbg verification purposes, it may be useful to disable the optimization settings for Release builds.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 783px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4f1e8aa569235a94d4368c2cca556318/e51a6/image-20230401221935008.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgklEQVQoz32RzWrbQBRG9eSF0kUeIBBCF912V9qGPkAhNUmgjRMrrSTrz/ZIo//Ikq1iGftkNK5LC2kvfDAwd86cO2OEYYjn+9i2jRCCKIqYLyLu3QW3U6Hz1Z4zmnh8uzOZ+S55KsmSmCJNkGKO59gsQp9IrY08z7EsiziWrNdrMtUUypI3l4IX7ya8urA4+5Jxepnz4cphbPl4aYOv4sqaafz4KzWmkjDadqXNpJR0XafAMUlaEAbK+sd3As8F9gx1ceNy8vGBk082L98/cPo55vVVyfko52xU8PZaYCyXS9I01aDVavUbKESkzG2CcMb+wMOdOkzuxpj3Y1w1ZlM/qrt2HGvzs8OI4kwdirm+uSWcSaZuQFXVavyONMvI80IBD8S2bSnKkqZpKctKZ+jr+y39dqv3jbquVUODYzuUVaU/ZbD+qxTwCH2ujnt93x9Gblv1yL5HkiQEQaCAjW7Y7Xa6ef/HwX9Fj7zZDIZLrWqaJr6CDW94NPyf1XOGA/AJBvFVy7h7xugAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4f1e8aa569235a94d4368c2cca556318/8ac56/image-20230401221935008.webp 240w,
+/static/4f1e8aa569235a94d4368c2cca556318/d3be9/image-20230401221935008.webp 480w,
+/static/4f1e8aa569235a94d4368c2cca556318/b408c/image-20230401221935008.webp 783w"
+              sizes="(max-width: 783px) 100vw, 783px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4f1e8aa569235a94d4368c2cca556318/8ff5a/image-20230401221935008.png 240w,
+/static/4f1e8aa569235a94d4368c2cca556318/e85cb/image-20230401221935008.png 480w,
+/static/4f1e8aa569235a94d4368c2cca556318/e51a6/image-20230401221935008.png 783w"
+            sizes="(max-width: 783px) 100vw, 783px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4f1e8aa569235a94d4368c2cca556318/e51a6/image-20230401221935008.png"
+            alt="image-20230401221935008"
+            title="image-20230401221935008"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>Note that Debug builds have optimization disabled by default.</p>
 <h2 id="windbg-troubleshooting" style="position:relative;"><a href="#windbg-troubleshooting" aria-label="windbg troubleshooting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WinDbg Troubleshooting</h2>
 <h3 id="when-nt-symbols-are-incorrect-please-fix-symbols-error-is-output" style="position:relative;"><a href="#when-nt-symbols-are-incorrect-please-fix-symbols-error-is-output" aria-label="when nt symbols are incorrect please fix symbols error is output permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>When “NT symbols are incorrect, please fix symbols” Error is Output</h3>
-<p>TODO: To be added</p>
+<p>If the error <code class="language-text">NT symbols are incorrect, please fix symbols</code> is displayed when you run a command such as <code class="language-text">!process 0 0</code>, there may be some problem with symbol loading.</p>
+<p>In such a case, first use a command like the following example to identify what problem is occurring during symbol loading.</p>
+<div class="gatsby-highlight" data-language="powershell"><pre class="language-powershell"><code class="language-powershell"><span class="token comment"># Output detailed information when loading nt symbols</span>
+<span class="token operator">!</span>sym noisy<span class="token punctuation">;</span> <span class="token punctuation">.</span>reload <span class="token operator">/</span>f nt</code></pre></div>
+<p>Reference: <a href="https://stackoverflow.com/questions/66540126/process-0-0-nt-symbols-are-incorrect-please-fix-symbols" target="_blank" rel="nofollow noopener noreferrer">windows 10 - !process 0 0 - NT symbols are incorrect, please fix symbols - Stack Overflow</a></p>
+<p>In my environment, fixing an incorrect symbol path setting also resolved this problem.</p>
 <h2 id="other-tips" style="position:relative;"><a href="#other-tips" aria-label="other tips permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other Tips</h2>
 <h3 id="which-windbgx86-and-windbgx64-should-be-used" style="position:relative;"><a href="#which-windbgx86-and-windbgx64-should-be-used" aria-label="which windbgx86 and windbgx64 should be used permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Which WinDbg(X86) and WinDbg(X64) Should Be Used?</h3>
-<p>TODO: To be added</p>
+<p>Basically, use WinDbg(X64) when debugging or analyzing dumps for 64-bit applications, and use WinDbg(X86) for 32-bit applications.</p>
+<p>WinDbg(X64) can analyze both 64-bit and 32-bit applications, but when WinDbg(X64) analyzes a 32-bit application, the added WOW64 layer can cause problems that make analysis more difficult, especially when analyzing dumps.</p>
+<p>In some cases, you can avoid the problem with the <code class="language-text">.effmach x86</code> command, but this is not the same as using WinDbg(X86), so it is better to use WinDbg(X86) whenever possible.</p>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/-effmach--effective-machine-" target="_blank" rel="nofollow noopener noreferrer">.effmach (Effective Machine) - Windows drivers | Microsoft Learn</a></p>
 <h3 id="using-dark-theme-in-windbgclassic" style="position:relative;"><a href="#using-dark-theme-in-windbgclassic" aria-label="using dark theme in windbgclassic permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Dark Theme in WinDbg(Classic)</h3>
-<p>TODO: To be added</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Apr 7, 2023</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/win-dbg-en/">WinDbg (en)</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/reversing-en/">Reversing (en)</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/english/">English</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Aspiring Reverse Engineer and CTF Player (Team: 0nePadding). Passionate about WinDbg and Anti-Virus internals. OSCP / CISSP. Working at Microsoft Japan, but all views expressed are my own.<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば(@kash1064)</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"><div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/windbg-basics-001-en";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-1b4c767f65d3cd23a6a6.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-143e63dc8829b6ae01ed.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-1b4c767f65d3cd23a6a6.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-70b9fa3c3d7503c09b7d.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-39116c87b6893a5523f0.js" async=""></script></body></html>
+<p>You can get the theme I usually use from the following link.</p>
+<p>Reference: <a href="https://github.com/kash1064/WinDbg-Classic-Dark" target="_blank" rel="nofollow noopener noreferrer">kash1064/WinDbg-Classic-Dark: The Dark theme of WinDbg Classic</a></p>
+<p>In appearance, it looks like the following. I customized it to keep the colors as simple as possible, reduce the number of color types, and aim for a color scheme close to the dark theme of VSCode, which I am used to.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/e2d85/main-windows.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABwSjYVhN4XoP/xAAcEAACAQUBAAAAAAAAAAAAAAABAgADERITFAT/2gAIAQEAAQUCNR5tqY7asxDEpZQog8yCcyW5Un//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAeEAADAAEEAwAAAAAAAAAAAAAAAQIxESEiMiMzof/aAAgBAQAGPwLuxc2d2aK5F5IPbP0e9GaM0f/EACAQAAIBAgcBAAAAAAAAAAAAAAABEUFRITFhkaGx4dH/2gAIAQEAAT8hxfeNUeXfUVbfE4AUq1cngPglFC6Jo1LoXuI//9oADAMBAAIAAwAAABCj/wAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPxAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPxAf/8QAHRABAAIBBQEAAAAAAAAAAAAAAQARIUFRYYHwkf/aAAgBAQABPxAZTpcTCql35Rw2W4tDMtqhRykFiFli53eg7wI58wIBco8EpFUJ6DiAPR8n/9k='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/8ac56/main-windows.webp 240w,
+/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/d3be9/main-windows.webp 480w,
+/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/e46b2/main-windows.webp 960w,
+/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/6970a/main-windows.webp 1411w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/09b79/main-windows.jpg 240w,
+/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/7cc5e/main-windows.jpg 480w,
+/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/6a068/main-windows.jpg 960w,
+/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/e2d85/main-windows.jpg 1411w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/jpeg"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/07f9d0c5f8b40c4a9f60b6c8cea2cd0d/6a068/main-windows.jpg"
+            alt="img"
+            title="img"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Apr 7, 2023</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/win-dbg-en/">WinDbg (en)</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/reversing-en/">Reversing (en)</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/english/">English</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Aspiring Reverse Engineer and CTF Player (Team: 0nePadding). Passionate about WinDbg and Anti-Virus internals. OSCP / CISSP. Working at Microsoft Japan, but all views expressed are my own.<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば(@kash1064)</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"><div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/windbg-basics-001-en";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-03bde0da95f02ca5adfe.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-143e63dc8829b6ae01ed.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-03bde0da95f02ca5adfe.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-e38835de71f2914852ce.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-39116c87b6893a5523f0.js" async=""></script></body></html>

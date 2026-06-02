@@ -58,7 +58,7 @@
 
         gtag('config', 'UA-122086587-6', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">Rust のユニットテストと結合テストに関するメモ書き - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="Rust のユニットテストと結合テストに関するメモ書きです。"/><meta data-react-helmet="true" property="og:site_name" content="Rust のユニットテストと結合テストに関するメモ書き - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/42a86ef0996119572315112587f870d4/rust-test.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Rust のユニットテストと結合テストに関するメモ書き - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="Rust のユニットテストと結合テストに関するメモ書きです。"/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/42a86ef0996119572315112587f870d4/rust-test.png"/><link as="script" rel="preload" href="/webpack-runtime-39116c87b6893a5523f0.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-bcf20e5bc3c2cf414815.js"/><link as="script" rel="preload" href="/app-feb4e7ca1aeb1cd2a2fc.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"/><link as="fetch" rel="preload" href="/page-data/rust-test/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Rust のユニットテストと結合テストに関するメモ書き</h1><div class="Content-module--content__body--2TrQ-"><p>今回は Rust のテスト記法に関するメモ書きです。</p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a0f47f11c0e7e9c18dcf5ce2a040fc9d"/><title data-react-helmet="true">Rust のユニットテストと結合テストに関するメモ書き - かえるのひみつきち</title><meta data-react-helmet="true" name="description" content="Rust のユニットテストと結合テストに関するメモ書きです。"/><meta data-react-helmet="true" property="og:site_name" content="Rust のユニットテストと結合テストに関するメモ書き - かえるのひみつきち"/><meta data-react-helmet="true" property="og:image" content="https://kashiwaba-yuki.com/static/42a86ef0996119572315112587f870d4/rust-test.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Rust のユニットテストと結合テストに関するメモ書き - かえるのひみつきち"/><meta data-react-helmet="true" name="twitter:description" content="Rust のユニットテストと結合テストに関するメモ書きです。"/><meta data-react-helmet="true" name="twitter:image" content="https://kashiwaba-yuki.com/static/42a86ef0996119572315112587f870d4/rust-test.png"/><link as="script" rel="preload" href="/webpack-runtime-39116c87b6893a5523f0.js"/><link as="script" rel="preload" href="/framework-3761df4ab6ee9f056936.js"/><link as="script" rel="preload" href="/532a2f07-92db97c0addf07d5cb73.js"/><link as="script" rel="preload" href="/dc6a8720040df98778fe970bf6c000a41750d3ae-de8b150b8d31810e941d.js"/><link as="script" rel="preload" href="/app-d4eaa29de0e4f7b7c8f0.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"/><link as="fetch" rel="preload" href="/page-data/rust-test/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/251939775.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/401334301.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/825871152.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Rust のユニットテストと結合テストに関するメモ書き</h1><div class="Content-module--content__body--2TrQ-"><p>今回は Rust のテスト記法に関するメモ書きです。</p>
 <!-- omit in toc -->
 <h2 id="もくじ" style="position:relative;"><a href="#%E3%82%82%E3%81%8F%E3%81%98" aria-label="もくじ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>もくじ</h2>
 <ul>
@@ -144,7 +144,49 @@
 <span class="token punctuation">}</span></code></pre></div>
 <p>このようなテストモジュールについては <code class="language-text">cargo test</code> もしくは <code class="language-text">cargo test &lt;テスト関数></code> でテストを実行できます。</p>
 <p>例えば上記の例では、<code class="language-text">cargo test test_add_basic</code> を実行することで add 関数のテストに成功することを確認できます。</p>
-<p><img src="C:%5CUsers%5Ckash1064%5CCodes%5Cblog-project%5CKaeru-no-Himitsukichi%5Cstatic%5Cmedia%5C2026-05-31-rust-test%5Cimage-20260531161743127.png" alt="image-20260531161743127"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d41db702c4eff9c4e44bff10c85a8d02/aa61c/image-20260531161743127.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 17.916666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsklEQVQI11XOaw6DIAwAYO8AcTpBZSIPUdDgg6lL5v0vtY7sz740bdOmSZP8cvejX7yf12XbwgI5bOd5LOv6vq7Xec7zvO9P58YQgvdeawW07tqWJ1XDavGglBJC8jwviiLLMkJJVZbfqCoSlRE0jLE6glXirIXgTcMizrkQoiQUZSm+pRghhBH+h/BvlJiua5UkTd33xlprjJmmUQrpxjF+qIdhUFIqqXrYmU5IoOAKyges6iLtZ8vTDgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/d41db702c4eff9c4e44bff10c85a8d02/8ac56/image-20260531161743127.webp 240w,
+/static/d41db702c4eff9c4e44bff10c85a8d02/d3be9/image-20260531161743127.webp 480w,
+/static/d41db702c4eff9c4e44bff10c85a8d02/e46b2/image-20260531161743127.webp 960w,
+/static/d41db702c4eff9c4e44bff10c85a8d02/fa9eb/image-20260531161743127.webp 1065w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/d41db702c4eff9c4e44bff10c85a8d02/8ff5a/image-20260531161743127.png 240w,
+/static/d41db702c4eff9c4e44bff10c85a8d02/e85cb/image-20260531161743127.png 480w,
+/static/d41db702c4eff9c4e44bff10c85a8d02/d9199/image-20260531161743127.png 960w,
+/static/d41db702c4eff9c4e44bff10c85a8d02/aa61c/image-20260531161743127.png 1065w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/d41db702c4eff9c4e44bff10c85a8d02/d9199/image-20260531161743127.png"
+            alt="image-20260531161743127"
+            title="image-20260531161743127"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <h3 id="ユニットテストテストのサンプル-1" style="position:relative;"><a href="#%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB-1" aria-label="ユニットテストテストのサンプル 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ユニットテストテストのサンプル 1</h3>
 <p>Rust のユニットテストでは、標準の assert! マクロにより評価を行うことができます。</p>
 <p>例えば、以下の 3 つの関数をテスト用に作成します。</p>
@@ -177,7 +219,49 @@
     <span class="token macro property">assert!</span><span class="token punctuation">(</span>result <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">,</span><span class="token string">"2 + 3 = 5 ですが、実際の結果は {} でした。"</span><span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>上記のテストに失敗した場合、以下のようなテキストを表示できます。</p>
-<p><img src="C:%5CUsers%5Ckash1064%5CCodes%5Cblog-project%5CKaeru-no-Himitsukichi%5Cstatic%5Cmedia%5C2026-05-31-rust-test%5Cimage-20260531163634374.png" alt="image-20260531163634374"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6a9e8f69d18090a2dcdaefcc68032966/4b2cc/image-20260531163634374.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 14.166666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgklEQVQI1yWOSQ7DIAxFuUVDK6RiYbDNEJBKmt7/YnXIW1h/4T+YlFIuBTHEGEMIQiwXnGIUyd6/X4vn4hZ2CWutoUSt1TFGH+N3nnN+Wmu977UWAM/MGqoXEQFAhZaBByJyzhlty4u99+N7zDmZpdaqYUTpsoWAqCtkmUX/H4tt2/6K8Brn00HXsAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/6a9e8f69d18090a2dcdaefcc68032966/8ac56/image-20260531163634374.webp 240w,
+/static/6a9e8f69d18090a2dcdaefcc68032966/d3be9/image-20260531163634374.webp 480w,
+/static/6a9e8f69d18090a2dcdaefcc68032966/e46b2/image-20260531163634374.webp 960w,
+/static/6a9e8f69d18090a2dcdaefcc68032966/d5002/image-20260531163634374.webp 1013w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/6a9e8f69d18090a2dcdaefcc68032966/8ff5a/image-20260531163634374.png 240w,
+/static/6a9e8f69d18090a2dcdaefcc68032966/e85cb/image-20260531163634374.png 480w,
+/static/6a9e8f69d18090a2dcdaefcc68032966/d9199/image-20260531163634374.png 960w,
+/static/6a9e8f69d18090a2dcdaefcc68032966/4b2cc/image-20260531163634374.png 1013w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/6a9e8f69d18090a2dcdaefcc68032966/d9199/image-20260531163634374.png"
+            alt="image-20260531163634374"
+            title="image-20260531163634374"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>また、<code class="language-text">assert_eq!</code> というマクロを使用することもできます。</p>
 <p>このマクロでは、パラメータとして与えられた 2 つの要素の値が一致することを確認できます。</p>
 <div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[test]</span>
@@ -261,7 +345,47 @@
 
 <span class="token punctuation">}</span></code></pre></div>
 <p>ただし、このコードで上記のテストを実行すると、<code class="language-text">assert_ne!</code> の依存関係にある Debug や PartialEq の実装が存在しないためテストがエラーとなってしまいます。</p>
-<p><img src="C:%5CUsers%5Ckash1064%5CCodes%5Cblog-project%5CKaeru-no-Himitsukichi%5Cstatic%5Cmedia%5C2026-05-31-rust-test%5Cimage-20260531224028164.png" alt="image-20260531224028164"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 926px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1e429381fd858c3d3e0197d56c5007be/69476/image-20260531224028164.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.750000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzElEQVQY05WOWW6EMBBEOcTgZeKlDbbByzBAImHiJB/c/1DpYaT8JVKeWqWSunpp8ltcSp5ep1rrtm3HcZRS5vm+riua933//HrwUet+ssxLzrecsrW2GXVX3HgPcYwppmSMEVK0bSulVFoDgHMOPWhQSmGXMXo5IYQ0tHeEUTDmFmPw3vd9HIbB2hxC9J5zjosopRh9KmOMn6BpOHSEkl6IyUDQKigVAVATKsAz9BsN1+ZCaXoRm5JoWkLw0E+xP3kM40Pd9ZqEYP/kGwkrLRUfPiDoAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/1e429381fd858c3d3e0197d56c5007be/8ac56/image-20260531224028164.webp 240w,
+/static/1e429381fd858c3d3e0197d56c5007be/d3be9/image-20260531224028164.webp 480w,
+/static/1e429381fd858c3d3e0197d56c5007be/dafe9/image-20260531224028164.webp 926w"
+              sizes="(max-width: 926px) 100vw, 926px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/1e429381fd858c3d3e0197d56c5007be/8ff5a/image-20260531224028164.png 240w,
+/static/1e429381fd858c3d3e0197d56c5007be/e85cb/image-20260531224028164.png 480w,
+/static/1e429381fd858c3d3e0197d56c5007be/69476/image-20260531224028164.png 926w"
+            sizes="(max-width: 926px) 100vw, 926px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/1e429381fd858c3d3e0197d56c5007be/69476/image-20260531224028164.png"
+            alt="image-20260531224028164"
+            title="image-20260531224028164"
+            loading="lazy"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>このように <code class="language-text">assert_ne!</code> などのマクロをカスタム構造体のテストに使用する場合は、構造体に <code class="language-text">#[derive(Debug,PartialEq)]</code> を付けて実装を導出しておく必要があります。</p>
 <h3 id="ユニットテストテストのサンプル-3" style="position:relative;"><a href="#%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB-3" aria-label="ユニットテストテストのサンプル 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ユニットテストテストのサンプル 3</h3>
 <p>ここまではテスト関数内でパニックが発生した場合にテストが失敗していましたが、意図的にパニックを発生させたい関数について、「適切にパニックが発生するか」をテストすることもできます。</p>
@@ -411,4 +535,4 @@
 <span class="token punctuation">}</span></code></pre></div>
 <h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
 <p>ユニットテストや結合テストにはもっと色々な記法があり、より複雑なテストの実装も可能なようですが、とりあえず今回はここまでにします。</p>
-<p>最近は AI 使ってばっかりなのでもっとテストをガリガリ書けるようになりたいですね。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Jun 1, 2026</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/rust/">Rust</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Aspiring Reverse Engineer and CTF Player (Team: 0nePadding). Passionate about WinDbg and Anti-Virus internals. OSCP / CISSP. Working at Microsoft Japan, but all views expressed are my own.<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば(@kash1064)</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"><div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/rust-test";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-feb4e7ca1aeb1cd2a2fc.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-143e63dc8829b6ae01ed.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-feb4e7ca1aeb1cd2a2fc.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-bcf20e5bc3c2cf414815.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-39116c87b6893a5523f0.js" async=""></script></body></html>
+<p>最近は AI 使ってばっかりなのでもっとテストをガリガリ書けるようになりたいですね。</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->Jun 1, 2026</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/rust/">Rust</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Aspiring Reverse Engineer and CTF Player (Team: 0nePadding). Passionate about WinDbg and Anti-Virus internals. OSCP / CISSP. Working at Microsoft Japan, but all views expressed are my own.<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/kash1064" rel="noopener noreferrer" target="_blank"><strong>かしわば(@kash1064)</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"><div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/rust-test";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-299cfcade846097f4d4b.js"],"app":["/app-d4eaa29de0e4f7b7c8f0.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-76f2006942127b3c7274.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-143e63dc8829b6ae01ed.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-d19905e5c8fc953958f1.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-6ba68ef37e264f701345.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-0faa242d92f89b71e668.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-2d7007993fc2bf0f9caf.js"]};/*]]>*/</script><script src="/polyfill-299cfcade846097f4d4b.js" nomodule=""></script><script src="/component---src-templates-post-template-js-b6ca778bef1fd22bdd64.js" async=""></script><script src="/cd95ea5cbd2c605f26db819f07999610c9ff4310-c2f05dc74373de400085.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-d4eaa29de0e4f7b7c8f0.js" async=""></script><script src="/dc6a8720040df98778fe970bf6c000a41750d3ae-de8b150b8d31810e941d.js" async=""></script><script src="/532a2f07-92db97c0addf07d5cb73.js" async=""></script><script src="/framework-3761df4ab6ee9f056936.js" async=""></script><script src="/webpack-runtime-39116c87b6893a5523f0.js" async=""></script></body></html>
